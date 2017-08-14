@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>联系我们</title>
+    <meta name="description" content="广州安臣药业有限公司">
+    <meta name=”keyword” content=”广州安臣药业有限公司，医药，药业，安臣“>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=rNwvhjIgn75qeVmxE3Q0pE9b"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .usTitle > div.title {
+            border-bottom: 1px solid #dedede;
+            padding: 20px 15px 15px;
+        }
+        .usTitle > div.title > strong {
+            width: 40px;
+            height: 40px;
+            background-color: #0074b6;
+            color: #fff;
+            display: inline-block;
+            line-height: 40px;
+            font-size: 24px;
+        }
+        .usTitle > div.title > span {
+            font-size: 24px;
+            color: #0074b6;
+        }
+        .usTitle > p {
+            text-indent: 2em;
+            line-height: 30px;
+            font-size: 16px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .usTitle .col-md-6 {
+            padding: 10px 0 5px;
+            border-bottom: 1px dashed #edecec;
+            width: 48%;
+            margin-right: 20px;
+        }
+        .usTitle .col-md-6 > i {
+            color: #d2d2d2;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .usTitle .col-md-6 a {
+            color: #333333;
+        }
+        .usTitle .col-md-6 a:hover,.usTitle .col-md-6 a:focus {
+            text-decoration: none;
+        }
+        .usTitle .col-md-12 {
+            margin-bottom: 30px;
+        }
+        .usTitle .outline {
+            margin-bottom: 50px;
+        }
+        .outline{
+            border: 1px solid #dedede;
+            position: relative;
+            overflow: hidden;
+            height: 340px;
+            width: 100%;
+            padding: 10px;
+        }
+        .google-map {
+            height: 320px;
+            width: 98%;
+            right: 10px;
+            top: 10px;
+            position: absolute;
+            border: 1px solid #dedede;
+        }
+        @media (max-width: 768px) {
+            body {
+                background-color: #fff;
+            }
+            .usTitle > p {
+                font-size: 14px;
+                line-height: 25px;
+            }
+            .usTitle .col-md-6 > i {
+                width: 24px;
+            }
+
+            .usTitle .col-md-6 {
+                width: 100%;
+            }
+            .google-map {
+                width: 100%;
+                height: 220px;
+                right: 0;
+            }
+            .usTitle .outline {
+                margin-bottom: 30px;
+                height: 240px;
+                border: 0;
+                padding: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo.png" class="headL"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+                <a class="navbar-brand hidden-xs" href="index.html"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills navbar-right">
+                    <li class="text-center"><a href="index.html">首&#12288;&#12288;页</a></li>
+                    <li class="text-center"><a href="news.html">新闻资讯</a></li>
+                    <li class="text-center"><a href="products.html">产品中心</a></li>
+                    <li class="text-center"><a href="jobs.html">招贤纳士</a></li>
+                    <li class="active text-center"><a href="about.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+<!--nav结束-->
+
+<!--banner开始-->
+<section id="same" class="banner">
+    <div class="item active" data-image-lg="images/us.jpg" data-image-xs="images/ussmall.jpg" ></div>
+</section>
+<!--banner结束-->
+
+<!--content-->
+<section class="us" id="common">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="usTitle">
+                    <div class="title"><strong class="text-center">01</strong> <span>企业介绍</span></div>
+                    <p>广州安臣药业有限公司是具有独立法人资格的药品经营企业。始创于2001年，主营业务为医药健康产业的项目推广和运营。公司经过多年积累与发展，已拥有完善的营销体系与市场体系。</p>
+                    <p>公司座落于风景优美的花城广州，人才集聚，并拥有专门从事新特药市场开发与推广的团队。销售网络以珠三角为基础，辐射广东各地区，坚持“勤奋、务实、高效”的企业作风，贯彻 “积极进取、敬业爱岗、创新发展”的企业精神。</p>
+                    <p>公司继续以高素质的推广团队，优质的经营品种，发挥现有资源优势，依托广阔的销售网络，保持企业经营的可持续性发展。 公司诚邀业界同仁前来洽谈合作，安臣一如既往，秉承“真诚服务、诚信共赢” 的企业理念，加强合作、优势互补，共建长期密切的伙伴关系，用真诚和信赖，共创辉煌未来。</p>
+                </div>
+                <div class="usTitle">
+                    <div class="title"><strong class="text-center">02</strong> <span>联系我们</span></div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 col-xs-12"><i class="fa fa-phone"></i><a href="tel:8221821"><strong>电话：</strong>8221821</a></div>
+                        <div class="col-md-6 col-xs-12"><i class="fa fa-fax"></i><strong>传真：</strong>0814-7548264</div>
+                        <div class="col-md-6 col-xs-12"><i class="fa fa-map-marker"></i><strong>地址：</strong>广东省广州市荔湾区花湾路339号</div>
+                        <div class="col-md-6 col-xs-12"><i class="fa fa-envelope"></i><strong>邮箱：</strong>17842255@163.com</div>
+                    </div>
+                    <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+                    <div class="outline col-md-12">
+                        <div id="allmap" class="google-map small"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--content结束-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <span class="footer-left">版权所有:广州安臣药业有限公司<a href="http://www.miitbeian.gov.cn/" target="_blank">©2017.粤ICP备17071663号-1</a></span>
+            <span><a href="index.html">首页</a>|<a href="javascript:;">新闻动态</a>|<a href="javascript:;">产品中心</a>|<a href="javascript:;">招贤纳士</a>|<a href="javascript:;">关于我们</a></span>
+        </div>
+    </div>
+</footer>
+<div class="search-common hidden-xs">
+    <form action="" method="get" target="_blank" class="navbar-form">
+        <div class="form-group">
+            <input type="hidden" name="m" value="search">
+            <input type="hidden" name="c" value="index">
+            <input type="hidden" name="a" value="init">
+            <input type="hidden" name="typeid" value="57" id="typeid">
+            <input type="hidden" name="siteid" value="5" id="siteid">
+            <input type="text" class="form-control" placeholder="请输入搜索内容" name="q" id="q">
+        </div>
+        <a id="search_btn" href="javascript:;" class="btn btn-jxzy">go</a>
+
+    </form>
+    <a class="search-right text-center" href="javascript:;"><i class="glyphicon glyphicon-search"></i></a>
+</div>
+<a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+
+<script src="js/style.js"></script>
+<script>
+    $("#googlemaps").attr("style","height:300px");
+    // 百度地图API功能
+    var sContent ="<span style='font-weight:bold'>广州安臣制药有限公司</span><br>广东省广州市荔湾区花湾路339号";
+    var map = new BMap.Map("allmap");
+    window.point = new BMap.Point(113.245644,23.088935);
+    map.centerAndZoom(point, 19);
+    map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT}));
+    map.addControl(new BMap.NavigationControl());
+    var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
+    map.addEventListener("click", function(e){
+        map.openInfoWindow(infoWindow,window.point);
+    });
+</script>
+</body>
+</html>

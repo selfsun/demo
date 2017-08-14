@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>人才招聘</title>
+    <meta name="description" content="广州安臣药业有限公司">
+    <meta name=”keyword” content=”广州安臣药业有限公司，医药，药业，安臣“>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .jobList {
+            overflow: hidden;
+            margin-top: 30px;
+            border-bottom: 1px solid #dedede;
+        }
+
+        .jobList:last-child {
+            border-bottom: 0;
+            margin-bottom: 30px;
+        }
+        /*col-md-2*/
+        .jobList > .col-md-2 {
+            padding-left: 30px;
+        }
+        .jobList > .col-md-2 > div{
+            width: 94px;
+            height: 94px;
+            background-color: #0074b6;
+            color: #fff;
+            line-height: 94px;
+            font-size: 30px;
+        }
+        .jobList > .col-md-2 > div > hr {
+            height: 1px;
+            background-color: #fff;
+            margin-top: -26px;
+            width: 73%;
+        }
+        .jobList > .col-md-2 > p {
+            font-size: 22px;
+            color:#333;
+            margin-top: 10px;
+        }
+
+        /*col-md-10*/
+        .jobList > .col-md-10 > p ,.jobList > .col-md-10 >h4 span {
+            line-height: 30px;
+            color: #666;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .jobList > .col-md-10 >h4 {
+            color: #333;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        .jobList > .col-md-10 >h4 a {
+            color: #333;
+        }
+        .jobList > .col-md-10 >h4 a:hover,.jobList > .col-md-10 >h4 a:focus {
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            body {
+                background-color: #fff;
+            }
+            .jobList > .col-md-2 {
+                padding-left: 0;
+            }
+            .jobList > .col-md-2 > div {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 25px;
+            }
+            .jobList > .col-md-2 > div > hr {
+                display: none;
+            }
+            .jobList > .col-md-2 > p {
+                text-align: center;
+            }
+
+            .jobList > .col-md-10 > p, .jobList > .col-md-10 > h4 span {
+                font-size: 14px;
+                line-height: 28px;
+            }
+            .jobList > .col-md-10 > h4 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo.png" class="headL"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+                <a class="navbar-brand hidden-xs" href="index.html"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills navbar-right">
+                    <li class="text-center"><a href="index.html">首&#12288;&#12288;页</a></li>
+                    <li class="text-center"><a href="news.html">新闻资讯</a></li>
+                    <li class="text-center"><a href="products.html">产品中心</a></li>
+                    <li class="active text-center"><a href="jobs.html">招贤纳士</a></li>
+                    <li class="text-center"><a href="about.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+<!--nav结束-->
+
+<!--banner开始-->
+<section id="same" class="banner">
+    <div class="item active" data-image-lg="images/job.jpg" data-image-xs="images/jobsmall.jpg" ></div>
+</section>
+<!--banner结束-->
+
+<!--content-->
+<section class="job" id="common">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">人才招聘</h3>
+                <div class="jobList">
+                    <div class="col-md-2">
+                        <div class="text-center">NO1
+                            <hr/></div>
+                        <p>销售经理</p>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>岗位要求：</h4>
+                        <p>1.负责公司处方药产品的市场销售拓展及管理工作；</p>
+                        <p>2.负责区域代理商的遴选、评估、合同跟进、监督执行等工作；</p>
+                        <p>3.负责区域内一线销售人员的管理、培训及指导工作；</p>
+                        <p>4.完成公司规定的各项汇报及市场信息收集及反馈。</p>
+                        <h4>任职要求：</h4>
+                        <p>1.大专以上学历，3年以上药品销售经验，具临床销售经验者优先；</p>
+                        <p>2.主要负责公司拳头产品的销售，有临床销售及区域管理经验者优先。</p>
+                        <p>3.优秀的语言表达能力、高效的沟通能力；</p>
+                        <p>4.良好的服务意识和强烈的进取心，敢于承受压力，能长期出差。</p>
+                        <h4>工作地点：<span>广州</span></h4>
+                    </div>
+                </div>
+                <div class="jobList">
+                    <div class="col-md-2">
+                        <div class="text-center">NO2
+                            <hr/></div>
+                        <p>药品销售</p>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>岗位职责：</h4>
+                        <p>1、负责所辖区域临床、卫生院、诊所、医务室、连锁药房等终端的开发；</p>
+                        <p>2、做好终端客户日常维护工作，维护公司形象，增进客情；</p>
+                        <p>3、负责完成所辖区域的销售目标并及时回款；</p>
+                        <p>4、负责协助完成区域内促销、订货会等市场推广和客户答谢活动；</p>
+                        <p>5、及时完成公司规定的各项报表。</p>
+                        <h4>岗位要求：</h4>
+                        <p>1、中专及以上学历，医药相关专业优先；可接受实习或应届毕业生；</p>
+                        <p>2、一年以上相关工作经验，熟悉当地终端网络及一定的客户资源者优先；</p>
+                        <p>3、热爱医药行业，为人诚实守信，认同公司企业文化；</p>
+                        <p>4、具有较强的沟通能力和挑战精神，服从公司安排。</p>
+                        <h4>工作地点：<span>广州</span></h4>
+                    </div>
+                </div>
+                <div class="jobList">
+                    <div class="col-md-2">
+                        <div class="text-center">NO3
+                            <hr/></div>
+                        <p>学术主管</p>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>岗位职责：</h4>
+                        <p>1.负责公司产品学术推广工作的策划、组织、协调、评估；</p>
+                        <p>2.通过专业化的学术推广，将公司优质的产品及信息介绍给医生和患者，协助医院销售工作，提升公司及产品品牌形象；</p>
+                        <p>3.开展区域学术活动，完成学术会的准备、执行及信息反馈；</p>
+                        <p>4.对市场销售人员进行产品相关知识培训及考核，解答相关学术问题；</p>
+                        <p>5.完成领导交办的其它事项。</p>
+                        <h4>工作地点：<span>广州</span></h4>
+                    </div>
+                </div>
+                <div class="jobList">
+                    <div class="col-md-2">
+                        <div class="text-center">NO4
+                            <hr/></div>
+                        <p>储备干部</p>
+                    </div>
+                    <div class="col-md-10">
+                        <h4>岗位要求：</h4>
+                        <p>1、大专及以上学历，市场营销、医药相关专业优先；可接受实习或应届毕业生；</p>
+                        <p>2、热爱医药行业，为人诚实守信，认同公司企业文化；</p>
+                        <p>3、具有较强的沟通能力和挑战精神，服从公司安排。</p>
+                        <h4>工作地点：<span>广州</span></h4>
+                    </div>
+                </div>
+                <div class="jobList">
+                    <div class="col-md-10 col-md-offset-2">
+                        <h4>联系人员：<span>马先生</span></h4>
+                        <h4><a href="tel:15890983272">联系电话：<span>15890983272</span></a></h4>
+                        <h4>公司传真：<span>020－85688989</span></h4>
+                        <h4>公司邮箱：<span>anchen_hr@163.com</span></h4>
+                        <h4>联系地址：<span>广州市荔湾区花湾路613号沙涌工业区B幢五楼之一</span></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--content结束-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <span class="footer-left">版权所有:广州安臣药业有限公司<a href="http://www.miitbeian.gov.cn/" target="_blank">©2017.粤ICP备17071663号-1</a></span>
+            <span><a href="index.html">首页</a>|<a href="javascript:;">新闻动态</a>|<a href="javascript:;">产品中心</a>|<a href="javascript:;">招贤纳士</a>|<a href="javascript:;">关于我们</a></span>
+        </div>
+    </div>
+</footer>
+<div class="search-common hidden-xs">
+    <form action="" method="get" target="_blank" class="navbar-form">
+        <div class="form-group">
+            <input type="hidden" name="m" value="search">
+            <input type="hidden" name="c" value="index">
+            <input type="hidden" name="a" value="init">
+            <input type="hidden" name="typeid" value="57" id="typeid">
+            <input type="hidden" name="siteid" value="5" id="siteid">
+            <input type="text" class="form-control" placeholder="请输入搜索内容" name="q" id="q">
+        </div>
+        <a id="search_btn" href="javascript:;" class="btn btn-jxzy">go</a>
+
+    </form>
+    <a class="search-right text-center" href="javascript:;"><i class="glyphicon glyphicon-search"></i></a>
+</div>
+<a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+
+<script src="js/style.js"></script>
+
+</body>
+</html>

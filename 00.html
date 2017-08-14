@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #demo {
+            width: 1140px;
+            margin: 100px auto;
+
+        }
+        #demo div.maxBox {
+            width: 800px;
+            height: 440px;
+        }
+        #demo div.maxBox img {
+            width: 100%;
+        }
+        #demo div.minBox {
+            width: 800px;
+            height: 80px;
+            overflow: hidden;
+        }
+        #demo div.minBox ul {
+            width: 800%;
+        }
+
+
+        ul li {
+            float: left;
+            margin-right: 10px;
+        }
+        ul li a img {
+            width: 120px;
+            height: 70px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div>
+    <div id="demo" class="center-block">
+        <div class="maxBox"></div>
+        <div class="minBox">
+            <ul>
+                <li><a href="javascript:;"><img src="images/1.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/2.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/3.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/1.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/2.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/3.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/1.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/2.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/3.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/1.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/2.jpg" /></a></li>
+                <li><a href="javascript:;"><img src="images/pro-01.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var a = $('ul').find('img').attr('src');
+
+    var imgA = '<img src="' + a + '"/>';
+    $('.maxBox').append(imgA);
+
+    $(".minBox").find('img').each(function () {
+        function AutoScroll() {
+            $("#demo").find('ul:first').animate({
+                marginLeft:'-75px'
+            },500, function () {
+                $(this).css({marginLeft:'0px'}).find('li:first').appendTo(this);
+            });
+        }
+        $(this).click(function () {
+        var liLength = $(".minBox").find('li').length;
+        var common = $(this).parent('a').parent('li').index() +1;
+console.log(liLength);
+console.log(common);
+            if(liLength==common){
+                console.log(222);
+                $(".maxBox").empty();
+                var c = $(".minBox li:last-child img").attr('src');
+                var imgC = '<img src="' + c + '"/>';
+                $(".maxBox").append(imgC);
+
+            }else{
+                $(".maxBox").empty();
+                var b = $(this).attr('src');
+                var imgB = '<img src="' + b + '"/>';
+                $(".maxBox").append(imgB);
+
+                myVal = setTimeout(AutoScroll);
+                console.log(333);
+            }
+
+
+//            if($(".minBox ul li:last-child")){
+//                console.log(222);
+//            }else{
+//                $(".maxBox").empty();
+//                var b = $(this).attr('src');
+//                var imgB = '<img src="' + b + '"/>';
+//                $(".maxBox").append(imgB);
+//
+//                myVal = setTimeout(AutoScroll);
+//                console.log(333);
+//            }
+        })
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+//    var speed = 1000;
+//    function AutoScroll() {
+//        $("#demo").find('ul:first').animate({
+//            marginLeft:'-80px'
+//        }, function () {
+//            $(this).css({marginLeft:'0px'}).find('li:first').appendTo(this);
+//        });
+//    }
+//
+//    var myVal = setTimeout(AutoScroll, speed);
+//
+//    var a = document.getElementById('demo');
+//    a.onmouseover = function () {
+//        clearInterval(myVal);
+//        console.log(111);
+//    };
+//
+//    a.onmouseout = function () {
+//        myVal = setInterval(AutoScroll, speed);
+//        console.log(222);
+//    };
+
+
+
+
+
+
+
+
+
+
+    function loadXMLDoc()
+    {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {
+            //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","/try/ajax/ajax_info.txt",true);
+        xmlhttp.send();
+    }
+
+    function a(){
+
+    }
+</script>
+
+
+
+</body>
+</html>
+
+
+

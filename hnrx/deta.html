@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>详情页</title>
+    <meta name="description" content="湖南省润湘医药有限公司">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link href="css/royalslider.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/jq.marq.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .detail .content {
+        background-color: #fff;
+    }
+    .content-link{
+        margin-top: 20px;
+        line-height: 60px;
+    }
+    .content-link>a{
+        margin-right: 5px;
+        margin-left: 5px;
+        color: #333;
+    }
+    .content-link>a:hover{
+        color: #0371c1;
+    }
+    .content-link>strong{
+        font-size: 24px;
+        color: #0371c1;
+        margin-right: 10px;
+    }
+
+    .tab-pane > p.abstract {
+        color: #999;
+        background-color: #f5f5f5;
+        padding: 10px 20px;
+        text-indent: 0;
+        line-height: 30px;
+    }
+
+    .tab-pane > p {
+        line-height: 25px;
+        text-indent: 2em;
+        margin-top: 20px;
+    }
+
+    .zoombox{
+        margin: 15px 0;
+        padding: 30px 0;
+        background-color: #f5f5f5;
+    }
+    .zoompic>img{
+        /*width: 400px;*/
+        height: 290px;
+
+    }
+    .slider{
+        width: 100%;
+        overflow: hidden;
+        padding: 0 30px;
+        height: 84px;
+        position: relative;
+        margin-top: 30px;
+    }
+    .slider ul{
+        /*overflow: hidden;*/
+        width: 20000px;
+        position: absolute;
+    }
+    .slider ul>li{
+        float: left;
+        padding: 2px;
+        border: 1px solid #fff;
+    }
+    .slider ul>li+li{
+        margin-left: 10px;
+    }
+    .slider ul>li.current{
+        border: 1px solid #0371c1;
+
+    }
+    .slider ul>li img{
+        width: 106px;
+        height: 78px;
+    }
+
+    .page{
+        padding-top: 30px;
+        border-top: 1px dashed #ccc;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .page>a{
+        font-size: 20px;
+        text-align: left;
+        display: block;
+        color: #999;
+    }
+    .page>a:hover{
+        color: #0371c1;
+    }
+
+    .tab-pane>.img{
+        text-align: center;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width:768px){
+        .content-link{
+            margin-top: 10px;
+            line-height: 40px;
+        }
+        .content-link>strong{
+            font-size: 20px;
+        }
+        .content {
+            padding: 0;
+        }
+        .zoompic>img{
+            /*width: 200px;*/
+            height: 145px;
+        }
+        .slider{
+            margin-top: 20px;
+        }
+        .slider ul{
+            height: 51px;
+        }
+        .slider ul>li+li{
+            margin-left: 5px;
+        }
+        .slider ul li img{
+            width: 60px;
+            height: 45px;
+        }
+        .page {
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-top: 0;
+        }
+        .tab-pane>.img{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+
+
+<header class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="tel:0731－85688912" class="pull-left">电话：0731－85688912</a>
+                <form class="navbar-form hidden-xs pull-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo.png" class="headL" alt="126x40" style="width: 126px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+                <a class="navbar-brand hidden-xs" href="index.html"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills navbar-right">
+                    <li class="text-center"><a href="index.html"><i class="fa fa-home"></i><p>首&#12288;&#12288;页</p></a></li>
+                    <li class="active text-center"><a href="news.html"><i class="fa fa-newspaper-o"></i><p>新闻动态</p></a></li>
+                    <li class="text-center"><a href="products.html"><i class="fa fa-file-text"></i><p>产品中心</p></a></li>
+                    <li class="text-center"><a href="jobs.html"><i class="fa fa-star"></i><p>招贤纳士</p></a></li>
+                    <li class="text-center"><a href="about.html"><i class="fa fa-user"></i><p>关于我们</p></a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!--nav结束-->
+
+<!--内容开始-->
+
+<section class="container detail">
+    <div class="row">
+        <div class="content-link col-md-12"><strong>新闻动态</strong><a href="index.html">首页</a>/<a href="news.html">新闻动态</a>><span>正文</span></div>
+        <div class="content col-md-12">
+            <div class="tab-pane col-md-12">
+                <h3 class="text-center tab-content-title">首届“润湘杯”创新标书设计大赛</h3>
+                <p class="text-center"><span>发布时间:2015-3-30</span><span>阅读:4069次</span></p>
+                <p class="abstract">3月14日下午4:30，在生科楼107教室，长沙医学院药学院隆重举行了“首届‘润湘杯’创新标书设计大赛颁奖典礼暨药学院学生科研实训基地成立大会”。</p>
+                <div class="zoombox">
+                    <div class="zoompic text-center">
+                        <img src="images/news01.jpg">
+                    </div>
+                    <div class="slider" id="thumbnail">
+                        <ul>
+                            <li class="current"><a href="images/news01.jpg" target="_blank"><img src="images/news01.jpg" ></a></li>
+                            <li><a href="images/news02.jpg" target="_blank"><img src="images/news02.jpg"></a></li>
+                            <li><a href="images/news03.jpg" target="_blank"><img src="images/news03.jpg"></a></li>
+                            <li><a href="images/news04.jpg" target="_blank"><img src="images/news04.jpg"></a></li>
+                            <li><a href="images/news05.jpg" target="_blank"><img src="images/news05.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news05.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>3月14日下午4:30，在生科楼107教室，长沙医学院药学院隆重举行了“首届‘润湘杯’创新标书设计大赛颁奖典礼暨药学院学生科研实训基地成立大会”。首届“润湘杯”创新标书设计大赛由长沙医学院举办、药学院与润湘医药有限公司共同承办，是我司校企合作的又一成果。本次大赛赛制科学合理，同学们积极参赛，老师们精心指导，赛出了风格和水平，有力地促进了药学院学生创新能力的提高，大赛奖金由润湘公司赞助提供。</p>
+                <p>校领导卢捷湘常务副校长、科研处王小金老师，润湘医药赖开鸿总经理及特邀嘉宾嘉实医药科技有限公司刘芳洁和刘虎总监，药学院马宁院长以及部分教师和学生出席了活动。</p>
+                <p>药学院唐靖博士担任主持，马宁院长祝贺辞并隆重宣布“药学院学生科研实训基地”正式成立，与卢校长一起为基地授牌。随后，唐博士宣布首届“润湘杯”创新标书设计大赛的获奖名单，卢捷湘院长、赖总，刘总等分别为获奖选手颁奖，丁芳芳代表获奖学生发言。</p>
+                <p>为进一步加强校企合作，赖开鸿总经理被特聘长沙医学院客座教授，卢校长为其颁发聘书。赖总和刘芳洁总监分别代表各自公司讲话，肯定了标书大赛的成功同时均表示将进一步与药学院深入合作共同做好人才培养工作。最后，卢校长为本次活动做总结，他指出校企合作是高校教育模式的发展趋势，是培养优秀人才的必经之路。同时他肯定了药学院在学生科研能力培养、校企合作方面所做出的努力与成绩，勉励大家再接再励，取得更大进步。</p>
+                <p>首届“润湘杯”创新标书设计大赛颁奖典礼暨药学院学生科研实训基地成立大会在药学院的承办和润湘医药科技有限公司的赞助下取得圆满成功，为学院创新人才培养、校企合作的深化打下良好基础。</p>
+                <div class="page">
+                    <a href="javascript:;">上一篇：【润湘新闻】长沙医学院“润湘班”结业典礼！！</a>
+                    <a href="javascript:;" alt="下一页">下一篇：瑞华和众曲之一生相托</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="text-center img-logo">
+        <img src="images/logocircle.png" class="logocircle"/>
+    </div>
+    <div class="up">
+        <p class="text-center footer-title">湖南省润湘医药有限公司</p>
+        <p class="text-center"><a href="index.html">首页</a>|<a href="javascript:;">新闻动态</a>|<a href="javascript:;">产品中心</a>|<a href="javascript:;">招贤纳士</a>|<a href="javascript:;">关于我们</a></p>
+    </div>
+    <p class="text-center">版权所有:湖南省润湘医药有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">湘ICP备17010056号-1</a></p>
+</footer>
+<a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+<script>
+    $(window).ready(function(){
+
+
+//        $("#thumbnail").marquee({
+//            direction: "left", distance: 110, time: 2, btnGo: {
+//                up: '#left2', down: '#right2'
+//            }
+//
+//        });
+
+
+
+
+
+
+
+
+        $("#thumbnail li a").click(function(){
+            $(".zoompic>img").attr( "src", $(this).attr("href"));
+            $("#thumbnail li.current").removeClass("current");
+            $(this).parents("li").addClass("current");
+            return false;
+        });
+        $(".zoompic>img").load(function(){
+            $(".zoompic>img:hidden").show();
+        });
+
+
+
+
+
+
+
+
+        var small_length =  $('.slider ul li').length;
+        if($(window).width() < 768){
+            var marginL = ($(window).width()-(small_length*66+(small_length-1)*5))/2-12.5;
+            if(small_length == 1){
+                console.log(small_length);
+                $(".slider").hide();
+            }else if(small_length == 2){
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+            }else if(small_length == 3){
+
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+
+            }else if(small_length == 4){
+
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+            }
+
+
+        }else{
+
+
+            var a = $('.slider').width();
+            var b = $('.slider>ul li').width()*$('.slider>ul li').length+($('.slider>ul li').length-1)*10;
+
+            if(a<b){
+                $('.slider>ul li').click(function(){
+                    console.log(5);
+                    var c = $('.slider>ul li').width()+'px';
+                    $('.slider>ul').css('margin-left',c);
+
+                });
+            }
+
+
+
+            $(function(){
+                var page= 1;
+                var i = 4;//每版四个图片
+//向右滚动
+                $(".next").click(function(){ //点击事件
+                    var v_wrap = $(this).parents(".scroll"); // 根据当前点击的元素获取到父元素
+                    var v_show = v_wrap.find(".slider"); //找到视频展示的区域
+                    var v_cont = v_wrap.find(".box"); //找到视频展示区域的外围区域
+                    var v_width = v_cont.width();
+                    var len = v_show.find("li").length; //我的视频图片个数
+                    var page_count = Math.ceil(len/i); //只要不是整数，就往大的方向取最小的整数
+                    if(!v_show.is(":animated")){
+                        if(page == page_count){
+                            v_show.animate({left:'0px'},"slow");
+                            page =1;
+                        }else{
+                            v_show.animate({left:'-='+v_width},"slow");
+                            page++;
+                        }
+                    }
+                });
+//向左滚动
+                $(".prev").click(function(){ //点击事件
+                    var v_wrap = $(this).parents(".scroll"); // 根据当前点击的元素获取到父元素
+                    var v_show = v_wrap.find(".scroll_list"); //找到视频展示的区域
+                    var v_cont = v_wrap.find(".box"); //找到视频展示区域的外围区域
+                    var v_width = v_cont.width();
+                    var len = v_show.find("li").length; //我的视频图片个数
+                    var page_count = Math.ceil(len/i); //只要不是整数，就往大的方向取最小的整数
+                    if(!v_show.is(":animated")){
+                        if(page == 1){
+                            v_show.animate({left:'-='+ v_width*(page_count-1)},"slow");
+                            page =page_count;
+                        }else{
+                            v_show.animate({left:'+='+ v_width},"slow");
+                            page--;
+                        }
+                    }
+                });
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//            var a = $('.slider').width();
+//            var b = $('.slider>ul li').width()*$('.slider>ul li').length+($('.slider>ul li').length-1)*10;
+//
+//            if(a<b){
+//                $('.slider>ul li').click(function(){
+//                    console.log(5);
+//                    var c = $('.slider>ul li').width()+'px';
+//                    $('.slider>ul').css('margin-left',c);
+//
+//                });
+//            }
+        }
+
+        $(window).resize(function(){
+            if($(window).width()>768){
+
+                var paddingNum = ($(".content-all").width()-540)/2;
+                $(".paddingNum").css("padding-left",paddingNum+"px");
+                var marginL = ($(".zoombox").width()-(small_length*112+(small_length-1)*10))/2-12.5;
+                if(small_length == 1){
+                    console.log(small_length);
+                    $(".slider").hide();
+                }else if(small_length == 2){
+                    $(".slider").show();
+                    $(".slider").css("margin-left",marginL+"px");
+                }else if(small_length == 3){
+
+                    $(".slider").css("margin-left",marginL+"px");
+
+                }else if(small_length == 4){
+                    $(".slider").css("margin-left",marginL+"px");
+                }
+                else if(small_length == 5){
+                    $(".slider").css("margin-left",marginL+"px");
+                }
+
+            }
+        });
+
+
+    });
+</script>
+<script src="js/style.js"></script>
+</body>
+</html>

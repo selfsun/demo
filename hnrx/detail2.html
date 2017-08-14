@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>详情页</title>
+    <meta name="description" content="湖南省润湘医药有限公司">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link href="css/royalslider.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .detail .content {
+        background-color: #fff;
+    }
+    .content-link{
+        margin-top: 20px;
+        line-height: 60px;
+    }
+    .content-link>a{
+        margin-right: 5px;
+        margin-left: 5px;
+        color: #333;
+    }
+    .content-link>a:hover{
+        color: #0371c1;
+    }
+    .content-link>strong{
+        font-size: 24px;
+        color: #0371c1;
+        margin-right: 10px;
+    }
+
+    .tab-pane > p.abstract {
+        color: #999;
+        background-color: #f5f5f5;
+        padding: 10px 20px;
+        text-indent: 0;
+        line-height: 30px;
+    }
+
+    .tab-pane > p {
+        line-height: 25px;
+        text-indent: 2em;
+        margin-top: 20px;
+    }
+
+    .zoombox{
+        margin: 15px 0;
+        padding: 30px 0;
+        background-color: #f5f5f5;
+    }
+    .zoompic>img{
+        /*width: 400px;*/
+        height: 290px;
+
+    }
+    .slider{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    .slider ul{
+        height: 78px;
+        width: 1000px;
+    }
+    .slider ul>li{
+        float: left;
+        padding: 2px;
+        border: 1px solid #fff;
+    }
+    .slider ul>li+li{
+        margin-left: 10px;
+    }
+    .slider ul>li.current{
+        border: 1px solid #0371c1;
+
+    }
+    .slider ul>li img{
+        width: 106px;
+        height: 78px;
+    }
+
+    .page{
+        padding-top: 30px;
+        border-top: 1px dashed #ccc;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .page>a{
+        font-size: 20px;
+        text-align: left;
+        display: block;
+        color: #999;
+    }
+    .page>a:hover{
+        color: #0371c1;
+    }
+
+    .tab-pane>.img{
+        text-align: center;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width:768px){
+        .content-link{
+            margin-top: 10px;
+            line-height: 40px;
+        }
+        .content-link>strong{
+            font-size: 20px;
+        }
+        .content {
+            padding: 0;
+        }
+        .zoompic>img{
+            /*width: 200px;*/
+            height: 145px;
+        }
+        .slider{
+            margin-top: 20px;
+        }
+        .slider ul{
+            height: 51px;
+        }
+        .slider ul>li+li{
+            margin-left: 5px;
+        }
+        .slider ul li img{
+            width: 60px;
+            height: 45px;
+        }
+        .page {
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-top: 0;
+        }
+        .tab-pane>.img{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+
+
+
+<!--nav开始-->
+<header class="hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="tel:0731－85688912" class="pull-left">电话：0731－85688912</a>
+                <form class="navbar-form hidden-xs pull-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo.png" class="headL" alt="126x40" style="width: 126px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+                <a class="navbar-brand hidden-xs" href="index.html"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills navbar-right">
+                    <li class="text-center"><a href="index.html"><i class="fa fa-home"></i><p>首&#12288;&#12288;页</p></a></li>
+                    <li class="active text-center"><a href="news.html"><i class="fa fa-newspaper-o"></i><p>新闻动态</p></a></li>
+                    <li class="text-center"><a href="products.html"><i class="fa fa-file-text"></i><p>产品中心</p></a></li>
+                    <li class="text-center"><a href="jobs.html"><i class="fa fa-star"></i><p>招贤纳士</p></a></li>
+                    <li class="text-center"><a href="about.html"><i class="fa fa-user"></i><p>关于我们</p></a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!--nav结束-->
+
+<!--内容开始-->
+
+<section class="container detail">
+    <div class="row">
+        <div class="content-link col-md-12"><strong>新闻动态</strong><a href="index.html">首页</a>/<a href="news.html">新闻动态</a>><span>正文</span></div>
+        <div class="content col-md-12">
+            <div class="tab-pane col-md-12">
+                <h3 class="text-center tab-content-title">首届“润湘杯”创新标书设计大赛</h3>
+                <p class="text-center"><span>发布时间:2015-3-30</span><span>阅读:4069次</span></p>
+                <p class="abstract">3月14日下午4:30，在生科楼107教室，长沙医学院药学院隆重举行了“首届‘润湘杯’创新标书设计大赛颁奖典礼暨药学院学生科研实训基地成立大会”。</p>
+                <div class="zoombox">
+                    <div class="zoompic text-center">
+                        <img src="images/news01.jpg">
+                    </div>
+                    <div class="slider" id="thumbnail">
+                        <ul>
+                            <li class="current"><a href="images/news01.jpg" target="_blank"><img src="images/news01.jpg" ></a></li>
+                            <li><a href="images/news02.jpg" target="_blank"><img src="images/news02.jpg"></a></li>
+                            <li><a href="images/news03.jpg" target="_blank"><img src="images/news03.jpg"></a></li>
+                            <li><a href="images/news04.jpg" target="_blank"><img src="images/news04.jpg"></a></li>
+                            <li><a href="images/news05.jpg" target="_blank"><img src="images/news05.jpg"></a></li>
+                            <li><a href="images/news06.jpg" target="_blank"><img src="images/news06.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>3月14日下午4:30，在生科楼107教室，长沙医学院药学院隆重举行了“首届‘润湘杯’创新标书设计大赛颁奖典礼暨药学院学生科研实训基地成立大会”。首届“润湘杯”创新标书设计大赛由长沙医学院举办、药学院与润湘医药有限公司共同承办，是我司校企合作的又一成果。本次大赛赛制科学合理，同学们积极参赛，老师们精心指导，赛出了风格和水平，有力地促进了药学院学生创新能力的提高，大赛奖金由润湘公司赞助提供。</p>
+                <p>校领导卢捷湘常务副校长、科研处王小金老师，润湘医药赖开鸿总经理及特邀嘉宾嘉实医药科技有限公司刘芳洁和刘虎总监，药学院马宁院长以及部分教师和学生出席了活动。</p>
+                <p>药学院唐靖博士担任主持，马宁院长祝贺辞并隆重宣布“药学院学生科研实训基地”正式成立，与卢校长一起为基地授牌。随后，唐博士宣布首届“润湘杯”创新标书设计大赛的获奖名单，卢捷湘院长、赖总，刘总等分别为获奖选手颁奖，丁芳芳代表获奖学生发言。</p>
+                <p>为进一步加强校企合作，赖开鸿总经理被特聘长沙医学院客座教授，卢校长为其颁发聘书。赖总和刘芳洁总监分别代表各自公司讲话，肯定了标书大赛的成功同时均表示将进一步与药学院深入合作共同做好人才培养工作。最后，卢校长为本次活动做总结，他指出校企合作是高校教育模式的发展趋势，是培养优秀人才的必经之路。同时他肯定了药学院在学生科研能力培养、校企合作方面所做出的努力与成绩，勉励大家再接再励，取得更大进步。</p>
+                <p>首届“润湘杯”创新标书设计大赛颁奖典礼暨药学院学生科研实训基地成立大会在药学院的承办和润湘医药科技有限公司的赞助下取得圆满成功，为学院创新人才培养、校企合作的深化打下良好基础。</p>
+                <div class="page">
+                    <a href="javascript:;">上一篇：【润湘新闻】长沙医学院“润湘班”结业典礼！！</a>
+                    <a href="javascript:;" alt="下一页">下一篇：瑞华和众曲之一生相托</a>
+                </div>
+            </div>
+            <!--<div class="content-all">-->
+                <!-- -->
+            <!--</div>-->
+
+        </div>
+    </div>
+</section>
+<!--<div class="cphotos wrap800">-->
+    <!--<div id="cPhotos" class="royalSlider rs_Default">-->
+        <!--<a class="rsImg" href="http://www.dongyanggroup.cn/uploadfile/2016/1230/20161230102728525.jpg"><img width="112" height="80" class="rsTmb" src="http://www.dongyanggroup.cn/uploadfile/2016/1230/thumb_112_80_20161230102728525.jpg" /></a>-->
+        <!--<a class="rsImg" href="http://www.dongyanggroup.cn/uploadfile/2016/1230/20161230102729491.jpg"><img width="112" height="80" class="rsTmb" src="http://www.dongyanggroup.cn/uploadfile/2016/1230/thumb_112_80_20161230102729491.jpg" /></a>-->
+        <!--<a class="rsImg" href="http://www.dongyanggroup.cn/uploadfile/2016/1230/20161230102733400.jpg"><img width="112" height="80" class="rsTmb" src="http://www.dongyanggroup.cn/uploadfile/2016/1230/thumb_112_80_20161230102733400.jpg" /></a>-->
+        <!--<a class="rsImg" href="http://www.dongyanggroup.cn/uploadfile/2016/1230/20161230102730397.jpg"><img width="112" height="80" class="rsTmb" src="http://www.dongyanggroup.cn/uploadfile/2016/1230/thumb_112_80_20161230102730397.jpg" /></a>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="text-center img-logo">
+        <img src="images/logocircle.png" class="logocircle"/>
+    </div>
+    <div class="up">
+        <p class="text-center footer-title">湖南省润湘医药有限公司</p>
+        <p class="text-center"><a href="index.html">首页</a>|<a href="javascript:;">新闻动态</a>|<a href="javascript:;">产品中心</a>|<a href="javascript:;">招贤纳士</a>|<a href="javascript:;">关于我们</a></p>
+    </div>
+    <p class="text-center">版权所有:湖南省润湘医药有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">湘ICP备17010056号-1</a></p>
+</footer>
+<a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+
+
+<script>
+    $(window).ready(function(){
+        $("#thumbnail li a").click(function(){
+            $(".zoompic > img").attr( "src", $(this).attr("href"));
+            $("#thumbnail li.current").removeClass("current");
+            $(this).parents("li").addClass("current");
+            return false;
+        });
+        $(".zoompic > img").load(function(){
+            $(".zoompic > img:hidden").show();
+        });
+
+
+
+        var small_length =  $('.slider ul li').length;
+        $(window).resize(function(){
+            if($(window).width()>768){
+                var paddingNum = $(".content-all").width()/2;
+                $(".paddingNum").css("padding-left",paddingNum+"px");
+                var paddingL = ($(".zoombox").width()-(small_length*112+(small_length-1)*10))/2-12.5;
+
+                if(small_length == 1) {
+                    $(".slider").hide();
+                }else{
+                    for(var i = 0 ; i < small_length ; i++ ){
+                    $(".slider").css("padding-left",paddingL+"px");
+                    console.log(1);
+                    }
+                }
+//                for(var i = 0 ; i < small_length ; i++ ){
+//                    if(i == 0) {
+//                        $(".slider").hide();
+//                    }else{
+//                        $(".slider").show();
+//                        $(".slider").css("padding-left",paddingL+"px");
+//                        console.log(1);
+//                    }
+//
+//                }
+
+                function move(to){
+                    var imgList = document.getElementById("imgList");
+                    if(to == "left") imgList.scrollLeft += 100; //li的宽度
+                    else imgList.scrollLeft -= 100; //li的宽度
+                }
+            }else {
+                var paddingL = ($(window).width()-(small_length*66+(small_length-1)*5))/2-12.5;
+                for(var i = 0 ; i < small_length ; i++ ){
+                    $(".slider").css("padding-left",paddingL+"px");
+                    console.log(1);
+                }
+
+            }
+        });
+
+//        $('#thumbnail').royalSlider({
+//            fullscreen: {
+//                enabled: false,
+//                nativeFS: false
+//            },
+//            controlNavigation: 'thumbnails',
+//            autoScaleSlider: true,
+//            autoScaleSliderWidth: 800,
+//            autoScaleSliderHeight: 620,
+//            loop: true,
+//            imageScaleMode: 'fit-if-smaller',
+//            navigateByClick: true,
+//            numImagesToPreload: 2,
+//            imageScalePadding:0,
+//            arrowsNav:true,
+//            navigateByClick:true,
+//            arrowsNavAutoHide: true,
+//            arrowsNavHideOnTouch: true,
+//            keyboardNavEnabled: false,
+//            fadeinLoadedSlide: true,
+//            globalCaption: true,
+//            globalCaptionInside: false,
+//            transitionType : 'fade',
+//            thumbs: {
+//                appendSpan: true,
+//                firstMargin: true,
+//                paddingBottom: 0,
+//                spacing: 5
+//            }
+//        });
+
+    //ajax
+        window.onload = function() {
+            var btn = document.getElementById('btn');
+            btn.onclick = function () {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                //第一步：创建对象
+                //秘书出场
+                var xhr = null;
+                if (window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                } else {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                //初始化
+                //准备好了
+                var url = './check.php?username=' + username + "&password=" + password;
+                xhr.open('post', url, false);
+
+                //这段代码在xhr.send();执行完之后才能执行
+                //这件事做完了怎么办
+                //事情办完之后干什么
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            alert(1);
+                            var data = xhr.responseText;
+                            if (data == 1) {
+                                document.getElementById('showInfo').innerHTML = '用户名或者密码错误';
+                            } else if (data == 2) {
+                                document.getElementById('showInfo').innerHTML = '登录成功';
+                            }
+                        }
+                    }
+
+                };
+                //实际的去做这件事
+                //去做这件事情
+                xhr.send(null);
+            }
+        };
+        window.onload = function(){
+            var btn = document.getElementById('btn');
+            btn.onclick = function () {
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                var xhr = null;
+                if(window.XMLHttpRequest){
+                    xhr = new XMLHttpRequest();
+                }else{
+                    xhr = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+
+                var url = './test.php?username'+username+'&password'+password;
+                xhr.open('post',url,false);
+
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4){
+                        if(xhr.status == 200){
+                            var data = xhr.responseText;
+                            if(data == 1){
+                                document.getElementById('showInfo').innerHTML = '用户名或者密码错误';
+                            }else if(data == 2){
+                                document.getElementById('showInfo').innerHTML = '登录成功';
+                            }
+                        }
+                    }
+                }
+                xhr.send(null);
+            }
+        };
+
+
+
+window.onload = function(){
+    var btn = document.getElementById('btn');
+    btn.onclick = function () {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        var url = './text.php?usernam'+username+'&password'+password;
+        xhr.open('post',url,false);
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if(xhr.status == 200){
+                    var data = xhr.responseText;
+                    if(data == 1){
+                        document.getElementById('showInfo').innerHTML = '用户名或者密码错误';
+                    }else if(data == 2){
+                        document.getElemnetById('showInfo').innerHTML = '登录成功';
+                    }
+                }
+            }
+        }
+        xhr.send(null);
+    }
+};
+
+window.onload = function(){
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        var url = './test.php?username'+username+"&password"+password;
+        xhr.open('post',url,false);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if(xhr.status == 200){
+                    var data = xhr.responseText;
+                    if(data == 1){
+                        document.getElementById("showInfo").innerHTML = '失败';
+                    }else if(data == 2){
+                        document.getElementById("showInfo").innerHTML = '成功';
+                    }
+                }
+            }
+        }
+        xhr.send(null);
+    }
+};
+
+window.onload = function(){
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        var xhr = null;
+        if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        var url = './test.php?username'+username+"&password"+password;
+        xhr.open('post',url,false);
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState ==4 ){
+                if(xhr.status == 200 ){
+                    var data = xhr.responseText;
+                    if(data == 1 ){
+                        document.getElementById("showInfo").innerHTML = '用户名或者密码错误';
+                    }else if(data == 2){
+                        document.getElementById("showInfo").innerHTML = '登录成功';
+                    }
+                }
+            }
+        };
+        xhr.send(null);
+    }
+}
+    });
+</script>
+<script src="js/style.js"></script>
+<script src="js/royalslider.js"></script>
+</body>
+</html>

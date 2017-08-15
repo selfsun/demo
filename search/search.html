@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template • TodoMVC</title>
+</head>
+<body ng-app="App">
+<div ng-controller="myController">
+    <form ng-keyup="search()">
+        <input type="text" id="wei" ng-focus="concentrate()"/>
+    </form>
+    <div>
+        <span ng-click="sort('id')">id</span>
+        <span ng-click="sort('text')">内容</span>
+        <span ng-click="sort('completed')">是否完成</span>
+    </div>
+    <ul>
+        <li ng-repeat="todo in todo">
+            <span>{{todo.id}}</span>
+            <span>{{todo.text}}</span>
+            <span>{{todo.completed}}</span>
+        </li>
+    </ul>
+</div>
+<!-- Scripts here. Don't remove ↓ -->
+
+</body>
+<!--<script src="../node_modules/angular/angular.js"></script>-->
+<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+
+<script>
+    angular.module("App",[]).controller('myController',['$scope','$filter',function($scope,$filter){
+        var todos = [
+            {id:0.01,text:'啊啊',completed:true},
+            {id:0.02,text:'豆豆',completed:false},
+            {id:0.03,text:'方法',completed:false},
+            {id:0.04,text:'版本',completed:false},
+            {id:0.05,text:'版本',completed:false},
+            {id:0.54,text:'版本',completed:true},
+            {id:0.044,text:'版本',completed:false},
+            {id:0.014,text:'版本',completed:false},
+            {id:0.024,text:'版本',completed:true},
+            {id:0.054,text:'版本',completed:false},
+            {id:0.048,text:'版本',completed:false},
+            {id:0.047,text:'版本',completed:false},
+            {id:0.0475,text:'版本',completed:false}
+        ];
+        $scope.todo=todos;
+
+$scope.search = function () {
+    $scope.todo = $filter('filter')(todos,document.getElementById('wei').value);
+};
+
+        $scope.sort = function (str) {
+            $scope.todo = $filter('filter')($scope.todo,str,isopen);
+            isopen = !isopen;
+        }
+    }]);
+</script>
+</html>

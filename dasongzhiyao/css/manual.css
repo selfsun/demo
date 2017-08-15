@@ -1,0 +1,7 @@
+.anchorjs-link {
+    opacity: 0;
+    text-decoration: none;
+}
+[data-anchorjs-icon]::after {
+    content: attr(data-anchorjs-icon);
+}

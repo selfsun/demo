@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>搜索登录页</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .search {
+            margin: 200px auto;
+        }
+        .search > .search-left{
+            padding: 28px 0;
+        }
+        .search > .search-left > a > img {
+            height: 158px;
+            width: 230px;
+        }
+        .search > .search-right > .input-group {
+            width: 100%;
+        }
+        .search > .search-right > .input-group > span {
+            width: 15%;
+        }
+        .search > .search-right > .input-group > span button {
+            width: 100%;
+        }
+        .btn-jxzy {
+            border-radius: 0;
+        }
+
+        @media (max-width:768px){
+            body { background-color: #fff;}
+            .search {
+                margin: 160px auto;
+                padding: 10px 15px 30px;
+                overflow: hidden;
+            }
+            .search-right {
+                margin-top: 20px;
+            }
+            .search > .search-left {
+                height: 140px;
+                padding: 30px 0;
+            }
+
+            .search > .search-left > a > img {
+                width: 150px;
+                height: 103px;
+            }
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 search">
+            <div class="search-left text-center col-md-12">
+                <a href="javascript:;"><img src="images/logo_dasong.png"/></a>
+            </div>
+            <div class="search-right col-md-8 col-md-offset-2 col-xs-12">
+                <div class="input-group">
+                    <input type="text" class="form-control-jxzy" placeholder="请输入搜索内容">
+                      <span class="input-group-btn">
+                        <button class="btn btn-jxzy" type="button">搜索</button>
+                      </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--悬浮窗-->
+
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+</body>
+</html>

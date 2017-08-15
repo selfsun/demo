@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<title>河南伟创百年健康管理有限公司</title>
+<meta name="description" content="河南伟创百年健康管理有限公司">
+<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/animate.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/style.js"></script>
+<script src="js/jquery-resize.js"></script>
+<script src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/jq.marq.js"></script>
+ 
+ <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>
+$(document).ready(function(e) {
+        
+		$(".banner-img").resize(function(){
+			var height = $(this).height();
+			if(height>10){
+				$("#banner").height(height+'px');
+			}
+		});
+		var num =0;
+		var myFn  = function(e) {$('.indexbanner ul li').eq(num).stop().fadeOut();
+			num++;
+			if(num>3){
+				num=0;
+			}
+            $('.indexbanner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			$('.indexbanner ul li').eq(num).stop().fadeIn();}
+        
+		
+		$('.indexbanner ol li').click(function(e) {
+			$('.indexbanner ul li').eq(num).stop().fadeOut();
+			num = $(this).index();
+            $('.indexbanner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			$('.indexbanner ul li').eq(num).stop().fadeIn();
+			});
+		
+		$('.indexbanner ul li').eq(0).show();
+		
+		$('.rightBtn').click(myFn);	
+		$('.leftBtn').click(function(e) {
+            $('.indexbanner ul li').eq(num).stop().fadeOut();
+			num--;
+			if(num<0){
+				num=3;	
+			}
+			$('.indexbanner ol li').eq(num).addClass('current').siblings().removeClass('current');
+			$('.indexbanner ul li').eq(num).stop().fadeIn();
+        });
+		
+		var timer = null;
+		timer = setInterval(myFn,3000);
+		$('.indexbanner').hover(function(e) {
+            clearInterval(timer);
+			$('.leftBtn,.rightBtn').show(); 
+        },function(){
+			timer = setInterval(myFn,3000);	
+			$('.leftBtn,.rightBtn').hide();
+		});
+		
+		
+});
+</script>
+</head>
+
+<body>
+<a name="top"></a>
+
+<div class="header-home" style="z-index:3;">
+<div class=" fixed-header">
+    <div class="container">
+      <div class="head"> 
+      <img src="images/logo.png" class="headL"/>
+      <img src="images/number.png" class="headR" />
+      </div>
+    </div>
+    <!--header!-->
+    <nav class="navbar navbar-default navbar_num" role="navigation">
+      <div class="container  nav_bar">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="">导航</span>
+          </button>
+        
+        <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="javascript:;">慢性病采集</a>
+
+        </div>
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">首页</a></li>
+            <li><a href="ask.html">寻医问药</a></li>
+            <li><a href="intro.html">疾病介绍</a></li>
+            <li><a href="health.html">健康百科</a></li>
+            <li><a href="product.html">服务产品</a></li>
+            <li><a href="service.html">伟创客服</a></li>
+            <li><a href="about.html">关于我们</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://hnwcbn.com/index/login"><i class="fa fa-user" aria-hidden="true"></i>数据采集平台</a></li>
+            <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<span class="caret"></span></a>
+          <ul class="dropdown-menu menu_do" role="menu">
+            <li><a href="javascript:;"><i class="glyphicon glyphicon-magnet" ></i>后台管理</a></li>
+            <li><a href="weixin.html"><i class="fa fa-weixin" ></i>微信管理</a></li>
+            <li><a href="javascript:;"><i class="glyphicon glyphicon-plus-sign" ></i>慢性病管理</a></li>
+            <li><a href="javascript:;"><i class="fa fa-key" ></i>修改密码</a></li>
+            <li class="divider"></li>
+            <li><a href="javascript:;"><i class="glyphicon glyphicon-log-out" ></i>退出</a></li>
+          </ul>
+        </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="clearfix"> </div>
+
+</div>      
+</div>
+      
+
+<!--banner!-->
+
+
+<div class="indexbanner" id="banner">
+  <div class="banner">
+    <ul style=" position:absolute;">
+      <li><img class="banner-img" src="images/bannner.jpg" /></li>
+      <li><img class="banner-img" src="images/bannner1.jpg" /></li>
+      <li><img class="banner-img" src="images/bannner4.jpg" /></li>
+      <li><img class="banner-img" src="images/bannner5.jpg" /></li>
+    </ul>
+   
+    <ol>
+      <li class="current" id="first">●</li>
+      <li>●</li>
+      <li>●</li>
+      <li>●</li>
+    </ol>
+    <a href="javascript:;" class="leftBtn"></a> <a href="javascript:;" class="rightBtn"></a> </div>
+</div>
+<!--//banner!--> 
+
+<!--con!-->
+
+    <div class="container Platform">
+      <div class="row">
+        <h3 class="module-title title col-md-12">伟创服务平台介绍<br />
+          PLATFORM INTRODUCTION</h3>
+        <div class="col-md-6 col-xs-12 pic" > <img src="images/yi.png" class="center-block" /> </div>
+        <div class="col-md-6 col-xs-12 intr">
+          <p>河南伟创百年健康管理有限公司成立于2016年10月，是河南瑞华和众投资有限公司的全资子公司。成立的初衷是为了基层市场提供更多、更优质、更贴心的服务。缩短基层和高层的距离，及时发现并解决问题，提高工作效率，突出差异化营销的创新能力。 河南伟创百年健康管理有限公司是一家集呼出、呼入、在线客服为一体的专业呼叫中心，在电话营销、热线服务、在线客服、记录审核等方面拥有丰富的资源和强大的运营能力。公司自建电话呼叫中心，具有第五代呼叫中心专业呼入、呼出系统，同时配备专业转接专业转接专业转接…… <a href="javascript:;">查看详情»»</a></p>
+        </div>
+      </div>
+      <div class="row health">
+        <h3 class="module-title title col-md-12">健康与亚健康<br />
+          HEALTH AND SUB HEALTH</h3>
+        <div class="col-md-6 col-xs-12 pic" > <img src="images/health.jpg" class="center-block" /> </div>
+        <div class="col-md-6 col-xs-12" >
+          <p>你健康吗？很多人都觉得自己很健康，其实不然。
+            WHO（世界卫生组织）给的健康标准“五快三良”：食得快；便得快；睡得快；说的快；走得快；良好的个性；良好的处事能力；良好的人际关系。亚健康是指我们身体虽无明显疾病，但已呈现“一多三退”的表现，即“疲劳多，活力减退、反应能力减退、适应力减退”的一种生理状态。
+            若按这两个标准，你的回答是否依旧是YES？<a href="javascript:;">查看详情»»</a></p>
+        </div>
+      </div>
+
+  <!--con结束!-->
+  <div class="main_cont ne_seven row"> 
+    <!--left-->
+    <div class="seven_le col-md-6 col-xs-12">
+      <div class="seven_title">
+        <h2>客户案例<!--<span>CLIENT</span>--></h2>
+        <a href="/p_case.htm" class="two_more"></a></div>
+      <div class="seven_le_c">
+        <ul>
+          <li>
+            <div class="seven_le_zi">
+              <h5>孙世平</h5>
+              <h6>53岁　湖北人</h6>
+              <p>1年前检查出骨质疏松较严重，整个背部腰两侧痛的厉害，晚上睡觉会痛醒，走路也受影响。药物治疗配合平台每隔一段时间给她进行合理膳食搭配，适合的运动等一系列生活习惯的改变，病情得到有效控制，生活质量大大提高。</p>
+              <div class="seven_le_more"></div>
+            </div>
+          </li>
+          <li>
+            <div class="seven_le_zi">
+              <h5>徐金枝</h5>
+              <h6>65岁　江西人</h6>
+              <p>1年前检查出骨质疏松较严重，整个背部腰两侧痛的厉害，晚上睡觉会痛醒，走路也受影响。药物治疗配合平台每隔一段时间给她进行合理膳食搭配，适合的运动等一系列生活习惯的改变，病情得到有效控制，生活质量大大提高。</p>
+              <div class="seven_le_more"></div>
+            </div>
+          </li>
+          <li>
+            <div class="seven_le_zi">
+              <h5>李淑君</h5>
+              <h6>25岁　重庆人</h6>
+              <p>今年夏季怀孕6个多月缺铁性贫血接近重度，出门走一会就头晕厉害，心慌，晚上睡觉腿抽筋。服用医生开的生血剂一月有改善，回访中每隔10天给她普及各种孕婴期知识，现在自己和宝宝都很健康，也十分感谢我们。</p>
+              <div class="seven_le_more"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--right!-->
+    <div class="seven_ri col-md-6 col-xs-12">
+      <div class="seven_title" >
+        <h2>客户反馈</h2>
+      </div>
+      <div class="seven_ri_c">
+        <div class="nine_c" id="sorllMenu2">
+          <ul style="height: 1134px;">
+			<li>
+            <h5><span>孙先生</span>养生这一块很实用，让人能很好的接受</h5>
+            <h6>[2016-12-27]</h6>
+            </li>
+          <li>
+            <h5><span>王女士</span>原来我服用了药物上火是这个原因，差点就把这么好的药不吃了</h5>
+            <h6>[2016-12-27]</h6>
+            </li>
+          <li>
+            <h5><span>刘先生</span>特来感谢，小马服务态度很好</h5>
+            <h6>[2016-12-27]</h6>
+            </li>
+          <li>
+            <h5><span>李先生</span>客户表示孟**爱岗敬业的精神令我们感动，对工作认真负责、积极主动的态度，值得我们学</h5>
+            <h6>[2016-12-25]</h6>
+            </li>
+          <li>
+            <h5><span>王先生</span>我明白了，健康是自个的事，不是医生的，感谢</h5>
+            <h6>[2016-12-25]</h6>
+            </li>
+          <li>
+            <h5><span>孙先生</span>以前将养生不放在心上，这么一说我就明白了</h5>
+            <h6>[2016-12-25]</h6>
+            </li>
+          <li>
+            <h5><span>孟先生</span>健康的认识我也是有的，可之前没有学习的地方，现在倒好了，一下子明白很多</h5>
+            <h6>[2016-12-25]</h6>
+            </li>
+          <li>
+            <h5><span>张先生</span>他们的这个亲情沟通真是做到了</h5>
+            <h6>[2016-12-25]</h6>
+            </li>
+          <li>
+            <h5><span>贾女士</span>我这腰椎病要治疗，不仅要吃药，还得自己保养才能好</h5>
+            <h6>[2016-12-23]</h6>
+            </li>
+          <li>
+            <h5><span>孙先生</span>光是一个泡脚就有这么多道理，要是我不知道，还不愿意做了，受教了</h5>
+            <h6>[2016-12-23]</h6>
+            </li>
+          <li>
+            <h5><span>刘女士</span>以后要是有机会，一定要见见你们</h5>
+            <h6>[2016-12-23]</h6>
+            </li>
+          <li>
+            <h5><span>周先生</span>有点建议，能不能面对面的服务啊</h5>
+            <h6>[2016-12-23]</h6>
+            </li>
+          <li>
+            <h5><span>王女士</span>以前总觉得患糖尿病了吃中药是白费钱，现在才知道原来是在省钱</h5>
+            <h6>[2016-12-21]</h6>
+            </li>
+          <li>
+            <h5><span>李先生</span>我昨天晚上用你说的生姜盐水泡脚之后，比平常多睡了两个小时那，我很开心啊，小妹妹谢谢你哦。</h5>
+            <h6>[2016-12-21]</h6>
+            </li>
+          <li>
+            <h5><span>郑先生</span>以前总是为孩子为家人考虑，自己有病怕花钱，原来自己身体好了，年纪大了 才不为他们增加负担。</h5>
+            <h6>[2016-12-21]</h6>
+            </li>
+          <li>
+            <h5><span>冯女士</span>这两天做了你们给我说的盐敷，腰痛的症状好些了，很舒服，谢谢你啊姑娘。</h5>
+            <h6>[2016-12-21]</h6>
+            </li>
+            <li>
+            <h5><span>孙先生</span>晚上睡觉不能开窗因为睡觉时肌肉身体是处于一个放松的状态，窗外的冷空气或风会进入室内进而进入体内，长期身体就会入侵风寒湿等，我明白了</h5>
+            <h6>[2016-12-21]</h6>
+            </li>
+            <li>
+            <h5><span>周女士</span>之前一直以为身体没有不舒服就不用测血糖了，听你这么说，平时的血糖监控还是很重要的。</h5>
+            <h6>[2016-12-21]</h6>
+            </li>
+            <li>
+            <h5><span>张先生</span>现在才知道自己日常的生活，对身体的康复有那么大的作用</h5>
+            <h6>[2016-12-20]</h6>
+            </li>
+            <li>
+            <h5><span>张先生</span>听你这么一说，今天算是明白这个病的严重性。谢谢你们的关心，你们都很懂事。</h5>
+            <h6>[2016-12-20]</h6>
+            </li>
+            <li>
+            <h5><span>李女士</span>之前有人告诉我南瓜不能吃，经过咨询你们其实是有降糖效果的，而且很多食物都是可以吃的，主要是量的控制，现在血糖一直保持得挺稳定的。</h5>
+            <h6>[2016-12-20]</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="module-inner row">
+      <h3 class="module-title title col-md-12"> 专业权威专家 <br>
+        PROFESSIONAL AUTHPRITY EXPERT</h3>
+      <div class="col-md-4 box_6 wow rotateInDownLeft animated" data-wow-delay="0.4s" style="animation-delay: 0.4s; animation-name: rotateInDownLeft; visibility: visible;"> <img src="images/ZY.jpg" class="img-responsive center-block" alt="">
+        <div class="desc">
+          <h4>专业权威</h4>
+          <p>遵循严谨的学术规范，面对提问，寻求相关专家老师建议，再进行意见交叉审理，给出最为专业的答案，为您的健康负责。</p>
+          <div class="more"><a href="javascript:;"><img src="images/more.png" alt=""></a></div>
+        </div>
+      </div>
+      <div class="col-md-4 box_6 wow lightSpeedIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: lightSpeedIn;"> <img src="images/QQ.jpg" class="img-responsive center-block" alt="">
+        <div class="desc">
+          <h4>亲情沟通</h4>
+          <p>以心交心，时刻站在您角度，我们不仅是解决医学问题，更是解决“人”的问题，健康不仅仅是身体，更是心理。</p>
+          <div class="more"><a href="javascript:;"><img src="images/more.png" alt=""></a></div>
+        </div>
+      </div>
+      <div class="col-md-4 box_6 wow rotateIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: rotateIn;"> <img src="images/FW.jpg" class="img-responsive center-block" alt="">
+        <div class="desc">
+          <h4>服务至上</h4>
+          <p>严格把关每一道流程,以客户的角度不断来改变运营方式、提升自己,力求打造国内一流的健康管理平台,服务至心,真正解决您的问题。</p>
+          <div class="more"><a href="javascript:;"><img src="images/more.png" alt=""></a></div>
+        </div>
+      </div>
+  </div>
+  
+  <!--//大数据营销!-->
+  <div class="container data row">
+        <h3 class="module-title title  col-md-12">我们如何服务<br />
+           HOW CAN WE SERVICE </h3>
+        <div class="nr col-md-12">
+          <p class="none">专业权威：遵循严谨的学术规范，面对提问，寻求相关专家老师建议，再进行意见交叉审理，给出最为专业、权威的答案，为您的健康负责。 </p>
+          <p class="none">亲情沟通：以心交心，时刻站在您角度，我们不仅是解决医学问题，更是解决“人”的问题，健康不仅仅是身体，更是心理。</p>
+          <p class="none">客户至上：平台严格把关每一道流程，以客户的角度来不断来改变运营方式、提升自己，力求打造国内一流的健康管理平台，服务至心，真正解决您的问题。</p>
+          <p>寻医问药：利用专业的服务准则、亲情沟通的服务技巧，客户至上的服务理念为客户提供最为专业的健康答案。</p>
+          <p> 国内一线医院专家老师线上坐诊，数十位优秀健康管理师私人制定属于您的健康方案，专注、专业、专心。 </p>
+          <br>
+          <div class="button"><a href="#" class="viewBtn">我要咨询</a><a href="#" class="viewBtn">寻医问药</a> </div>
+         </div>
+</div>
+
+<!--logo-->
+<div class="row href">
+        <h3 class="module-title title col-md-12">友情链接<br />
+           FRIENDSHIP LINK </h3>
+        <div class="partner col-md-12">
+        	<ul class="col-lg-3 col-md-3 col-xs-12">
+            	<li><a href="javascript:;" title="河南瑞华和众投资有限公司">河南瑞华和众投资有限公司</a></li>
+            	<li><a href="javascript:;" title="辽宁宇鹏医药有限公司">辽宁宇鹏医药有限公司</a></li>
+            	<li><a href="javascript:;" title="海南鸿联药业有限公司">海南鸿联药业有限公司</a></li>
+            	<li><a href="javascript:;" title="四川中和医药有限公司">四川中和医药有限公司</a></li>
+            </ul>
+        	<ul class="col-lg-3 col-md-3 col-xs-12">
+            	<li><a href="javascript:;" title="河南省景华医药有限公司">河南省景华医药有限公司</a></li>
+            	<li><a href="javascript:;" title="河南省景华医药有限公司">河南省景华医药有限公司</a></li>
+            	<li><a href="javascript:;" title="湖南省润湘医药有限公司">湖南省润湘医药有限公司</a></li>
+            	<li><a href="javascript:;" title="河南瑞华和众投资有限公司">河南瑞华和众投资有限公司</a></li>
+            </ul>
+        	<ul class="col-lg-3 col-md-3 col-xs-12">
+            	<li><a href="javascript:;" title="四川中和医药有限公司">四川中和医药有限公司</a></li>
+            	<li><a href="javascript:;" title="陕西中大康成医药有限公司">陕西中大康成医药有限公司</a></li>
+            	<li><a href="javascript:;" title="甘肃润东药业管理有限公司">甘肃润东药业管理有限公司</a></li>
+            	<li><a href="javascript:;" title="青海益欣药业有限责任公司">青海益欣药业有限责任公司</a></li>
+            </ul>
+        	<ul class="col-lg-3 col-md-3 col-xs-12">
+            	<li><a href="javascript:;" title="武汉传奇医药有限责任公司">武汉传奇医药有限责任公司</a></li>
+            	<li><a href="javascript:;" title="山西达而闻医药科贸有限公司">山西达而闻医药科贸有限公司</a></li>
+            	<li><a href="javascript:;" title="开封市耕耘农业科技有限公司">开封市耕耘农业科技有限公司</a></li>
+            	<li><a href="javascript:;" title="河南宝能石油工程技术服务有限公司 ">河南宝能石油工程技术服务有限公司 </a></li>
+            </ul>
+        </div>
+</div>
+<!---->
+
+</div>
+
+<footer id="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-ribbon" style="margin-top:-40px;">
+                            <span>联系我们</span>
+                        </div>
+                        <div class="col-md-4">
+                            <p style="text-align:center;color:#fff;font-size:30px; margin-top: 40px;"><i class="fa fa-phone"></i> <strong>电话:</strong> 400-990-3736</p>
+                            <p style="text-align: center;margin: 20px;font-size: 12px;color:#fff;"><i class="fa fa-map-marker"></i> <strong>地址:</strong> 河南郑州市金水区农科路38号2号楼501</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="newsletter" style="margin-top:20px;">
+                                <h4 style='text-align:center;'>
+                                <img src="images/ewm.jpg" style="max-width:35%" class="center-block"></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="newsletter">
+                                <h4 style='text-align:center;'>网站导航</h4>
+                            </div>
+                            <ul style="display:block;text-align:center;list-style:none;">
+                                <li><a href="http://www.hnwcbn.com/askquestion/index" target="_blank">寻医问药</a></li>
+                                <li><a href="http://www.hnwcbn.com/article/disease" target="_blank">疾病介绍</a></li>
+                                <li><a href="http://www.hnwcbn.com/article/health" target="_blank">健康百科</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p style="text-align:center;color:#fff;">版权所有:河南伟创百年健康管理有限公司© 2016.<br><a target="_blank" href="http://www.miitbeian.gov.cn">豫ICP备16037884号</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+<!-- 侧边栏，包含客服等信息 -->
+<div id="rightMenuBar" class="right-menu-bar" style=" right:0">
+    <div class="right-menu-container" id="J_rightBarMenuContainer">
+ 		<div class="qita">
+            <a class="active user" href="http://www.hnwcbn.com/index/login">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span>登录</span>
+            </a>
+        </div>
+        <div id="service_qq" class="qita">
+            <a href="javascript:;" class="right-menu qq"  rel="nofollow">
+                <i class="fa fa-qq" aria-hidden="true"></i>
+                <span>QQ</span>
+            </a>
+        <!-- QQ 开始 -->
+            <div class="qq_num hidden">
+                <div class="qq">
+                	<i class="fa fa-qq" aria-hidden="true"></i>
+                    <span>在线客服</span>
+                </div>
+                <ul>
+                    <li><a href="javascript:;"><img src="images/QQ-th.jpg"></a>售前客服</li>
+                    <li><a href="javascript:;"><img src="images/QQ-th.jpg"></a>售前客服</li>
+                    <li><a href="javascript:;"><img src="images/QQ-th.jpg"></a>售后客服</li>
+                    <li><a href="javascript:;"><img src="images/QQ-th.jpg"></a>技术支持</li>
+                </ul>
+            </div>
+            
+    <!-- QQ 结束 -->
+      </div>
+        <div class="qita" id="service_phone">
+                <a href="javascript:void(0);" class="right-menu phone"  rel="nofollow">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>电话</span>
+                </a>
+                
+                    <!-- 电话 开始 -->
+                <div class="phone_num hidden">
+                    <div class="rexian">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>全国服务热线</span>
+                    </div>
+                    <h2>400-990-3736</h2>
+                    <h5>健康无价、大爱无边</h5>
+                 </div> 
+           </div>
+        <div class="qita"  id="service_search">
+            <a href="/dialog_1.htm" class="right-menu search westdialogopen"   rel="nofollow" title="搜索"><i class="fa fa-search" aria-hidden="true"></i>
+                <span>搜索</span>
+            </a>
+                <!-- 搜索 开始 -->
+            <div class="search_num hidden">
+                <div>
+                    <form action="" method="get">
+                        <input class="left" type="text" name="FirstName" value="名称/拼音"><input class="right" type="submit" value="搜索">
+                    </form>                
+                </div>
+            </div>
+     <!-- 搜索结束 -->
+
+    </div>
+    	<div class="qita top_num">
+        	<a href="#top" class="top"><i class="fa fa-caret-up" aria-hidden="true"></i>
+                <span>TOP</span></a> 
+        </div>
+        
+    </div>
+     
+
+</div>
+
+</body>
+</html>

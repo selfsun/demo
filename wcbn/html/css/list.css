@@ -1,0 +1,100 @@
+/*疾病介绍*/
+.jbjs {
+	margin-bottom: 40px; background:#fff;
+}
+.jbjs h2, .jbjs h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.jbjs h2 {
+	color: #156918;
+	padding: 20px 0 10px 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.jbjs ul li {
+	padding: 30px 0 10px;
+	border-bottom: 1px solid #ccc;
+	height: 240px;
+}
+.jbjs>ul>li a{ color:#28ae61;}
+.jbjs1 img,.jbjsBanner>img{
+	width: 100%;
+}
+.jbjsBanner {
+	padding-left:0; padding-right:0;
+}
+.jbjs a:hover {
+	text-decoration: none;
+	color:#28ae61;
+}
+.jbjs span {
+	font-size: 12px;
+}
+.jbjs2 p {
+	font-size: 16px;
+	line-height: 25px;
+	margin-top: 10px;
+}
+.page {
+	margin-top: 40px;
+	text-align: center;
+}
+.page ol {
+	text-align: center;
+	margin: 0 auto;
+	width: 250px;
+}
+.btn-page {
+	background-color: #156918;
+	margin-right: 10px;
+	color: #fff;
+}
+.btn-page:hover {
+	color: none;
+}
+.first {
+	background-color: #ccc;
+	color: #333;
+}
+.jbjs .pagination> li> a,.jbjs .pagination> li> span,.jbjs .pagination> li> a:hover,.jbjs .pagination> li> span:hover,.jbjs .pagination> li> a:focus,.jbjs .pagination> li> span:focus{color: #28ae61;}
+
+.jbjs .pagination > .active > a,.jbjs .pagination > .active > span, .jbjs .pagination > .active > a:hover,.jbjs .pagination > .active > span:hover, .jbjs.pagination > .active > a:focus,.jbjs .pagination > .active > span:focus {
+    cursor: default;
+    background-color: #28ae61;
+    border-color: #28ae61;
+}
+.jbjs .pagination> .active> a, body.dark .pagination> .active> a{ color:#fff;}
+ @media(max-width:767px) {
+.jbjs1 img {
+	width: 45%;
+}
+.jbjs1 {
+	padding-top: 15px;
+}
+.jbjs ul {
+	margin-bottom: 10px;
+	/*float: left;*/
+}
+.jbjs ul li {
+	border-bottom: none;
+	padding-top: 10px;
+}
+.jbjs2 {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+}
+.jbjs2 p {
+	font-size: 14px;
+	padding:0 20px;
+}
+.jbjs2 h3 {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 16px;
+}
+.jbjs2 span.time {
+	display: block;
+	text-align: center;
+}
+}

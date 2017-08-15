@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+.serBanner>img {
+	width: 100%;
+}
+.about {
+	background: #fff;
+}
+hr.tall {
+	margin: 44px 0;
+}
+hr {
+	background-image: linear-gradient(to right, transparent, #DBDBDB, transparent);
+	border: 0;
+	height: 1px;
+	margin: 22px 0;
+}
+.about .col-md-7 {
+	padding: 0 20px;
+}
+.about h4 {
+	font-size: 1.4em;
+	color: #333;
+	text-align: left;
+	line-height: 27px;
+	margin-bottom:13px;
+}
+.list li {
+	padding-top: 5px;
+	padding-left: 36px;
+	line-height:24px;
+	margin-bottom:13px;
+}
+.list li i {
+	color: #FFF;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	padding: 5px;
+	background:#278921;
+	
+	
+}
+.about .col-md-7>p {
+	margin-top: 30px;
+	line-height: 30px;
+}
+.about .col-md-7>p.last {
+	padding-bottom: 40px;
+}
+.feature-box.feature-box-style-2 .feature-box-info {
+	padding-left: 60px;
+}
+.feature-box.feature-box-style-2 .feature-box-icon {
+	background: transparent;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+}
+.feature-box.feature-box-style-2 h4 {
+	font-size: 1.4em;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 27px;
+	margin: 0 0 14px 0;
+}
+.about .col-md-7 h2 {
+	color: #1d2127
+}
+
+@media(max-width:768px){
+	.about{ padding:0 20px;}
+	hr.tall{ margin:22px 0;}
+	.about h2{ font-size:18px;}
+	hr.tall{ font-size:12px;}
+	.feature-box.feature-box-style-2 .feature-box-info{ padding-left:30px;}
+	.list li{ padding-left:0;}
+	}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<title>河南伟创百年健康管理有限公司</title>
+<meta name="description" content="河南伟创百年健康管理有限公司">
+<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+<link rel="stylesheet" href="css/year.css" type="text/css">
+<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+<link rel="stylesheet" href="plugins/Swiper-3.4.1/Swiper-3.4.1/dist/css/swiper.css">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<script src="js/jquery-resize.js"></script>
+<script src="plugins/Swiper-3.4.1/Swiper-3.4.1/dist/js/swiper.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+	var a = $(window).width();
+		if(a<768){
+			$(".bg").css("display","block");
+			
+			}
+		else{
+			$(".bg").css("display","none");
+		}
+	
+	var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+    
+    // 如果需要前进后退按钮
+   // nextButton: '.swiper-button-next',
+//    prevButton: '.swiper-button-prev',
+    
+    // 如果需要滚动条
+    scrollbar: '.swiper-scrollbar',
+  }); 
+  
+  
+  
+$(".li_packet").click(function(e) {
+    var str=new Array("1.png","2.png","3.png",'4.png');
+	var a;
+	a=str[parseInt(Math.random()*(str.length))];
+	$(".modal-body").append("<img src='images/0"+a+"'/>");
+});
+
+	$(".btn-default").click(function(e) {
+		$(".modal-body").empty();
+	
+	});
+	$(".close").click(function(e) {
+		$(".modal-body").empty();
+	
+	});
+	});
+</script>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide one"> <img src="images/2017.png"> </div>
+    <div class="swiper-slide two"> <img src="images/2.jpg"> </div>
+    <div class="swiper-slide three"> <img src="images/3.jpg"> </div>
+    <div class="swiper-slide four"> <img src="images/4.jpg"> </div>
+    <div class="swiper-slide five"> <img src="images/5.png"> </div>
+    <div class="swiper-slide seven"> <img src="images/7.png"> </div>
+    <div class="swiper-slide eight"> <img src="images/8.png"> </div>
+    <div class="swiper-slide" id="last">
+      <div class="nine container">
+        <ul class="row">
+          <li class="col-md-12 bg visible-xs-block"> <img src="images/5bg.jpg"> </li>
+          <li class="col-md-4 col-xs-4 li_packet gr" data-toggle="modal" data-target="#myModal"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet gr" data-toggle="modal" data-target="#myModal"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet" data-toggle="modal" data-target="#myModal" id="li_packet01"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet gr" data-toggle="modal" data-target="#myModal" id="li_packet04"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet gr" data-toggle="modal" data-target="#myModal" id="li_packet05"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet" data-toggle="modal" data-target="#myModal" id="li_packet02"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet gr" data-toggle="modal" data-target="#myModal" id="li_packet07"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet gr" data-toggle="modal" data-target="#myModal" id="li_packet08"> <img src="images/packet.png"> </li>
+          <li class="col-md-4 col-xs-4 li_packet" data-toggle="modal" data-target="#myModal" id="li_packet03"> <img src="images/packet.png"> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 如果需要分页器 -->
+  <div class="swiper-pagination"></div>
+  
+  <!-- 如果需要导航按钮 -->
+  <!--<div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>-->
+  
+  <!-- 如果需要滚动条 -->
+  <div class="swiper-scrollbar"></div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="display:">
+        <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> <span class="sr-only">Close</span> </button>
+        <h4 class="modal-title" id="myModalLabel">伟创百年</h4>
+      </div>
+      <div class="modal-body"> </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+        <a href="www.hnwcbn.com">猴会有期</a>
+        </button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">鸡续战斗</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

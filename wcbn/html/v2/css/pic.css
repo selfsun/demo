@@ -1,0 +1,208 @@
+/*新建图文页面*/
+body {
+	background: #e7e8eb;
+}
+.js_main_title {
+	line-height: 55px;
+	border-bottom: 1px solid #d9dadc;
+	padding: 0 10px;
+	background: #fff;
+}
+.js_main_title a {
+	text-decoration: none;
+	color: #ccc;
+}
+.js_main_title a:hover {
+	text-decoration: none;
+	color: #333;
+}
+.page_nav a:first {
+font-size:20px;
+}
+.appmsg_container_bd {
+	background: #fff;
+}
+.appmsg_container_bd>.editing {
+	border: 1px solid #d9dadc;
+}
+.appmsg_container_bd>.editing>i {
+	font-size: 30px;
+	text-align: center;
+}
+.editing .appmsg_pc {
+	padding: 10px;
+	cursor: pointer;
+}
+.appmsg_item {
+	line-height: 90px;
+	margin: 0;
+	border: 1px solid #d9dadc;
+	border-top: 0;
+	position: relative;
+	cursor: pointer;
+	background: #fff;
+	overflow: hidden;
+	max-height: 134px;
+}
+.appmsg_item>span {
+	float: left;
+	color: #333;
+	width: 60%;
+}
+.appmsg_item .pict {
+	padding: 10px;
+}
+.appmsg_thumb {
+	float: right;
+	text-align: center;
+	background: #ececec;
+	width: 40%;
+	text-align: center;
+	height: 90px;
+}
+.appmsg_thumb i {
+	font-size: 30px;
+	color: #c9c9c9;
+	line-height: 90px;
+}
+
+/*底部*/
+.page_appmsg_new .tool_area_wrp {
+	background-color: #fff;
+	border-top: 1px solid #d9dadc;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	z-index: 2;
+}
+.tool_bar {
+	margin-top: 0;
+	padding: 20px 90px 40px;
+}
+.tool_bar .btn.r {
+	margin-left: 1em;
+	margin-right: 0;
+}
+.appmsg_edit_mask {
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	z-index: 2;
+	bottom: 0;
+	width: 100%;
+}
+.appmsg_edit_mask a {
+	position: relative;
+	color: #fff;
+	font-size: 20px;
+}
+.appmsg_tit span {
+	color: #fff;
+}
+.appmsg_edit_mask a.up, .appmsg_edit_mask a.down {
+	float: left;
+	margin-left: 20px;
+}
+.appmsg_edit_mask a.del {
+	float: right;
+	margin-right: 20px;
+}
+.appmsg {
+	position: relative;
+}
+.appmsg_tit {
+	background: rgba(0,0,0,0.8);
+	text-align: center;
+	line-height: 24px;
+}
+.frm_input_box {
+	margin-bottom: 30px;
+}
+.frm_input_tit {
+	font-size: 22px;
+	margin: 30px 0 20px;
+}
+.appmsg_edit_item {
+	text-align: center;
+}
+.appmsg_container_title {
+	color: #333;
+	text-align: left;
+	line-height: 3;
+}
+.main_bd.col-md-3 {
+	background: #f8f8f8;
+}
+textarea {
+	outline: none;
+	resize: none;
+	max-height: 1000px;
+}
+.main_bd {
+	padding-bottom: 40px;
+}
+.main_bd .appmsg_add {
+	line-height: 90px;
+	margin: 0;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	color: #ccc;
+	border: 1px dashed #d9dadc;
+	border-top: 0;
+	background: #f8f8f8;
+}
+.appmsg_content {
+	background: #f8f8f8;
+	margin-top: -1px;
+	min-height: 134px;
+	text-align: center;
+}
+.appmsg_content i {
+	font-size: 50px;
+	text-align: center;
+	line-height: 134px;
+	color: #c9c9c9;
+}
+.appmsg_edit_item.title .frm_input {
+	color: #adadad;
+	font-size: 22px;
+	height: 46px;
+	line-height: 46px;
+}
+.btn.btn_input button {
+	width: 100%;
+}
+.tool_bar span button {
+	color: #fff;
+}
+.btn button {
+	background-color: transparent;
+	border: 0 none;
+	display: block;
+	height: 100%;
+	outline: 0 none;
+	overflow: visible;
+	padding: 0 22px;
+}
+.tool_bar {
+	text-align: center;
+}
+.tool_bar>span {
+	background: #44b549;
+}
+.appmsg_container_bd {
+	height: 800px;
+	overflow-y: auto;
+	background:#f8f8f8;
+}
+.pic_right {
+	background: #fff;
+	height: 800px;
+	overflow-y : auto;
+}
+textarea{ height:600px;}

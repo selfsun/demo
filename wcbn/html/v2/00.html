@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <style>
+        div div {
+            height: 120px;
+            line-height: 30px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="broadcast" class="bar" name="giftactive">-->
+    <!--<div style="float:left"><strong>间隔滚动效果：</strong></div>-->
+    <!--<div id="demo" style="overflow:hidden;height:22px;line-height:22px;">-->
+        <!--<ul class="mingdan" id="holder">-->
+            <!--<li><a href="#" target="_blank">aaaaaa</a></li>-->
+            <!--<li><a href="#" target="_blank">bbbbbb</a></li>-->
+            <!--<li><a href="#" target="_blank">cccccc</a></li>-->
+            <!--<li><a href="#" target="_blank">dddddd</a></li>-->
+            <!--<li><a href="#" target="_blank">eeeeee</a></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+ class="center-block"
+ class="text-center"
+<strong></strong>
+
+<div>
+    <div id="demo">
+        <ul>
+            <li><a href="javascript:;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></li>
+            <li><a href="javascript:;">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</a></li>
+            <li><a href="javascript:;">cccccccccccccccccccccccccccccc</a></li>
+            <li><a href="javascript:;">dddddddddddddddddddddddddddddd</a></li>
+            <li><a href="javascript:;">eeeeeeeeeeeeeeeeeeeeeeeeeeeeee</a></li>
+            <li><a href="javascript:;">ffffffffffffffffffffffffffffff</a></li>
+            <li><a href="javascript:;">gggggggggggggggggggggggggggggg</a></li>
+            <li><a href="javascript:;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</a></li>
+            <li><a href="javascript:;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</a></li>
+            <li><a href="javascript:;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</a></li>
+            <li><a href="javascript:;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+    var speed = 1000;
+    function AutoScroll() {
+        $("#demo").find('ul:first').animate({
+            marginTop:'-30px'
+        }, function () {
+            $(this).css({marginTop:'0px'}).find('li:first').appendTo(this);
+        });
+    }
+
+    var myVal = setTimeout(AutoScroll, speed);
+
+    var a = document.getElementById('demo');
+    a.onmouseover = function () {
+        clearInterval(myVal);
+        console.log(111);
+    };
+
+    a.onmouseout = function () {
+        myVal = setInterval(AutoScroll, speed);
+        console.log(222);
+    };
+
+</script>
+
+
+<style>
+    /*p.greenBold strong{*/
+        /*color: #0074b6;*/
+    /*}*/
+    h4 strong{
+        padding: 5px;
+        border: 1px solid #0074b6;
+        color:#0074b6;
+
+    }
+    /*.text-content {*/
+        /*background-color: #fafafa;*/
+        /*padding: 10px;*/
+    /*}*/
+</style>
+
+
+<style>
+    p{
+        padding: 0 20px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	overflow: scroll;
+	background: #8f0111;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	font-family: "方正隶二简体";
+}
+
+.one, .two, .three, .five, .four, .seven, .eight, .nine, .packet_red {
+	text-align: center;
+	width: 100%;
+}
+
+/*.swiper-slide{ border:1PX solid #fff;}*/
+
+.one {
+	margin-top: -30px;
+}
+.five {
+	margin: 0 auto;
+}
+.five, .seven, .eight {
+	margin: 0 auto;
+}
+.two, .three {
+	margin: 0 auto;
+	bottom: 2px;
+}
+.two img {
+	bottom: 0;
+}
+.nine {
+	text-align: center;
+	width: 1000px;
+	margin: 30px auto;
+}
+.nine>ul>li.col-md-4 {
+	margin-bottom: 50px;
+	text-align: center;
+}
+.bg {
+	margin-bottom: 20px;
+}
+.packet>img {
+	width: 30%;
+}
+.packet a {
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	width: 175px;
+	height: 40px;
+	text-align: center;
+	background: #fff;
+	line-height: 40px;
+	font-size: 30px;
+	position: relative;
+	margin-right: 40px;
+	z-index: 3;
+	bottom: 306px;
+}
+.packet a.nomargin {
+	margin-right: 0;
+}
+.one>img {
+	width: 30%;
+}
+.nine>img {
+	width: 40%;
+}
+.two>img, .three>img, .four>img, .five>img, .seven>img, .eight>img {
+	width: 30%
+}
+;
+.li_packet {
+	cursor: pointer;
+}
+.li_packet>img {
+	width: 70%;
+}
+.viewport {
+	width: 500%;
+	height: 100%;
+	display: -webkit-box;
+	overflow: hidden;
+	pointer-events: none;
+	-webkit-transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	position: relative;
+}
+.modal {
+	text-align: center;
+}
+.modal-body, .modal-footer {
+	text-align: center;
+}
+.modal-body {
+	background: #8f0111;
+}
+.modal-footer>.btn-default {
+	font-size: 30px;
+	border: hidden;
+	background-color: #e23524;
+	color: #fff;
+	width: 180px;
+}
+.modal-footer>.btn-default>a {
+	color: #fff;
+}
+h4.modal-title {
+	color: #333;
+	font-size: 40px;
+}
+@media (max-width:768px) {
+.one{ background:url(../images/1bg.jpg);}
+h4.modal-title {
+	font-size: 30px;
+}
+.modal-footer>.btn-default {
+	font-size: 16px;
+	border: hidden;
+	background-color: #e23524;
+	color: #fff;
+	width: 110px;
+}
+.one img {
+	width: 100%;
+}
+img {
+	height: auto;
+	width: auto\9;
+	width: 77%;
+}
+.nine>ul>.li_packet>img {
+	width: 100%;
+	margin-top: 10px;
+}
+.one, .two, .three, .four, .five, .seven, .eight {
+	margin: 0 auto;
+}
+.nine>ul>li.col-md-4>a>img {
+	width: 90%;
+	height: 90%;
+}
+.nine {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.nine>ul>li.col-md-4 {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.packet a {
+	width: 30%;
+	height: 28px;
+	font-size: 18px;
+	line-height: 28px;
+	bottom: 175px;
+}
+.two>img, .three>img, .four>img, .five>img, .seven>img, .eight>img {
+	width: 100%
+}
+;
+}

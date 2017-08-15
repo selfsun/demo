@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*伟创客服*/
+.bg {
+	background: url(../images/bg.jpg);
+}
+.bg .con {
+	background-color: #fff;
+	padding: 50px 100px;
+}
+.serBanner>img{ width:100%;}
+.bg ul li {
+	height: 300px;
+	border-top: 1px dashed #ccc;
+}
+.bg ul li.noBorder{ border-top:none;}
+.bg h2 {
+	color: #156918;
+	font-size: 40px;
+	font-weight: bold;
+}
+.bg h2 .one {
+	font-size: 30px;
+}
+.bg h2 .two {
+	font-size: 20px;
+}
+.bg .words {
+	margin: 30px 0;
+}
+.bg p {
+	font-size: 18px;
+	line-height: 35px;
+}
+.con img{ max-width:100%;}
+ @media (max-width:1055px) {
+.bg .con {
+	padding: 50px 20px;
+}
+.bg ul li {
+	height: 280px;
+}
+.bg h2 {
+	color: #156918;
+	font-size: 30px;
+	line-height:1.3;
+}
+.bg h2 .one {
+	font-size: 25px;
+}
+.bg h2 .two {
+	font-size: 18px;
+}
+.bg .words {
+	margin: 30px 0;
+}
+.bg p {
+	font-size: 16px;
+	line-height: 30px;
+}
+}
+ @media ( max-width:840px) {
+.bg .con {
+	padding: 30px 10px;
+}
+.bg ul li {
+	height: 230px;
+}
+.bg h2 {
+	color: #156918;
+	font-size: 25px;
+}
+.bg h2 .one {
+	font-size: 20px;
+}
+.bg h2 .two {
+	font-size: 16px;
+}
+.bg .words {
+	margin: 25px 0;
+}
+.bg p {
+	font-size: 14px;
+	line-height: 25px;
+}
+}
+ @media ( max-width:767px) {
+.bg .con {
+	padding: 25px 10px;
+}
+.bg ul li {/* border-top:none; */
+	height: 335px;
+}
+.bg h2 {
+	color: #156918;
+	font-size: 22px;
+	text-align: center;
+}
+.bg h2 .one {
+	font-size: 18px;
+}
+.bg h2 .two {
+	font-size: 16px;
+}
+.bg .words {
+	margin: 20px 0;
+}
+.bg p {
+	font-size: 14px;
+	line-height: 20px;
+}
+.bg img {
+	width: 30%;
+	text-align: center;
+}
+}

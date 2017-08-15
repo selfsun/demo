@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .name {
+            /*width: 1500px;*/
+        }
+        #link-box {
+            overflow: hidden;
+            margin: 100px 300px auto;
+            /*padding: 0 500px;*/
+            border: 1px solid #999;
+            height: 300px;
+        }
+        #link-box-in {
+            /*float: left;*/
+            height: 1200%;
+            /*margin-bottom: 20px;*/
+            margin: 0 auto;
+        }
+        #link-box-01,#link-box-02{
+            /*float: left;*/
+        }
+        #link-box-01 > li ,#link-box-02 > li {
+            line-height: 25px;
+        }
+        /*#link-box-01 > a ,#link-box-02 > a {*/
+            /*padding: 0 5px;*/
+            /*height: 90px;*/
+            /*position: relative;*/
+            /*margin-right: 6px;*/
+            /*width: 172px;*/
+            /*border: 1px solid #ebe7e7;*/
+        /*}*/
+        /*#link-box-01 > a > img ,#link-box-02 > a > img {*/
+            /*width: 100%;*/
+            /*height: 84px;*/
+        /*}*/
+        /*#link-box-01 > a > div , #link-box-02 > a > div {*/
+            /*height: 90px;*/
+            /*line-height: 90px;*/
+            /*position: absolute;*/
+            /*width: 100%;*/
+            /*color: #fff;*/
+            /*display: none;*/
+        /*}*/
+        /*#link-box-01 > a > div p {*/
+            /*line-height: 25px;*/
+            /*margin: 20px 0;*/
+        /*}*/
+        /*#link-box-01 > a > div p.normal {*/
+            /*line-height: 90px;*/
+            /*margin: 0;*/
+        /*}*/
+        /*#link-box-01 > a:hover > div ,#link-box-02 > a:hover > div  {*/
+            /*display:block;*/
+            /*background-color: rgba(0,116,182,0.8);*/
+            /*top: 0;*/
+            /*left: 0;*/
+            /*padding: 0 5px;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+<div id="link-box">
+    <div class="name" id="link-box-in">
+        <ul id="link-box-01">
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+            <li><a href="javascript:;">这句表内容区不自动换行</a></li>
+        </ul>
+        <ul id="link-box-02"></ul>
+    </div>
+</div>
+
+
+<script>
+
+
+    var speed = 40;
+    var table = document.getElementById('link-box');
+    var table1 = document.getElementById('link-box-01');
+    var table2 = document.getElementById('link-box-02');
+    table2.innerHTML = table1.innerHTML;
+
+    function Marquee(){
+        if(table2.offsetWidth-table.scrollTop<=0){
+            table.scrollTop-=table1.offsetWidth;
+        }else{
+            table.scrollTop++;
+        }
+    }
+    var MyVar = setInterval(Marquee,speed);
+    table.onmouseover= function () { clearInterval(MyVar) };
+    table.onmouseout= function () { MyVar=setInterval(Marquee,speed); };
+</script>
+</body>
+</html>

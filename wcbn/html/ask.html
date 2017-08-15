@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<title>寻医问药</title>
+<meta name="description" content="河南伟创百年健康管理有限公司">
+<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/animate.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/style.js"></script>
+<script src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/jq.marq.js"></script><!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+/*寻医问药*/
+
+
+/*.Reply {
+	height: 990px;
+}*/
+.pagination> li> a, .pagination> li> span,.pagination> li> a:hover, .pagination> li> span:hover,.jbjs .pagination> li> a:focus, .pagination> li> span:focus{color: #28ae61;}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    cursor: default;
+    background-color: #28ae61;
+    border-color: #28ae61;
+}
+.pagination> .active> a, body.dark .pagination> .active> a{ color:#fff;}
+.portlet .btn-primary{ background-color: #28ae61;border-color: #28ae61;}
+
+.askBanner>img{ width:100%;}
+.reply {
+	background: #f6f6f6;
+	margin-top: 20px;
+}
+.rightCon>ul>li>h5, .rightCon>ul>li>h2 {
+	color: #333;
+}
+.rightCon>ul>li>h2 {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+}
+.rightCon>ul>li>h2>span {
+	display: inline-block;
+	width: 44px;
+	height: 16px;
+	background: #28ae61;
+	font-size: 10px;
+	line-height: 16px;
+	color: #fff;
+	margin-left: 15px;
+	text-align: center;
+}
+.rightCon>ul>li {
+	background: #fff;
+	padding: 15px;
+	margin-top: 13px;
+}
+.rightCon>ul>li>.message {
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+.rightCon>ul>li>p.huifu {
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+.container>.row>.rightCon>ul>li>p {
+	margin-top: 0;
+}
+.container>.row>.rightCon>ul>li>p.hello {
+	border-top: 1px solid #28ae61;
+	font-size: 12px;
+	line-height: 20px;
+	padding-top: 15px;
+}
+.hello span {
+	color: #28ae61;
+	font-weight: bold;
+}
+.portlet{ margin-top:20px; background:#fff; padding:10px 20px;}
+.portlet .input-lg, .form-group-lg .form-control{ padding:10px; }
+.portlet .sex{ line-height:46px; height:46px;}
+.sex .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{ position:relative;}
+.sub{ text-align:center;}
+.sub .btn-lg,.sub .btn-group-lg > .btn{ padding:5px 10px; font-size:14px;}
+.rightCon>nav>.pagination-lg > li > a,.rightCon>nav>.pagination-lg > li > span{ padding:6px 12px; font-size:14px;}
+.reply .input-lg,.reply .form-group-lg .form-control{ font-size:16px;}
+.portlet .form-group{ margin-bottom:20px;}
+@media(max-width:768px){ .reply{ margin-top:0;}}
+</style>
+</head>
+
+<body>
+<div class="header-home" style="z-index:3;">
+  <div class=" fixed-header">
+    <div class="container">
+      <div class="head"> <img src="images/logo.png" class="headL"/> <img src="images/number.png" class="headR" /> </div>
+    </div>
+    <!--header!-->
+    <nav class="navbar navbar-default navbar_num" role="navigation">
+      <div class="container  nav_bar"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>
+          <span class="">导航</span>
+          </button>
+          <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="javascript:;">慢性病采集</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li class="active"><a href="ask.html">寻医问药</a></li>
+            <li><a href="intro.html">疾病介绍</a></li>
+            <li><a href="health.html">健康百科</a></li>
+            <li><a href="product.html">服务产品</a></li>
+            <li><a href="service.html">伟创客服</a></li>
+            <li><a href="about.html">关于我们</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:;"><i class="fa fa-user" aria-hidden="true"></i>数据采集平台</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<span class="caret"></span></a>
+              <ul class="dropdown-menu menu_do" role="menu">
+                <li><a href="javascript:;"><i class="glyphicon glyphicon-magnet" ></i>后台管理</a></li>
+                <li><a href="weixin.html"><i class="fa fa-weixin" ></i>微信管理</a></li>
+                <li><a href="javascript:;"><i class="glyphicon glyphicon-plus-sign" ></i>慢性病管理</a></li>
+                <li><a href="javascript:;"><i class="fa fa-key" ></i>修改密码</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;"><i class="glyphicon glyphicon-log-out" ></i>退出</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </nav>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<div class="askBanner"><img src="images/ask.jpg"></div>
+<div class="container reply">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="portlet box green-jungle " >
+        <div class="portlet-body">
+          <form role="form" id="form_ask" method="post" action="/askquestion/sub">
+            <div class="form-body">
+              <div class="form-group">
+                <label class="control-label input-lg">咨询标题(必填)</label>
+                <input name="title" type="text" class="form-control input-lg" placeholder="字数限制2-20个字">
+              </div>
+              <div class="form-group">
+                <label class="control-label input-lg">病情介绍</label>
+                <textarea name="content" rows="5" class="form-control input-lg" placeholder="主要症状、发病时间、治疗经过、病情变化、想得到怎样的帮助（不少于25个字）。"></textarea>
+              </div>
+              <div class="hrb"></div>
+              <div class="form-group">
+                <div class="row">
+                  <label for="realname" class="col-sm-2 col-xs-3 control-label input-lg">姓&nbsp;&nbsp;&nbsp;名:</label>
+                  <div class="col-sm-10 col-xs-9">
+                    <div class="input-group">
+                      <div class="input-group-addon" style="color:red">*</div>
+                      <input type="text" class="form-control input-lg" name="username" id="realname" placeholder="姓名">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label for="phone" class="col-sm-2 col-xs-3 control-label input-lg">手机号:</label>
+                  <div class="col-sm-10 col-xs-9">
+                    <div class="input-group">
+                      <div class="input-group-addon" style="color:red">*</div>
+                      <input name="phone" type="text" class="form-control input-lg" value="" placeholder="手机号">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label class="col-sm-2 col-xs-3 control-label input-lg">性&nbsp;&nbsp;&nbsp;别:</label>
+                  <div class="col-sm-10 sex col-xs-9">
+                    <div class="mt-radio-inline">
+                      <label class="radio-inline">
+                        <input name="sex" value="1" checked="" type="radio">
+                        男 <span></span> </label>
+                      <label class="radio-inline">
+                        <input name="sex" value="2" type="radio">
+                        女 <span></span> </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label for="age" class="col-sm-2 col-xs-3 control-label input-lg">年&nbsp;&nbsp;&nbsp;龄:</label>
+                  <div class="col-sm-10 col-xs-9">
+                    <div class="input-group">
+                      <input type="number" name="age" class="form-control input-lg" id="age" placeholder="年龄">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <label for="area" class="col-sm-2 col-xs-3 control-label input-lg">地&nbsp;&nbsp;&nbsp;区:</label>
+                  <div class="col-sm-10 col-xs-9">
+                    <div class="input-group">
+                      <select id="area1" name="area_id1" class="form-control area-sel input-lg">
+                      </select>
+                      <select id="area2" name="area_id2" class="form-control area-sel input-lg hidden">
+                      </select>
+                      <select id="area3" name="area_id3" class="form-control area-sel input-lg hidden">
+                      </select>
+                      <select id="area4" name="area_id4" class="form-control area-sel input-lg hidden">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-12 sub"> <a class="btn btn-primary btn-lg" href="javascript:;" id="subBtn">提交</a> </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 rightCon">
+      <ul>
+        <li>
+          <h2>肾炎饮食控<span>已回复</span></h2>
+          <span class="message">张女士   |    女   |   34岁  |  2016-12-12   11：08：50</span><br>
+          <p class="huifu">肾炎医生开药后嘱咐低蛋白、低盐饮食，限制蛋豆制品类摄入，那我具体应该怎么控制摄入量呢？否该停药？</p>
+          <p class="hello"><span>回复：</span>指导意见：您好，低蛋白饮食是指一天内蛋白质摄入量在20-40g。但蛋白质是构成人体一切组织的基础，所以每天还是需要一定量的蛋白摄入，选富含优质蛋白的食物，这类食物以动物类为主，如蛋、禽、鱼、肉，尽量少食或不食植物性蛋白。肉类限制每餐不超过50g；低盐饮食是指盐每天控制在1-4g，或者酱油5-10ml，为减少盐的摄入，烹调可多用醋，醋可强化咸味。祝您早日康复！活愉快！</p>
+        </li>
+        <li>
+          <h2>腹泻<span>已回复</span></h2>
+          <span class="message">张女士   |    女   |   34岁  |  2016-12-12   11：08：50</span><br>
+          <p class="huifu">我家宝宝从昨天开始排便先是泡沫样，今天又像蛋花样，这种情况严重吗？需要去医院打针吗？</p>
+          <p class="hello"><span>回复：</span>指导建议：您好，根据您的描述，您宝宝可能是轮状病毒感染引起的腹泻，注意时刻观察宝宝的精神状态、皮肤弹性、口腔黏膜、眼窝有无凹陷、眼泪有无、尿量变化等，腹泻易导致宝宝身体不同程度脱水，建议还是去正规医院看医生。若发现脱水一般首要处理措施需静脉补液或口服补液盐。妈妈要注意每次哺乳时间要缩短，少量多次，辅食暂停；保持臀部及会阴部皮肤清洁、干爽，便后用温水清洗，柔软毛巾擦拭。祝您宝宝早日康复！</p>
+        </li>
+        <li>
+          <h2>关节疼痛<span>已回复</span></h2>
+          <span class="message">张女士   |    女   |   34岁  |  2016-12-12   11：08：50</span><br>
+          <p class="huifu">最近几个月右手大拇指与食指下面经常疼，尤其是玩手机时明显，请问这是什么情况呢？</p>
+          <p class="hello"><span>回复：</span>问题分析：您好，根据您的描述可能是长期关节劳损导致的腱鞘炎，建议到正规医院进行体格检查确诊。 指导建议：注意手指、手腕正确用姿；工作生活避免长时间用手关节，结束后用热水泡手，搓手指和手腕；避免手部受凉；疼痛厉害时可热敷或热盐敷。祝您早日康复！</p>
+        </li>
+      </ul>
+      <nav class="button">
+        <ul class="pagination pagination-lg">
+          <li class="disabled"><a href="javascript:;"><<</a></li>
+          <li class='active'><a href='javascript:;'>1</a></li>
+          <li><a href='javascript:;'>2</a></li>
+          <li><a href='javascript:;'>3</a></li>
+          <li><a href='javascript:;'>>></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+<footer id="footer" style="padding-top:20px;">
+  <div class="container">
+    <div class="row">
+      <div class="footer-ribbon" style="margin-top:-40px;"> <span>联系我们</span> </div>
+      <div class="col-md-4">
+        <p style="text-align:center;color:#fff;font-size:30px; margin-top: 40px;"><i class="fa fa-phone"></i> <strong>电话:</strong> 400-990-3736</p>
+        <p style="text-align: center;margin: 20px;font-size: 12px;color:#fff;"><i class="fa fa-map-marker"></i> <strong>地址:</strong> 河南郑州市金水区农科路38号2号楼501</p>
+      </div>
+      <div class="col-md-4">
+        <div class="newsletter" style="margin-top:20px;">
+          <h4 style='text-align:center;'> <img src="images/ewm.jpg" style="max-width:35%" class="center-block"></h4>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="newsletter">
+          <h4 style='text-align:center;'>网站导航</h4>
+        </div>
+        <ul style="display:block;text-align:center;list-style:none;">
+          <li><a href="http://www.hnwcbn.com/askquestion/index" target="_blank">寻医问药</a></li>
+          <li><a href="http://www.hnwcbn.com/article/disease" target="_blank">疾病介绍</a></li>
+          <li><a href="http://www.hnwcbn.com/article/health" target="_blank">健康百科</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p style="text-align:center;color:#fff;">版权所有:河南伟创百年健康管理有限公司© 2016.<br>
+            <a target="_blank" href="http://www.miitbeian.gov.cn">豫ICP备16037884号</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

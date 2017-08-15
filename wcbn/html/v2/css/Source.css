@@ -1,0 +1,125 @@
+
+
+.sub_title_bar::after {
+	clear: both;
+	content: "​";
+	display: block;
+	height: 0;
+}
+.page_media_list .sub_title_bar {
+	padding-top: 10px;
+}
+
+.sub_title_bar {
+	line-height: 55px;
+}
+.sub_title_bar .info {
+	float: left;
+}
+.sub_title_bar>a>i {
+	margin-right: 5px;
+}
+.page_media_list .sub_title_bar h3 {
+	display: inline-block;
+	vertical-align: middle;
+}
+.sub_title_bar h3 {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	color: #333;
+}
+.page_media_list .sub_title_bar .btn_card_rank, .page_media_list .sub_title_bar .btn_list_rank {
+	color: #fff;
+	display: inline-block;
+	height: 20px;
+	position: relative;
+	vertical-align: middle;
+	width: 20px;
+	z-index: 1;
+}
+.page_media_list .sub_title_bar .btn_new {
+	float: right;
+	margin-top: 12px;
+}
+
+
+.info>h3 {
+	display: inline-block;
+	margin-right: 10px;
+}
+.sub_title_bar .rank_style {
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: middle;
+}
+.rank_style a {
+	border: 1px solid #b2b2b2;
+	padding: 1px 2px;
+	color: #b2b2b2;
+}
+.rank_style .current {
+	color: #333;
+	border: 1px solid #333;
+}
+.empty_tips {
+	color: #8d8d8d;
+	font-size: 14px;
+	padding: 100px 0;
+	text-align: center;
+}
+/*视频*/
+
+.highlight_box {
+	background-color: #f4f5f9;
+	line-height: 1.6;
+	margin-bottom: 20px;
+	padding: 9px 30px;
+	position: relative;
+}
+.highlight_box .links {
+	font-size: 0;
+	margin-left: -14px;
+	padding: 3px 0;
+}
+ul, ol {
+	list-style-type: none;
+	padding-left: 0;
+}
+.highlight_box .links .links_item {
+	border-left-color: #d9dadc;
+	font-size: 14px;
+	margin-top: -0.2em;
+	vertical-align: middle;
+}
+.links_item:first-child {
+	border-left-width: 0;
+}
+.links_item {
+	border-left: 1px solid #d9dadc;
+	display: inline-block;
+	line-height: 1em;
+	padding: 0 1em;
+	vertical-align: middle;
+}
+
+
+/*table*/
+
+.pay_video_table_wrp {
+	margin-top: 30px;
+}
+.table_wrp.with_border .table {
+	border: 1px solid #e7e7eb;
+}
+.table {
+	background-color: #fff;
+	border-bottom: 1px solid #e7e7eb;
+	border-spacing: 0;
+	border-top: 1px solid #e7e7eb;
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+}
+#li01{ border-left:1px solid #e7e7eb;}
+.sub_title_bar>a.btn:hover,.sub_title_bar>a.btn:focus{ color:#fff;}

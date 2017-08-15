@@ -14,6 +14,8 @@
 <script src="js/jquery.js"></script>
 <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=rNwvhjIgn75qeVmxE3Q0pE9b"></script>
+<script type="text/javascript" src="js/ditu.js"></script>
+
 <style type="text/css">
 	.about>img{ width:100%;}
 	.us>h3{ text-align:center; margin:30px 0;}
@@ -117,7 +119,7 @@ $("#googlemaps").attr("style","height:300px");
 	window.point = new BMap.Point(114.315139,34.762035);
 	map.centerAndZoom(point, 18);
         map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT}));
-        map.addControl(new BMap.NavigationControl())
+        map.addControl(new BMap.NavigationControl());
 	var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
 	map.openInfoWindow(infoWindow,point); //开启信息窗口
         map.addEventListener("click", function(e){        

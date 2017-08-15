@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<title>搜索页面</title>
+<meta name="description" content="河南瑞华和众投资股份有限公司">
+<link rel="shortcut icon" href="images/rhhz.ico" type="image/x-icon" />
+<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/style.js"></script>
+<script type="text/javascript" src="http://www.dasongzhiyao.net/statics/js/cookie.js"></script>
+<script type="text/javascript" src="http://www.dasongzhiyao.net/statics/js/search_common.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<style>
+.search>.tit {
+	height: 100px;
+	text-align: center;
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: #f9f9f9;
+}
+.search>.tit>.col-md-7 {
+	margin-top: 15px;
+}
+.search>.tit>.col-md-7>.input-group>input {
+	width: 445px;
+	border: 1px solid #00a3e9;
+	border-radius: 0;
+	margin-left: 35px;
+}
+.search>.tit>.col-md-7>.input-group button {
+	width: 150px;
+	background: #00a3e9;
+	border: 1px solid #00a3e9;
+	border-radius: 0;
+}
+.search>.tit>.col-md-5 {
+	line-height: 60px;
+	text-align: left;
+	color: #00a3e9;
+}
+.sr_lists {
+	border: 1px solid #e3e3e3;
+	padding: 20px;
+	margin-bottom: 50px;
+	padding-bottom: 40px;
+}
+.wrap>div>h5 {
+	line-height: 25px;
+}
+.sr_lists .c li div.adds {
+	color: #00a3e9;
+}
+
+/**
+ * Canvas
+ */
+
+[canvas] {
+ z-index: 1;
+}
+ [canvas=sr_main] {
+ overflow-y: auto;
+ position: relative;
+ background-color: white;
+ -webkit-overflow-scrolling: touch;
+}
+[canvas=container]:before, [canvas=container]:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+/**
+ * Off-Canavs
+ */
+
+[off-canvas] {
+ display: none;
+ position: fixed;
+ overflow: hidden;
+ overflow-y: auto;
+ color: white;
+ -webkit-overflow-scrolling: touch;
+}
+ [off-canvas*=top] {
+ width: 100%;
+ height: 255px;
+ top: 0;
+}
+ [off-canvas*=right] {
+ width: 255px;
+ height: 100%;
+ top: 0;
+ right: 0;
+}
+ [off-canvas*=bottom] {
+ width: 100%;
+ height: 255px;
+ bottom: 0;
+}
+ [off-canvas*=left] {
+	width:100px;
+ height: 100%;
+ top: 0;
+ left: 0;
+}
+ [off-canvas*=reveal] {
+ z-index: 0;
+}
+ [off-canvas*=push] {
+ z-index: 1;
+}
+ [off-canvas*=overlay] {
+ z-index: 9999;
+}
+
+/**
+ * Animation
+ */
+
+[canvas], [off-canvas] {
+ -webkit-transform: translate( 0px, 0px );
+ -ms-transform: translate( 0px, 0px );
+ transform: translate( 0px, 0px );
+ -webkit-transition: -webkit-transform 300ms;
+ transition:         transform 300ms;
+ -webkit-backface-visibility: hidden;
+}
+
+/**
+ * Print
+ */
+
+@media print {
+ [canvas] {
+ -webkit-transform: translate( 0px, 0px ) !important;
+ -ms-transform: translate( 0px, 0px ) !important;
+ transform: translate( 0px, 0px ) !important;
+}
+ [off-canvas] {
+ display: none !important;
+}
+}
+.sr_lists>.con {
+	border-left: 1px solid #efefef;
+	padding-left: 20px;
+}
+.sr_lists>.con>ul>li {
+	margin: 10px 0;
+	border-bottom: 1px solid #efeded;
+	padding-bottom: 20px;
+}
+.sr_lists>.con>ul>li>div>a>img {
+	float: left;
+	background: #fff;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.sr_lists>.con>ul>li>div>h5>a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	line-height: 35px;
+}
+.sr_lists>.con>ul>li>div>p {
+	font-size: 12px;
+	line-height: 25px;
+}
+.adds {
+	color: #00a2ea;
+	font-size: 12px;
+}
+.sr_lists>.left_1>div {
+	border-bottom: 1px solid #efeded;
+	text-align: right;
+	padding-right: 50px;
+	font-weight: bold;
+}
+.sr_lists>.left_1>div>h4 {
+	color: #333;
+	font-weight: bold;
+}
+.sr_lists>.left_1>div>h4.blue {
+	color: #00a3e9;
+}
+.sr_lists>.left_1>div.time {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.time>ul>li {
+	line-height: 30px;
+}
+.time>ul>li>a {
+	color: #00a3e9;
+}
+.sr_lists>.left_1>div.time>h4 {
+	line-height: 30px;
+	color: #666;
+}
+/*sb-1*/
+
+.sb-1>div {
+	border-bottom: 1px solid #efeded;
+	text-align: right;
+}
+.sb-1>div>h5 {
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.sb-1>div.time {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.sb-1>.time>ul>li {
+	line-height: 30px;
+}
+.sb-1>.time>ul>li>a {
+	color: #fff;
+}
+.sb-1>div.time>h5 {
+	line-height: 30px;
+	color: #fff;
+}
+@media (max-width:767px) {
+.search>.tit {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.search>.tit>.col-md-7>.input-group>input {
+	margin-left: 0;
+	width: 100%;
+}
+.search>.tit>.col-md-7>.input-group button {
+	width: 80px;
+}
+.search>.tit {
+	padding: 0;
+}
+.search>.tit>.col-md-5 {
+	text-align: center;
+}
+.sr_lists {
+	border: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+.sr_head>.sear {
+	text-align: center;
+}
+.sr_head>.sear>a.toggle-left {
+	float: left;
+	color: #00a3e9;
+	font-size: 18px;
+	padding-left: 15px;
+}
+.sr_head {
+	border-bottom: 1px solid #00a3e9;
+	line-height: 32px;
+}
+}
+</style>
+</head>
+<body>
+<div class="header-home hidden-xs" style="z-index:3;">
+  <div class=" fixed-header">
+    <div class="container">
+      <div class="row">
+        <div class="head"> <a href="javascript:;"><img src="images/logo.png" class="headL"/></a> <img src="images/number.png" class="headR" /> </div>
+      </div>
+    </div>
+    <!--header!-->
+    <nav class="navbar navbar-default navbar_num" role="navigation">
+      <div class="container  nav_bar"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed col-xs-3" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="">导航</span> </button>
+            <span class="col-xs-6 hidden-lg hidden-md hidden-sm">400-990-3736</span> <a class="navbar-brand hidden-lg hidden-md hidden-sm col-xs-3" href="javascript:;" style="background:#fff;color: #333;"><img src="images/Rlogo.png"></a> </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav_left nav-pills">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="about.html">关于瑞华</a></li>
+              <li><a href="culture.html">企业文化</a></li>
+              <li class="dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">最新动态 <span class="caret"></span> </a>
+                <ul class="dropdown-menu menu_do" role="menu">
+                  <li> <a href="news.html"> 投资动态 </a> </li>
+                  <li> <a href="video.html">视频中心 </a> </li>
+                </ul>
+              </li>
+              <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索">
+              </div>
+              <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+          </div>
+        </div>
+        <!-- /.navbar-collapse --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </nav>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<!--<div class="clr sr_body sr_list">-->
+
+<div class="sr_main search container col-xs-12"  canvas="sr_main">
+  <div class="sr_head row visible-xs-block">
+    <div class="sear" id="search"> <a class="toggle-left visible-xs-block"><i class="glyphicon glyphicon-align-justify"></i></a> <a href="javascript:;" onclick="setmodel(53, $(this),2, '1');"  class="on">瑞华和众</a> </div>
+  </div>
+  <div class="row tit">
+    <div class="col-md-7">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">搜索</button>
+        </span> </div>
+      <!-- /input-group --> 
+    </div>
+    <!-- /.col-lg-6 -->
+    <div class="jg col-md-5">获得约<span> 0 </span>条结果 （用时0.10 秒）</div>
+  </div>
+  <div class="sr_lists row">
+    <div class="left_1 col-md-3 hidden-xs col-xs-3">
+      <div style="margin-top:20px;">
+        <h4>搜索结果</h4>
+        <h4 class="blue">SEARCH RESULT</h4>
+      </div>
+      <div class="time">
+        <h4>按时间搜索</h4>
+        <ul>
+          <li><a href="javascript:;" class="ac">全部时间</a></li>
+          <li><a href="javascript:;" class="ac">一天内</a></li>
+          <li><a href="javascript:;" class="ac">一周内</a></li>
+          <li><a href="javascript:;" class="ac">一月内</a></li>
+          <li><a href="javascript:;" class="ac">一年内</a></li>
+        </ul>
+      </div>
+      <div class="bgno time">
+        <h4>搜索历史</h4>
+        <ul id='history_ul'>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-9 con" style="background:#fff;">
+      <ul>
+        <li>
+          <div> <a href="javascript:;"><img src="images/1.jpg" width="70" height="70" /></a>
+            <h5><a href="javascript:;">瑞华和众公司成立的初衷就是要打造一支<font color=red>志同道合</font></a></h5>
+            <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完……</p>
+          </div>
+          <div class="adds">发布时间：2017-02-07 14:20:44</div>
+        </li>
+        <li>
+          <div>
+            <h5><a href="javascript:;">瑞华和众公司成立的初衷就是要打造一支<font color=red>志同道合</font></a> </h5>
+            <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完…… </p>
+          </div>
+          <div class="adds">发布时间：2017-02-07 08:41:36</div>
+        </li>
+        <li>
+          <div>
+            <h5><a href="javascript:;">瑞华和众公司成立的初衷就是要打造一支<font color=red>志同道合</font></a> </h5>
+            <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完…… </p>
+          </div>
+          <div class="adds">发布时间：2017-02-07 08:41:36</div>
+        </li>
+        <li>
+          <div>
+            <h5><a href="javascript:;">瑞华和众公司成立的初衷就是要打造一支<font color=red>志同道合</font></a> </h5>
+            <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完…… </p>
+          </div>
+          <div class="adds">发布时间：2017-02-07 08:41:36</div>
+        </li>
+        <li>
+          <div>
+            <h5><a href="javascript:;">瑞华和众公司成立的初衷就是要打造一支<font color=red>志同道合</font></a> </h5>
+            <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完…… </p>
+          </div>
+          <div class="adds">发布时间：2017-02-07 08:41:36</div>
+        </li>
+      </ul>
+      <nav aria-label="Page navigation" style="text-align:center">
+        <ul class="pagination">
+          <li class="disabled"> <a href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li> <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+        </ul>
+      </nav>
+    </div>
+    <footer class="visible-xs-block">
+      <p>版权所有:河南瑞华和众投资股份有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">豫ICP备17006991号</a></p>
+    </footer>
+  </div>
+</div>
+<div off-canvas="sb-1 left reveal " style="background:#00a3e9; padding:50px 10px 0;" class="sb-1"> 
+  <!-- Left Slidebar content -->
+  
+  <div>
+    <h5>搜索结果</h5>
+    <!--<h5 class="blue">SEARCH RESULT</h5>--> 
+  </div>
+  <div class="time">
+    <h5>按时间搜索</h5>
+    <ul>
+      <li><a href="javascript:;" class="ac">全部时间</a></li>
+      <li><a href="javascript:;" class="ac">一天内</a></li>
+      <li><a href="javascript:;" class="ac">一周内</a></li>
+      <li><a href="javascript:;" class="ac">一月内</a></li>
+      <li><a href="javascript:;" class="ac">一年内</a></li>
+    </ul>
+  </div>
+  <div class="bgno time">
+    <h5>搜索历史</h5>
+    <ul id='history_ul'>
+    </ul>
+  </div>
+</div>
+<div class="top_icon hidden-lg hidden-md"> <a href="javascript:scroll(0,0)"> <i class="glyphicon glyphicon-upload"></i> </a> </div>
+<footer class="hidden-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 one">
+        <h4>联系我们</h4>
+        <p>Q Q：122554522</p>
+        <p>电话：400-990-3736</p>
+        <p>地址: 郑州市金水区花园北路62号</p>
+      </div>
+      <div class="col-md-4"> <a href="index.html">首页</a> <a href="about.html">关于瑞华</a> <a href="culture.html">企业文化</a> <a href="news.html">最新动态</a> <a href="contact.html">联系我们</a> </div>
+      <div class="col-md-4 one">
+        <h4>联系我们</h4>
+        <p>邮箱：122554522@163.com</p>
+        <p>网址：http://www.ruihuahz.com</p>
+      </div>
+    </div>
+  </div>
+  <p>版权所有:河南瑞华和众投资股份有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">豫ICP备17006991号</a></p>
+</footer>
+<script type="text/javascript" src="http://www.dasongzhiyao.net/statics/js/search_history.js"></script> 
+
+<!--</div>--> 
+<script type="text/javascript">
+	window.jQuery || document.write('<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"><\/script>')</script> 
+<script src="js/slidebars.js"></script> 
+<script>
+( function ( $ ) {
+	$( document ).ready( function () {
+		var controller = new slidebars();
+		
+		controller.init();
+		
+		// Toggle left
+		$( '.toggle-left' ).on( 'click', function ( event ) {
+			event.preventDefault();
+			event.stopPropagation();
+			
+			controller.toggle( 'sb-1' );
+		});
+		
+		
+				
+	var _width = $(window).width();
+	if(_width>=768&&_width<992){
+		$(".col-xs-12").removeClass("col-xs-12").addClass("col-xs-9");
+		}else if($(window).width()<768){
+			$(".sr_main").addClass("col-xs-12");	
+		}else{
+			
+			$(".sr_main").removeClass("col-xs-12");
+		}
+			});
+		}) ( jQuery );
+</script>
+</body>
+</html>

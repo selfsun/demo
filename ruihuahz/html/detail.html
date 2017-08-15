@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<title>最新动态——详情页</title>
+<meta name="description" content="河南瑞华和众投资股份有限公司">
+<link rel="shortcut icon" href="images/rhhz.ico" type="image/x-icon" />
+<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/style.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+.news {
+	background: url(../images/news.png) no-repeat;
+	background-position-x: 50%
+}
+.news_body {
+	background: #fff;
+	border: 1px solid #eeeeee;
+	margin-top: 220px;
+	padding: 30px;
+	margin-bottom: 60px;
+}
+.news_body .icon {
+	border-bottom: 1px solid #f4f3f3;
+	margin-bottom: 30px;
+}
+.news_body .icon p {
+	font-size: 14px;
+}
+.news_body .icon p a {
+	text-decoration: none;
+}
+.news_body .icon p.right_l a {
+	margin: 0 5px;
+}
+.news_body .icon p.right_l a.active {
+	color: #00a3e9;
+	font-weight: bold;
+}
+.news_body .icon .right_p {
+	padding-bottom: 20px;
+	text-align: right;
+}
+.news_body .icon .right_p a.active {
+	border-bottom: 1px solid #00a3e9;
+	padding-bottom: 23px;
+}
+.news_body .icon .right_p a:hover {
+	padding-bottom: 23px;
+}
+.news_body .icon .right_p span {
+	margin: 0 8px;
+}
+.news_body>.title_h {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f4f3f3;
+	margin-bottom: 30px;
+}
+.news_body>.title_h>h3 {
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 20px;
+	line-height: 30px;
+}
+.news_body>.title_h>p {
+	color: #666;
+}
+.news_body>.cont>p {
+	line-height: 25px;
+	font-size: 14px;
+	text-indent: 2em;
+	margin: 15px 0;
+	line-height: 30px;
+}
+.news_body>.cont>img {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+@media (max-width:768px) {
+.news {
+	background: none;
+	background: #eff3f8;
+}
+.news_body {
+	margin: 15px;
+}
+.news_body .icon .right_p {
+	display: none;
+}
+.news_body .icon p.right_l {
+	padding-bottom: 20px;
+}
+.news_body .icon p.right_l a {
+	margin: 0 3px;
+}
+.news_body>.title_h>h3 {
+	font-size: 16px;
+}
+}
+</style>
+</head>
+<body>
+<div class="header-home" style="z-index:3;">
+  <div class=" fixed-header">
+    <div class="container">
+      <div class="row">
+        <div class="head"> <a href="javascript:;"><img src="images/logo.png" class="headL"/></a> <img src="images/number.png" class="headR" /> </div>
+      </div>
+    </div>
+    <!--header!-->
+    <nav class="navbar navbar-default navbar_num" role="navigation">
+      <div class="container  nav_bar"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed col-xs-3" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="">导航</span> </button>
+            <span class="col-xs-6 hidden-lg hidden-md hidden-sm">400-990-3736</span> <a class="navbar-brand hidden-lg hidden-md hidden-sm col-xs-3" href="javascript:;" style="background:#fff;color: #333;"><img src="images/Rlogo.png"></a> </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav_left nav-pills">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="about.html">关于瑞华</a></li>
+              <li><a href="culture.html">企业文化</a></li>
+              <li class="dropdown active"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">最新动态 <span class="caret"></span> </a>
+                <ul class="dropdown-menu menu_do" role="menu">
+                  <li> <a href="news.html"> 投资动态 </a> </li>
+                  <li> <a href="video.html">视频中心 </a> </li>
+                </ul>
+              </li>
+              <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索">
+              </div>
+              <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+          </div>
+        </div>
+        <!-- /.navbar-collapse --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </nav>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<div class="news">
+  <div class="container">
+    <div class="row">
+      <div class="news_body col-md-12">
+        <div class="icon">
+          <p class="right_l"><i class="fa fa-home"></i><a href="index.html">首页</a><i class="fa fa-caret-right "></i><a href="news.html">最新动态</a><i class="fa fa-caret-right "></i><a href="news.html">投资动态</a><i class="fa fa-caret-right "></i><a href="javascript:;" class="active">正文</a></p>
+          <p class="right_p"><a href="news.html" class="active">投资动态</a><span>|</span><a href="javascript:;">视频中心</a> 
+        </div>
+        <div class="title_h">
+          <h3>瑞华和众公司成立的初衷就是要打造一支志同道合，融合“诚信”</h3>
+          <p>2015-10-12&nbsp;&nbsp;点击<span>200</span>次</p>
+        </div>
+        <div class="cont">
+          <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完美的个人，打造完美的团队，把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。脑卒中急性期通常是指发病后的1-2周，此其患者从患侧肢体无主动活动到肌张力开始恢复，并有弱的屈肌与伸肌共同运动。康复治疗是在神经内科或神经外科常规治疗的基础上，患者病情稳定48小时后开始进行。本期的康复治疗为一级康复，其目标是通过被动活动和主动参与，促进偏瘫侧肢体肌张力的恢复和主动活动的出现，一级肢体正确的摆放和体位的转换，预防可能出现的压疮、关节肿胀、下肢深静脉血栓形成、尿路感染和呼吸道的感染等并发症。对偏瘫侧的各种感觉刺激、对患者的心理疏导，一级其他相关的床边康复治疗，有助于脑卒中患者受损功能的改善。同时，积极控制相关的危险因素，做好脑卒中的二级预防。</p>
+          <img src="images/team.jpg">
+          <p>把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完美的个人，打造完美的团队，把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。三人行，必有我师。不求完美的个人，打造完美的团队！三人行，必有我师。不求完美的个人，打造完美的团队，把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。</p>
+          <p>脑卒中急性期通常是指发病后的1-2周，此其患者从患侧肢体无主动活动到肌张力开始恢复，并有弱的屈肌与伸肌共同运动。康复治疗是在神经内科或神经外科常规治疗的基础上，患者病情稳定48小时后开始进行。本期的康复治疗为一级康复，其目标是通过被动活动和主动参与，促进偏瘫侧肢体肌张力的恢复和主动活动的出现，一级肢体正确的摆放和体位的转换，预防可能出现的压疮、关节肿胀、下肢深静脉血栓形成、尿路感染和呼吸道的感染等并发症。对偏瘫侧的各种感觉刺激、对患者的心理疏导，一级其他相关的床边康复治疗，有助于脑卒中患者受损功能的改善。同时，积极控制相关的危险因素，做好脑卒中的二级预防。把“瑞”放在公司名称的首位，代表诚信是公司创业、立业之本。一人为人，二人为从，三人为众。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="top_icon hidden-lg hidden-md"> <a href="javascript:scroll(0,0)"> <i class="glyphicon glyphicon-upload"></i> </a> </div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 one">
+        <h4>联系我们</h4>
+        <p>Q Q：122554522</p>
+        <p>电话：400-990-3736</p>
+        <p>地址: 郑州市金水区花园北路62号</p>
+      </div>
+      <div class="col-md-4"> <a href="index.html">首页</a> <a href="about.html">关于瑞华</a> <a href="culture.html">企业文化</a> <a href="news.html">最新动态</a> <a href="contact.html">联系我们</a> </div>
+      <div class="col-md-4 one">
+        <h4>联系我们</h4>
+        <p>邮箱：122554522@163.com</p>
+        <p>网址：http://www.ruihuahz.com</p>
+      </div>
+    </div>
+  </div>
+  <p>版权所有:河南瑞华和众投资股份有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">豫ICP备17006991号</a></p>
+</footer>
+</body>
+</html>

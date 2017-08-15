@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>医药宝典</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .content-all {
+        padding: 10px;
+        overflow: hidden;
+    }
+    .content-all > .medical-list{
+        overflow: hidden;
+        color: #007c3a;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .content-all > .medical-list>a>i{
+        margin-right: 10px;
+        font-size: 24px;
+        padding-top: 10px;
+    }
+    .content-all > .medical-list>a{
+        color: #666;
+        display: block;
+        border-bottom: 1px dashed #eaeaea;
+        line-height: 45px;
+        height: 45px;
+    }
+    .content-all > .medical-list:first-child>a{
+        border-top: 1px dashed #eaeaea;
+        margin-top: 40px;
+    }
+    .content-all > .medical-list>a:hover{
+        color: #007c3a;
+        background-color: #f3f7fb;
+        border-left: 5px solid #007c3a;
+    }
+    .content-all > .medical-list>a:hover>i{ padding-left: 10px; }
+
+    .content-all > .medical-list>a>a:nth-of-type(1){font-size: 16px; }
+    .content-all > .medical-list>a>span.pull-right
+    {
+        margin-right: 35px;
+        letter-spacing: 1.5px;
+        display: none;
+    }
+    .content-all > .medical-list>a>.medical-right{ float: right; }
+
+    .content-all >.page-jxzy{ margin-top: 40px; }
+    @media (max-width:768px) {
+
+        .content-all { padding: 0; }
+        .content-all > .medical-list{ font-size: 12px; }
+        .content-all > .medical-list>a>i{
+            margin-right: 6px;
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        .content-all > .medical-list>a>span:last-child{
+            margin-right: 20px;
+            letter-spacing: 1.2px;
+        }
+        .content-all > .medical-list:first-child>a , .content-all >.page-jxzy{ margin-top: 20px; }
+        .content-all > .medical-list>a:hover{ border-left: 3px solid #007c3a; }
+    }
+
+</style>
+<body>
+
+<!--nav开始-->
+<div id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header visible-xs">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <div class="icon pull-left hidden-xs"><a href="index.html"><img src="images/logo.png" /></a></div>
+                <ul class="nav navbar-nav nav-pills pull-right">
+                    <li class="text-center">
+                        <a href="index.html">首页<p>HOME</p></a>
+                    </li>
+                    <li class="text-center"><a href="company.html">企业概况<p>COMPANY</p></a></li>
+                    <li class="text-center"><a href="products.html">产品中心<p>PRODUCTS</p></a></li>
+                    <li class="text-center"><a href="news.html">新闻动态<p>NEWS</p></a></li>
+                    <li class="active text-center"><a href="medical.html">医药宝典<p>MEDICINE</p></a></li>
+                    <li class="text-center"><a href="jobs.html">人才招聘<p>JOBS</p></a></li>
+                    <li class="text-center"><a href="network.html">网络营销<p>SERVICE</p></a></li>
+                    <li class="text-center"><a href="contact.html">联系我们<p>CONTACT</p></a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--nav结束-->
+
+<!--banner开始-->
+<section class="banner" id="same">
+    <div class="item active" data-image-lg="images/medical.jpg" data-image-xs="images/medical-small.jpg"></div>
+</section>
+<!--banner结束-->
+
+<!--内容开始-->
+<section class="container">
+    <div class="row">
+        <div class="content">
+            <div class="content-all">
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <div class="medical-list col-md-12">
+                    <a href="javascript:;">
+                        <i class="fa fa-file-text-o"></i>
+                        <span href="javascript:;">气滞胃痛冲剂</span>
+                        <span class="medical-right" href="javascript:;">查看详情</span>
+                        <span class="pull-right">2015-05-10</span>
+                    </a>
+                </div>
+                <nav aria-label="Page navigation" class="page-jxzy col-md-12">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="page_total_num" class="pull-right">共24条</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="link text-center hidden-xs">
+        <a href="javascript:;">首页</a>|<a href="javascript:;">企业概况</a>|<a href="javascript:;">产品中心</a>|
+        <a href="javascript:;">新闻动态</a>|<a href="javascript:;">医药宝典</a>|<a href="javascript:;">人才招聘</a>|
+        <a href="javascript:;">网络营销</a>|<a href="javascript:;">联系我们</a>
+    </div>
+    <div class="banquan text-center">版权所有:陕西金象制药有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></div>
+</footer>
+<!--悬浮窗-->
+
+<div class="totop" title="返回顶部"><i class="fa fa-angle-up"></i></div>
+<div class="float hidden-xs">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">招商电话：029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="search-common hidden-xs">
+        <div class="navbar-form" style="display: none">
+            <div class="form-group">
+                <input type="hidden" name="m" value="search">
+                <input type="hidden" name="c" value="index">
+                <input type="hidden" name="a" value="init">
+                <input type="hidden" name="typeid" value="57" id="typeid">
+                <input type="hidden" name="siteid" value="5" id="siteid">
+                <input type="text" class="form-control" placeholder="请输入搜索内容" name="q" id="q">
+            </div>
+            <a id="search_btn2" style="margin-right:3px;" href="javascript:;" class="btn btn-jxzy">go</a>
+        </div>
+        <a class="search-right text-center" href="javascript:;"><i class="glyphicon glyphicon-search"></i></a>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+
+</body>
+</html>

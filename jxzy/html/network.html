@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>网络营销</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+<style type="text/css">
+    .content-all {
+        padding: 15px 15px 0;
+        overflow: hidden;
+        border: none;
+    }
+    .full-width {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .full-width thead tr th , .full-width tbody tr td {
+        border: 1px solid #dadada;
+        padding: 6px 5px;
+    }
+    .full-width tbody > tr > td:first-child{
+        background-color: #f9f9f9;
+    }
+    .full-width tbody > tr > td > a {
+        color: #333;
+    }
+    .full-width tbody > tr > td > a:hover {
+        color: #007c3a;
+    }
+    @media (max-width:768px) {
+
+        .full-width { margin-top: 10px; }
+
+        .full-width thead tr th , .full-width tbody tr td {
+            border: none;
+            border-bottom: 1px dotted #ccc;
+            padding: 10px;
+        }
+        .full-width thead tr,.full-width tbody tr{
+            border: 1px solid #dadada;
+            border-bottom: 2px solid #ddd;
+        }
+        .full-width tbody tr td:last-child {
+            border-bottom: 0;
+        }
+        table thead {
+            display: none;
+        }
+        table tr {
+            margin-bottom: 20px;
+            display: block;
+        }
+        .full-width tbody tr td {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+
+        }
+        .full-width tbody tr td:before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+        }
+    }
+
+</style>
+<body>
+
+<!--header开始-->
+<header class="header-home hidden-sm hidden-xs" id="header">
+    <div class="top-nav container">
+        <div class="head">
+            <a href="index.html"><img src="images/logo.png" class="headL"  data-src="holder.js/90x90" alt="90x90" style="width: 90px; height: 90px;"/></a>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<!--header结束-->
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <!--data-offset-top="260"-->
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="company.html">企业概况</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li><a href="news.html">新闻动态</a></li>
+                    <li><a href="medical.html">医药宝典</a></li>
+                    <li><a href="jobs.html">人才招聘</a></li>
+                    <li class="active"><a href="network.html">网络营销</a></li>
+                    <li><a href="online.html">在线客服</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+<!--nav结束-->
+
+<!--banner开始-->
+<section class="banner" id="same">
+    <div class="item active" data-image-lg="images/network.jpg" data-image-xs="images/network-small.jpg"></div>
+</section>
+<!--banner结束-->
+
+<!--内容开始-->
+<section class="container">
+    <div class="row">
+        <div class="content">
+            <div class="content-all net-table col-md-12">
+                <table class="full-width" id="tableFirst">
+                        <thead>
+                            <tr>
+                                <th class="text-center">部门</th>
+                                <th class="text-center">负责产品</th>
+                                <th class="text-center">包装规格</th>
+                                <th class="text-center">电话</th>
+                                <th class="text-center">姓名</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                            <td data-label="部门">销售一部</td>
+                            <td data-label="负责产品"><a href="javascript:;">坤灵丸</a></td>
+                            <td data-label="包装规格">1</td>
+                            <td data-label="电话">总机 88230456</td>
+                            <td data-label="姓名">赵经理</td>
+                        </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">消癌平片</a></td>
+                                <td data-label="包装规格">2</td>
+                                <td data-label="电话"> 88233710</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">补脑丸</a></td>
+                                <td data-label="包装规格">3</td>
+                                <td data-label="电话">88233711</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">前列舒乐片</a></td>
+                                <td data-label="包装规格">2</td>
+                                <td data-label="电话">88230458</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">骨筋丸胶囊</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">传真 88233715</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">复明胶囊</a></td>
+                                <td data-label="包装规格">3</td>
+                                <td data-label="电话">传真 88233715</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">痔速宁片</a></td>
+                                <td data-label="包装规格">3</td>
+                                <td data-label="电话">88230457</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">大败毒胶囊</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">88233712</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">降脂减肥片</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">空的</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售一部</td>
+                                <td data-label="负责产品"><a href="javascript:;">喘嗽宁片</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">空的</td>
+                                <td data-label="姓名">魏经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售二部</td>
+                                <td data-label="负责产品"><a href="javascript:;">健宝灵片</a></td>
+                                <td data-label="包装规格">3</td>
+                                <td data-label="电话">32862485</td>
+                                <td data-label="姓名">周经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售二部</td>
+                                <td data-label="负责产品"><a href="javascript:;">千柏鼻炎胶囊 </a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">32862485</td>
+                                <td data-label="姓名">周经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售二部</td>
+                                <td data-label="负责产品"><a href="javascript:;">和血胶囊</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">32862485</td>
+                                <td data-label="姓名">周经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售二部</td>
+                                <td data-label="负责产品"><a href="javascript:;">调经促孕丸</a></td>
+                                <td data-label="包装规格">2</td>
+                                <td data-label="电话">32862499</td>
+                                <td data-label="姓名">周经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售二部</td>
+                                <td data-label="负责产品"><a href="javascript:;">缩泉丸</a></td>
+                                <td data-label="包装规格">空的</td>
+                                <td data-label="电话">32862499</td>
+                                <td data-label="姓名">周经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售三部</td>
+                                <td data-label="负责产品"><a href="javascript:;">龙枣胶囊</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">33228828</td>
+                                <td data-label="姓名">于经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售三部</td>
+                                <td data-label="负责产品"><a href="javascript:;">龙枣胶囊</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">传真 33279152</td>
+                                <td data-label="姓名">于经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售四部</td>
+                                <td data-label="负责产品"><a href="javascript:;">复明胶囊</a></td>
+                                <td data-label="包装规格">3</td>
+                                <td data-label="电话">33258108</td>
+                                <td data-label="姓名">赵经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售四部</td>
+                                <td data-label="负责产品"><a href="javascript:;">复明胶囊</a></td>
+                                <td data-label="包装规格">3</td>
+                                <td data-label="电话">传真 33255388</td>
+                                <td data-label="姓名">窦经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">销售五部</td>
+                                <td data-label="负责产品"><a href="javascript:;">乳宁片</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">33256800</td>
+                                <td data-label="姓名">陈经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">吉林销售部</td>
+                                <td data-label="负责产品"><a href="javascript:;">百癣夏塔热片</a></td>
+                                <td data-label="包装规格">2</td>
+                                <td data-label="电话">0434-6296663</td>
+                                <td data-label="姓名">褚经理</td>
+                            </tr>
+                            <tr>
+                                <td data-label="部门">浙江销售部</td>
+                                <td data-label="负责产品"><a href="javascript:;">三鞭胶囊</a></td>
+                                <td data-label="包装规格">1</td>
+                                <td data-label="电话">0755-56183505</td>
+                                <td data-label="姓名">余经理</td>
+                            </tr>
+                        </tbody>
+                    </table>
+             </div>
+        </div>
+    </div>
+</section>
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-center visible-xs"><a href="tel:029-32862485">电话：029-32862485</a></p>
+            <p class="text-center hidden-xs"><a href="javascript:;">电话：029-32862485</a></p>
+            <p class="text-center"><span>地址：陕西省咸阳市秦都区医药园区</span></p>
+            <p class="text-center">版权所有:陕西金象制药有限公司©2016.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></p>
+        </div>
+    </div>
+</footer>
+
+<!--悬浮窗-->
+<div class="fixed jxzy">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="col-xs-6 text-center"><a href="tel:029-32862485"><i class="glyphicon glyphicon-earphone"></i><span>电话</span></a></li>
+        <li role="presentation" class="col-xs-6 text-center"><a href="index.html"><i class="glyphicon glyphicon-user"></i><span>首页</span></a></li>
+    </ul>
+</div>
+<div class="totop" title="返回顶部"><i class="glyphicon glyphicon-plane"></i></div>
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+<!--悬浮窗结束-->
+
+</body>
+</html>

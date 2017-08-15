@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>在线客服</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .content-all {
+        padding: 10px;
+        overflow: hidden;
+    }
+    .content-all>.service>.form-group{
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .content-all>.service>.form-group:last-child>button+button{
+        margin-left: 40px;
+    }
+    #guestcontent{
+        height: 180px;
+    }
+    
+    /*右边*/
+    .Guestbook{
+        border-left: 1px solid #dadada;
+        margin-bottom: 20px;
+    }
+    .Guestbook>h3{ margin-bottom: 10px;}
+    .Guestbook table{
+        border: 1px solid #f3f3f3;
+    }
+    .Guestbook table tr{
+        padding: 0 15px;}
+    .Guestbook tr>th{
+        background-color: #f5f5f5;
+        line-height: 40px;
+    }
+    .Guestbook tr>th>span{
+        padding: 0 15px;
+    }
+
+    .Guestbook tr>td{
+        padding: 10px 15px;
+        line-height: 30px;
+    }
+    .table{ margin-top: 10px; }
+    @media (max-width:768px) {
+
+        .content-all { padding: 0; }
+        .service{
+            padding: 0;
+        }
+        #guestcontent{
+            height: 130px;
+        }
+        .Guestbook{
+            margin-top: 30px;
+            padding: 0;
+            padding-top: 20px;
+            border-top:1px solid #dadada;
+            border-left: none;
+        }
+        .table{ margin-top: 20px; }
+        .Guestbook table{
+            border: 1px solid #ccc;
+        }
+    }
+
+</style>
+<body>
+
+<!--header开始-->
+<header class="header-home hidden-sm hidden-xs" id="header">
+    <div class="top-nav container">
+        <div class="head">
+            <a href="index.html"><img src="images/logo.png" class="headL"  data-src="holder.js/90x90" alt="90x90" style="width: 90px; height: 90px;"/></a>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<!--header结束-->
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <!--data-offset-top="260"-->
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="company.html">企业概况</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li><a href="news.html">新闻动态</a></li>
+                    <li><a href="medical.html">医药宝典</a></li>
+                    <li><a href="jobs.html">人才招聘</a></li>
+                    <li><a href="network.html">网络营销</a></li>
+                    <li class="active"><a href="online.html">在线客服</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+<!--nav结束-->
+
+<!--banner开始-->
+<section class="banner" id="same">
+    <div class="item active" data-image-lg="images/online.jpg" data-image-xs="images/online-small.jpg"></div>
+</section>
+<!--banner结束-->
+
+<!--内容开始-->
+<section class="container">
+    <div class="row">
+        <div class="content">
+            <div class="content-all">
+                <div class="service col-md-6">
+                    <h3 class="text-center">咨询客服</h3>
+                    <div class="form-group">
+                        <label for="username" class="col-sm-2 control-label hidden-xs text-right">用户名称</label>
+                        <div class="col-sm-10 col-xs-12">
+                            <div class="input-group">
+                                <div class="input-group-addon" style="color:red">*</div>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="用户名称">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phonenumber" class="col-sm-2 control-label hidden-xs text-right">电话号码</label>
+                        <div class="col-sm-10 col-xs-12">
+                            <div class="input-group">
+                                <div class="input-group-addon" style="color:red">*</div>
+                                <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="电话号码">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label hidden-xs text-right">邮箱</label>
+                        <div class="col-sm-10 col-xs-12">
+                            <div class="input-group">
+                                <div class="input-group-addon">&nbsp;&nbsp;</div>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="邮箱">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-sm-2 control-label hidden-xs text-right">地址</label>
+                        <div class="col-sm-10 col-xs-12">
+                            <div class="input-group">
+                                <div class="input-group-addon">&nbsp;&nbsp;</div>
+                                <input type="text" class="form-control" name="address" id="address" placeholder="地址">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestcontent" class="col-sm-2 control-label hidden-xs text-right">留言内容</label>
+                        <div class="col-sm-10 col-xs-12">
+                            <textarea type="text" class="form-control" name="guestcontent" id="guestcontent" placeholder="留言内容"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-jxzy text-center">留言</button>
+                        <button class="btn btn-jxzy text-center">重写</button>
+                    </div>
+                </div>
+                <div class="Guestbook col-md-6">
+                    <h3 class="text-center">留言列表</h3>
+                    <div class="table col-md-12">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><span class="pull-left">用户：<strong>包先生</strong></span><span class="pull-right">留言时间：2017-03-24</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>我分别2次在不同网上药店买了贵厂生产的补脑丸，价格相差10元（一个27元，一个37元），请问应在哪个网上药店上买呀？</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th><span class="pull-left">用户：<strong>王晓虎</strong></span><span class="pull-right">留言时间：2017-03-20</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>龙枣胶囊，一个疗程多少盒，多少钱一盒哦！哪里可以买到。</td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th><span class="pull-left">用户：<strong>王晓虎</strong></span><span class="pull-right">留言时间：2017-03-20</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>龙枣胶囊，一个疗程多少盒，多少钱一盒哦！哪里可以买到。</td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th><span class="pull-left">用户：<strong>王晓虎</strong></span><span class="pull-right">留言时间：2017-03-20</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>龙枣胶囊，一个疗程多少盒，多少钱一盒哦！哪里可以买到。</td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th><span class="pull-left">用户：<strong>王晓虎</strong></span><span class="pull-right">留言时间：2017-03-20</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>龙枣胶囊，一个疗程多少盒，多少钱一盒哦！哪里可以买到。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-center visible-xs"><a href="tel:029-32862485">电话：029-32862485</a></p>
+            <p class="text-center hidden-xs"><a href="javascript:;">电话：029-32862485</a></p>
+            <p class="text-center"><span>地址：陕西省咸阳市秦都区医药园区</span></p>
+            <p class="text-center">版权所有:陕西金象制药有限公司©2016.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></p>
+        </div>
+    </div>
+</footer>
+
+<!--悬浮窗-->
+<div class="fixed jxzy">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="col-xs-6 text-center"><a href="tel:029-32862485"><i class="glyphicon glyphicon-earphone"></i><span>电话</span></a></li>
+        <li role="presentation" class="col-xs-6 text-center"><a href="index.html"><i class="glyphicon glyphicon-user"></i><span>首页</span></a></li>
+    </ul>
+</div>
+<div class="totop" title="返回顶部"><i class="glyphicon glyphicon-plane"></i></div>
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+<!--悬浮窗结束-->
+
+</body>
+</html>

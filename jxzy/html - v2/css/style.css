@@ -1,0 +1,429 @@
+
+section h3.bg{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    background: url("../images/titlebg.png") no-repeat center center;
+    color: #007c3a;
+    font-weight: bold;
+}
+
+/*pageLink*/
+
+#pageLink {
+    margin: 70px 0;
+}
+#pageLink .col-md-4 > a > img {
+    width: 100%;
+}
+/*company*/
+#company {
+    margin-bottom: 70px;
+}
+#company .col-md-12 > div {
+    background-color: #379f66;
+    color: #fff;
+    padding: 30px 70px;
+}
+#company .col-md-12 > div p {
+    text-indent: 2em;
+    line-height: 25px;
+}
+
+#company .col-md-12 > div a{
+    background-color: transparent;
+    border-color: #fff;
+    border-radius: 50px;
+    width: 80px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+#list .col-md-6 {
+    color: #379f66;
+}
+#list .col-md-6 > .head {
+    overflow: hidden;
+}
+#list .col-md-6 > .head > a {
+    margin-top: 20px;
+}
+
+.news .media-left a img {
+    width: 130px;
+    height: 89.5px;
+}
+.news .media {
+    margin-bottom: 10px;
+}
+.news .media-body {
+    padding-top: 12px;
+}
+.news .media-body > a> h4 {
+    color: #666;
+    font-weight: bold;
+    line-height: 19px;
+    height: 19px;
+    overflow: hidden;
+}
+.news .media-body > a:hover > h4 {
+    color: #379f66;
+}
+.news .media-body > a > p {
+    color: #666;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;
+}
+.news ul li {
+    line-height: 30px;
+    border-bottom: 1px dashed #e2e2e2;
+}
+.news ul li a {
+    color: #666;
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+.news ul li a p {
+    display: inline-block;
+    width: 85%;
+    overflow: hidden;
+    height: 30px;
+}
+.news ul li a > i {
+    margin-right: 5px;
+    line-height: 30px;
+}
+.news ul li a:hover {
+    color: #379f66;
+}
+
+#list .col-md-6.news {
+    border-right: 1px solid #e2e2e2;
+}
+
+#products {
+    width: 540px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+
+.products  .mediaScroll > .media {
+    padding-left: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 210px;
+    margin-top: 15px;
+}
+.products .media-body > .btn-jxzy {
+    background-color: transparent;
+    border:2px solid #379f66;
+    color: #379f66;
+}
+
+.products .mediaScroll > .media a > img {
+    width: 230px;
+}
+
+.products .mediaScroll > .media > .media-body {
+    padding-left: 15px;
+    width: 230px;
+    height: 170px;
+
+}
+.products .mediaScroll > .media > .media-body  h4 {
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 19px;
+    height: 19px;
+    overflow: hidden;
+    color: #379f66;
+}
+.products .mediaScroll > .media > .media-body > p {
+    color: #333;
+    line-height: 25px;
+    height: 75px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.products {
+
+    overflow: hidden;
+}
+#products > .LRbutton span {
+    font-size: 70px;
+    color: #d8d8d8;
+    position: absolute;
+    top: 34%;
+}
+
+#products > .LRbutton span:hover {
+    color: #379f66;
+    cursor: pointer;
+}
+#products > .LRbutton span.left-button {
+    left: 0px;
+}
+#products > .LRbutton span.right-button {
+    right: 0px;
+}
+
+
+/*link*/
+
+#link {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#link h3 {
+    color: #379f66;
+    padding-bottom: 10px;
+}
+#link-box {
+    overflow: hidden;
+    width: 96%;
+    margin: 0 0px 0 15px;
+}
+#link-box-in {
+    float: left;
+    width: 1200%;
+    margin-bottom: 20px;
+}
+#link-box-01,#link-box-02{
+    float: left;
+}
+#link-box-01 > a ,#link-box-02 > a {
+    padding: 0 5px;
+    height: 90px;
+    position: relative;
+    margin-right: 6px;
+    width: 172px;
+    border: 1px solid #ebe7e7;
+}
+#link-box-01 > a > img ,#link-box-02 > a > img {
+    width: 100%;
+    height: 84px;
+}
+#link-box-01 > a > div , #link-box-02 > a > div {
+    height: 90px;
+    line-height: 90px;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0,116,182,0.8);
+    display: none;
+}
+#link-box-01 > a > div p {
+    line-height: 25px;
+    margin: 20px 0;
+}
+#link-box-01 > a > div p.normal {
+    line-height: 90px;
+    margin: 0;
+}
+#link-box-01 > a:hover > div ,#link-box-02 > a:hover > div  {
+    display:block;
+    top: 0;
+    left: 0;
+    padding: 0 5px;
+    text-align: center;
+}
+
+@media (max-width: 1200px){
+
+    /*products*/
+    #products {
+        width: 440px;
+        height: 205px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+    .products  .mediaScroll > .media {
+        width: 440px;
+        margin-left: 0;
+        margin-top: 20px;
+        height: 185px;
+        padding-left: 10px;
+    }
+    .products .mediaScroll > .media a > img {
+        width: 180px;
+        margin-top: 25px;
+    }
+}
+
+
+#same>.item, #banner>.item {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@media (max-width: 10000px){
+    #banner>.item,#same > .item {
+        width: 100%;
+    }
+}
+@media (max-width:991px) {
+    #list .col-md-6.news {
+        border-right: none;
+    }
+    #products,.products  .mediaScroll > .media {
+        width: 687px;
+    }
+    .products .mediaScroll > .media > .media-body {
+        width: 550px;
+    }
+    .float {
+        display: none;
+    }
+
+    .products .mediaScroll > .media a > img {
+        margin-left: 15px;
+    }
+}
+
+
+@media (max-width:767px) {
+    /*Ö÷Ò³Ãæ*/
+
+
+    #pageLink {
+        margin: 20px 0;
+    }
+    #pageLink a img {
+        width: 100%;
+    }
+    #pageLink .col-md-12 {
+        padding: 0;
+    }
+    #pageLink .col-xs-4{
+        padding: 2px;
+    }
+    #company {
+        margin-bottom: 10px;
+        background-color: #379f66;
+    }
+    #company .col-md-12 > div {
+        padding: 10px;
+    }
+    #company .col-md-12 > div h3 {
+        font-size: 16px;
+    }
+    #company .col-md-12 > div p {
+        font-size: 12px;
+    }
+    #company .col-md-12 > div a {
+        margin-right: 6px;
+    }
+
+
+    /*list*/
+    #list .col-md-6.news {
+        border-right: 0;
+        padding: 0;
+    }
+    #list .col-md-6 > .head h3 {
+        font-size: 18px;
+    }
+    #list .col-md-6 > .head > a {
+        margin-top: 10px;
+    }
+    .news .media-body > a> h4 {
+        font-size: 14px;
+    }
+    .news .media-body > a > p {
+        font-size: 12px;
+    }
+    .news ul li a p {
+        width: 82%;
+    }
+
+    .products  .mediaScroll {
+        margin-top: 20px;
+    }
+    .products {
+        padding: 0;
+        margin-top: 20px;
+    }
+    .products  .mediaScroll {
+        height: 120px;
+    }
+    .products .mediaScroll > .media a > img {
+        width: 120px;
+        margin-top: 10px;
+    }
+    .products .mediaScroll > .media > .media-body  h4 {
+        font-size: 16px;
+        margin-top: 0;
+    }
+    .products .mediaScroll > .media > .media-body > p {
+        font-size: 12px;
+        line-height: 20px;
+        height: 40px;
+    }
+    .products .mediaScroll > .media > .media-body {
+        padding-left: 0;
+        height: 108px;
+        width: 210px;
+    }
+
+    #products > .LRbutton span {
+        font-size: 50px;
+        top: 26%;
+    }
+
+    #products {
+        height: 130px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+    .products  .mediaScroll > .media {
+        margin-left: 10px;
+        height: 120px;
+        margin-top: 15px;
+    }
+
+
+    /*link*/
+    #link {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    #link h3 {
+        font-size: 18px;
+    }
+    #link-box {
+        width: 95%;
+        margin: 0 10px;
+    }
+    #link-box-01 > a, #link-box-02 > a {
+        height: 54px;
+        width: 107px;
+    }
+
+    #link-box-01 > a > img, #link-box-02 > a > img {
+        width: 100px;
+        height: 50px;
+    }
+    #link-box-01 > a > div, #link-box-02 > a > div {
+        height: 54px;
+        width: 107px;
+        line-height: 54px;
+        font-size: 12px;
+    }
+
+    #link-box-01 > a > div p ,#link-box-01 > a > div p.normal {
+        margin:7px 0;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+}

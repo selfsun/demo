@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>联系我们</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=rNwvhjIgn75qeVmxE3Q0pE9b"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .content-all {
+        padding: 20px;
+    }
+    .content-all>h3 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .content-all>h4 {
+        border-bottom: 1px solid #f4f3f3;
+        padding-bottom: 10px;
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .content-all>.col-md-6>p {
+        line-height: 30px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .content-all>.col-md-6>p>i {
+        color: #007c3a;
+        margin-right: 8px;
+        font-size: 20px;
+        width: 20px;
+        text-align: center;
+    }
+    .content-all>.col-md-6>p>a{
+        color: #333;
+    }
+    .content-all>.col-md-6>p>span {
+        font-size: 16px;
+    }
+    .content-all>.col-md-6>p>span.no {
+        font-size: 14px;
+    }
+    .content-all .google-map {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        height: 450px;
+        width: 100%;
+    }
+    @media (max-width:768px) {
+
+        .content-all {
+            padding: 0;
+        }
+        .content-all .google-map {
+            height: 240px;
+        }
+        .content-all>.col-md-6 {
+            margin-bottom: 0;
+            padding: 0;
+        }
+        .content-all>.col-md-6>p {
+            line-height: 25px;
+            font-size: 12px;
+        }
+        .content-all>.col-md-6>p>span {
+            font-size: 14px;
+        }
+        .content-all>.col-md-6>p>span.no {
+            display: none;
+        }
+        .content-all>.col-md-6>p>i {
+            color: #007c3a;
+            margin-right: 5px;
+            font-size: 16px;
+            width: 16px;
+            text-align: center;
+        }
+        .content-all>h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content-all>h4 {
+            border-bottom: 1px solid #f4f3f3;
+            padding-bottom: 10px;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+    }
+
+
+</style>
+<body>
+
+<!--header开始-->
+<header class="header-home hidden-sm hidden-xs" id="header">
+    <div class="top-nav container">
+        <div class="head">
+            <a href="index.html"><img src="images/logo.png" class="headL"  data-src="holder.js/90x90" alt="90x90" style="width: 90px; height: 90px;"/></a>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<!--header结束-->
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <!--data-offset-top="260"-->
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="company.html">企业概况</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li><a href="news.html">新闻动态</a></li>
+                    <li><a href="medical.html">医药宝典</a></li>
+                    <li><a href="jobs.html">人才招聘</a></li>
+                    <li><a href="network.html">网络营销</a></li>
+                    <li><a href="online.html">在线客服</a></li>
+                    <li class="active"><a href="contact.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!--nav结束-->
+
+<!--banner开始-->
+<section class="banner" id="same">
+    <div class="item active" data-image-lg="images/contact.jpg" data-image-xs="images/contact-small.jpg"></div>
+</section>
+
+<!--banner结束-->
+
+<!--内容开始-->
+
+<section class="container">
+    <div class="row">
+        <div class="content col-md-12">
+            <div class="content-all">
+                <h3 class="hidden-xs col-md-12">联系我们</h3>
+                <h4 class="hidden-xs col-md-12">CONTACT US</h4>
+                <div class="col-md-6">
+                    <p><i class="fa fa-phone"></i><a href="tel:029-32862485"><span>电话：</span>029-33571907</a></p>
+                    <p><i class="fa fa-map-marker"></i><span>地址：</span>陕西省咸阳市秦都区医药园区</p>
+                </div>
+                <div class="col-md-6">
+                    <p><i class="fa fa-envelope"></i><span>邮箱：</span>jinxiang88888@126.com</p>
+                    <p><i class="fa fa-globe"></i><span>网址：</span>http://www.sxjxzy.net/Contact.asp</p>
+                </div>
+                <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+                <div id="allmap" class="google-map small col-md-12"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-center visible-xs"><a href="tel:029-32862485">电话：029-32862485</a></p>
+            <p class="text-center hidden-xs"><a href="javascript:;">电话：029-32862485</a></p>
+            <p class="text-center"><span>地址：陕西省咸阳市秦都区医药园区</span></p>
+            <p class="text-center">版权所有:陕西金象制药有限公司©2016.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></p>
+        </div>
+    </div>
+</footer>
+
+<!--悬浮窗-->
+<div class="fixed jxzy">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="col-xs-6 text-center"><a href="tel:029-32862485"><i class="glyphicon glyphicon-earphone"></i><span>电话</span></a></li>
+        <li role="presentation" class="col-xs-6 text-center"><a href="index.html"><i class="glyphicon glyphicon-user"></i><span>首页</span></a></li>
+    </ul>
+</div>
+<div class="totop" title="返回顶部"><i class="glyphicon glyphicon-plane"></i></div>
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $("#googlemaps").attr("style","height:300px");
+    // 百度地图API功能
+    var sContent ="<span style='font-weight:bold'>陕西金象制药有限公司</span><br>陕西省咸阳市秦都区医药园区西橡阳光大道3号";
+    var map = new BMap.Map("allmap");
+    window.point = new BMap.Point(108.649614,34.314192);
+    map.centerAndZoom(point, 19);
+    map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT}));
+    map.addControl(new BMap.NavigationControl())
+    var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
+    map.addEventListener("click", function(e){
+        map.openInfoWindow(infoWindow,window.point);
+    });
+    $(document).ready(function(){
+        var lis = $("#mainNav>li");
+        lis.removeClass("active");
+        $(lis[6]).addClass("active");
+    });
+
+</script>
+</body>
+</html>

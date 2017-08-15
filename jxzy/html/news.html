@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>新闻动态</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .content-all {
+        padding: 10px;
+        overflow: hidden;
+    }
+    .content-all>.media{
+        margin-top: 40px;
+    }
+    .news-media>.media-body{
+        height: 126px;
+    }
+    .news-media>.media-body>a>h4{
+        color: #666;
+        font-weight: bold;
+        line-height: 1.9em;
+        height: 1.9em;
+        overflow: hidden;
+    }
+    .news-media>.media-body>p{
+        overflow: hidden;
+        line-height: 1.7em;
+        height: 3.4em;
+        margin-bottom: 5px;
+    }
+    .news-media>.media-body>.pull-left{
+        color: #999;
+        line-height: 38px;
+        letter-spacing: 1.5px;
+    }
+    .news-media>.media-body > a{
+
+    }
+    .news-media>.media-body>.btn-jxzy{
+        background-color: transparent;
+        border: 3px solid #007c3a;
+        color: #333;
+    }
+
+    .content>.content-all>.page-jxzy{
+        margin: 40px 0 10px;
+    }
+    @media (max-width:768px) {
+
+        .content-all {
+            padding: 15px;
+        }
+        .news-media>.media-body{
+             height: 75px;
+         }
+        .news-media>.media-body>a>h4{
+            line-height: 1.5em;
+            height: 1.5em;
+        }
+        .news-media>.media-body>p{
+            height: 1.8em;
+            margin-bottom: 0;
+        }
+        .news-media>.media-body>.btn-jxzy{
+            font-size: 12px;
+            padding: 2px 5px;
+        }
+        .news-media>.media-body>.pull-left{
+            height: 27px;
+        }
+        .news-media>.media-body>a>h4{
+            font-size: 16px;
+        }
+        .content-all>.media {
+            margin-top: 0;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+    }
+
+</style>
+<body>
+
+<!--header开始-->
+<header class="header-home hidden-sm hidden-xs" id="header">
+    <div class="top-nav container">
+        <div class="head">
+            <a href="index.html"><img src="images/logo.png" class="headL"  data-src="holder.js/90x90" alt="90x90" style="width: 90px; height: 90px;"/></a>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<!--header结束-->
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <!--data-offset-top="260"-->
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="company.html">企业概况</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li class="active"><a href="news.html">新闻动态</a></li>
+                    <li><a href="medical.html">医药宝典</a></li>
+                    <li><a href="jobs.html">人才招聘</a></li>
+                    <li><a href="network.html">网络营销</a></li>
+                    <li><a href="online.html">在线客服</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!--nav结束-->
+
+<!--banner开始-->
+<section class="banner" id="same">
+    <div class="item active" data-image-lg="images/news.jpg" data-image-xs="images/news-small.jpg"></div>
+</section>
+
+<!--banner结束-->
+
+<!--内容开始-->
+
+<section class="container">
+    <div class="row">
+        <div class="content">
+            <div class="content-all">
+                <div class="media col-md-6 news-media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                    <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                    <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                </div>
+            </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <div class="media col-md-6 news-media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" data-src="holder.js/158x127" alt="158x127" src="images/new03.jpg" data-holder-rendered="true">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a href="javascript:;"><h4 class="media-heading">全球药品市场规模增长4.8%</h4></a>
+                        <p>“百年一遇”的金融危机在2008年迅速席卷全球，给世界经济带来了极大的不确定性，药品市场也受到了很大的影响。制药企业也未能独善其身……</p>
+                        <a href="javascript:;" class="pull-left">2017-05-10</a><a class="btn btn-jxzy pull-right" href="javascript:;">查看详情</a>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation" class="page-jxzy col-md-12">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="page_total_num" class="pull-right">共24条</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-center visible-xs"><a href="tel:029-32862485">电话：029-32862485</a></p>
+            <p class="text-center hidden-xs"><a href="javascript:;">电话：029-32862485</a></p>
+            <p class="text-center"><span>地址：陕西省咸阳市秦都区医药园区</span></p>
+            <p class="text-center">版权所有:陕西金象制药有限公司©2016.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></p>
+        </div>
+    </div>
+</footer>
+
+<!--悬浮窗-->
+<div class="fixed jxzy">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="col-xs-6 text-center"><a href="tel:029-32862485"><i class="glyphicon glyphicon-earphone"></i><span>电话</span></a></li>
+        <li role="presentation" class="col-xs-6 text-center"><a href="index.html"><i class="glyphicon glyphicon-user"></i><span>首页</span></a></li>
+    </ul>
+</div>
+<div class="totop" title="返回顶部"><i class="glyphicon glyphicon-plane"></i></div>
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+
+</body>
+</html>

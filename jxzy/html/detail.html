@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>详情页</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    body{
+        background-color: #f5f5f5;
+    }
+    header{
+        background-color: #fff;
+    }
+    .content>.content-all{
+        background-color: #fff;
+        border: 0;
+    }
+    .content-link{
+        margin-top: 20px;
+        line-height: 60px;
+    }
+    .content-link>a{
+        margin-right: 5px;
+        margin-left: 5px;
+        color: #333;
+    }
+    .content-link>a:hover{
+        color: #007c3a;
+    }
+    .content-link>strong{
+        font-size: 24px;
+        color: #007c3a;
+        margin-right: 10px;
+    }
+    .article-left{
+        border-right: 1px solid #efeded;
+    }
+    .article-left h3{
+        color: #007c3a;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .article-left>.tab-pane>p{
+        line-height: 25px;
+        text-indent: 2em;
+        margin-top: 20px;
+    }
+    .article-left>.tab-pane>p.text-center{
+        color: #999;
+        line-height: 30px;
+        text-indent: 0;
+    }
+    .article-left>.tab-pane>p.text-center>span+span{
+        margin-left: 5px;
+    }
+    .article-left>.tab-pane>p.abstract{
+        color: #999;
+        background-color: #f5f5f5;
+        padding: 10px 20px;
+        text-indent: 0;
+
+    }
+
+
+    .zoombox{
+        margin: 15px 0;
+        padding: 30px 0;
+        background-color: #f5f5f5;
+    }
+    .zoompic>img{
+        width: 400px;
+        height: 290px;
+        
+    }
+    .slider{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    .slider ul{
+        height: 78px;
+        width: 1000px;
+    }
+    .slider ul>li{
+        float: left;
+        padding: 2px;
+        border: 1px solid #fff;
+    }
+    .slider ul>li+li{
+        margin-left: 10px;
+    }
+    .slider ul>li.current{
+        border: 1px solid #007c3a;
+
+    }
+    .slider ul>li img{
+        width: 106px;
+        height: 78px;
+    }
+
+    .article-right>.nav>li{
+        border-bottom: 1px dashed #ccc;
+    }
+    .article-right>.nav>li>a{
+        /*文本只显示1行,多出来的用省略号显示*/
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+
+        color: #666666;
+    }
+    .article-right>.nav>li>a:hover{
+        color: #007c3a;
+    }
+    .article-right > h4 { color: #007c3a;
+        font-weight: bold;}
+
+    .page{
+        padding-top: 30px;
+        border-top: 1px dashed #ccc;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .page>a{
+        font-size: 40px;
+        text-align: center;
+
+        color: #999;
+    }
+    .page>a+a{
+        margin-left: 30px;
+         }
+    .page>a:hover{
+        color: #007c3a;
+    }
+
+    .tab-pane>.img{
+        text-align: center;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width:768px){
+        section{
+            margin-top: 0;
+        }
+        .content-link{
+            margin-top: 10px;
+            line-height: 40px;
+        }
+        .content-link>strong{
+            font-size: 20px;
+        }
+        .content {
+            padding: 0;
+        }
+        .article-left{
+            border-right: none;
+            padding: 0;
+        }
+        .article-left h3{
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .article-left>.tab-pane>p.text-center{
+            font-size: 12px;
+        }
+
+        .zoompic>img{
+            width: 200px;
+            height: 145px;
+        }
+        .slider{
+            margin-top: 20px;
+        }
+        .slider ul{
+            height: 51px;
+        }
+        .slider ul>li+li{
+            margin-left: 5px;
+        }
+        .slider ul li img{
+            width: 60px;
+            height: 45px;
+        }
+        .page {
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-top: 0;
+        }
+        .tab-pane>.img{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+
+<!--header开始-->
+<header class="header-home hidden-sm hidden-xs" id="header">
+    <div class="top-nav container">
+        <div class="head">
+            <a href="index.html"><img src="images/logo.png" class="headL"  data-src="holder.js/90x90" alt="90x90" style="width: 90px; height: 90px;"/></a>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<!--header结束-->
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="company.html">企业概况</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li class="active"><a href="news.html">新闻动态</a></li>
+                    <li><a href="medical.html">医药宝典</a></li>
+                    <li><a href="jobs.html">人才招聘</a></li>
+                    <li><a href="network.html">网络营销</a></li>
+                    <li><a href="online.html">在线客服</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+
+
+<!--内容开始-->
+
+<section class="container">
+    <div class="row">
+        <div class="content-link col-md-12"><strong>新闻动态</strong><a href="index.html">首页</a>/<a href="news.html">新闻动态</a>><span>正文</span></div>
+        <div class="content col-md-12">
+            <div class="content-all">
+                <div class="col-md-9 article-left">
+                    <div class="tab-pane col-md-12">
+                        <h3 class="text-center tab-content-title">全球药品市场规模增长4.8%</h3>
+                        <p class="text-center"><span>来源:陕西金象制药</span><span>发布时间:2015-3-30</span><span>阅读:4069次</span></p>
+                        <p class="abstract">2008年可能遭受仿制药竞争的处方药的销售总额达240亿美元。抗肿瘤药类是增长最快的领域，增长达14%，与上年持平。2008年可能遭受仿制药竞争的处方药的销售总额达240亿美元。抗肿瘤药类是增长最快的领域，增长达14%，与上年持平。</p>
+                        <div class="zoombox">
+                            <div class="zoompic text-center">
+                                <img src="images/article-big-01.jpg">
+                            </div>
+                            <div class="slider" id="thumbnail">
+                                <ul>
+                                    <li class="current"><a href="images/article-big-01.jpg" target="_blank"><img src="images/article-small-01.jpg" ></a></li>
+                                    <li><a href="images/article-big-02.jpg" target="_blank"><img src="images/article-small-02.jpg"></a></li>
+                                    <li><a href="images/article-big-03.jpg" target="_blank"><img src="images/article-small-03.jpg"></a></li>
+                                    <li><a href="images/article-big-04.jpg" target="_blank"><img src="images/article-small-04.jpg"></a></li>
+                                    <!--<li><a href="images/article-big-03.jpg" target="_blank"><img src="images/article-small-03.jpg"></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <p>陕西金象制药有限公司位于陕西省咸阳市医药园区，是通过资产重组，兼并原陕西爱康沙棘制药有限公司后组建集科研、生产、销售为一体的高科技制药企业，注册资金1000万元，总投资4500万元。</p>
+                        <p>陕西金象制药有限公司厂区占地面积约14000平方米，建筑面积7800米，其中制剂车间3000平方米，前处理提取车间2400平方米，质检办公楼1400平方米，绿化面积4000平方米。现有员工200多人，中高级职称管理人员50多名，是一个设备先进、技术力量雄厚的现代化制药企业。</p>
+                        <div class="img center-block"><img src="images/20170426040337810.jpg" alt="" class="text-center"/></div>
+                        <p>陕西金象制药有限公司经过五年的艰苦创业，励精图治，已历经两次国家药品GMP认证，拥有一整套中药前处理、提取及片剂、丸剂、颗粒剂、胶囊剂、散剂生产线，年总产值可达1亿8千万元，具有胶囊剂、片剂、丸剂、颗粒剂等各种剂型品种30多个，自主研发的新药10多个。</p>
+                        <p>陕西金象制药有限公司有健全的市场网络、规范、高效的企业管理机制。药品销售分支机构已遍布全国各地，公司始终遵循质量第一，信誉第一，用户旨上的宗旨，逐步建立起一套集经营决策、财务监控、市场运作、生产管理、质量跟踪、新品开发和后勤供应等各种功能于一体的科学化经营管理体系。</p>
+                        <p>陕西金象制药有限公司属集团公司，下属“咸阳超凡房地产公司”，以公司总经理为龙头创建的国际化公寓——总投资5800万元“亮马河国际公寓”为现有的建筑行业增添了一大亮点！面向21世纪，公司将突出科技进步和人才两个重点，本着以“服务人类健康事业”的理念，狠抓质量、追求卓越、创造辉煌、攀登世界医药科技高峰。力求在制药行业打造出中国的医药航母！让宝贵的生命永远健康！</p>
+
+                        <div class="page">
+                            <a href="javascript:;" alt="上一页"><i class="fa fa-chevron-circle-left"></i></a>
+                            <a href="javascript:;" alt="下一页"><i class="fa fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 article-right">
+                    <h4 class="text-center col-md-12">热门文章</h4>
+                    <ul class="nav">
+                        <li class="active"><a href="javascript:;" >1：全球药品市场规模增长4.8%</a></li>
+                        <li><a href="javascript:;">2：中药以治疗药品进入国际主流市场</a></li>
+                        <li><a href="javascript:;">3：金银花价格翻倍 各地争相种植</a></li>
+                        <li><a href="javascript:;">4：热烈祝贺陕西金象制药有限公司第六届职工运动会隆重举行</a></li>
+                        <li><a href="javascript:;">5：中药饮片整顿后获发展新机遇及前景分析</a></li>
+                        <li><a href="javascript:;">6：中药注射剂再注册进入审查阶段及问题</a></li>
+                        <li><a href="javascript:;">7：中成药产业朝多元化延伸未来前景看好</a></li>
+                        <li><a href="javascript:;">8：抗流感药物原料价格上涨趋势明显</a></li>
+                        <li><a href="javascript:;">9：传统药物销量步步高</a></li>
+                        <li><a href="javascript:;">10：金银花价格翻倍 各地争相种植</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-center visible-xs"><a href="tel:029-32862485">电话：029-32862485</a></p>
+            <p class="text-center hidden-xs"><a href="javascript:;">电话：029-32862485</a></p>
+            <p class="text-center"><span>地址：陕西省咸阳市秦都区医药园区</span></p>
+            <p class="text-center">版权所有:陕西金象制药有限公司©2016.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></p>
+        </div>
+    </div>
+</footer>
+
+<!--悬浮窗-->
+<div class="fixed jxzy">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="col-xs-6 text-center"><a href="tel:029-32862485"><i class="glyphicon glyphicon-earphone"></i><span>电话</span></a></li>
+        <li role="presentation" class="col-xs-6 text-center"><a href="index.html"><i class="glyphicon glyphicon-user"></i><span>首页</span></a></li>
+    </ul>
+</div>
+<div class="totop" title="返回顶部"><i class="glyphicon glyphicon-plane"></i></div>
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+<script>
+    $(window).ready(function(){
+        $("#thumbnail li a").click(function(){
+            $(".zoompic>img").attr( "src", $(this).attr("href"));
+            $("#thumbnail li.current").removeClass("current");
+            $(this).parents("li").addClass("current");
+            return false;
+        });
+        $(".zoompic>img").load(function(){
+            $(".zoompic>img:hidden").show();
+        });
+
+
+
+        var small_length =  $('.slider ul li').length;
+        if($(window).width() < 768){
+            var marginL = ($(window).width()-(small_length*66+(small_length-1)*5))/2-12.5;
+            if(small_length == 1){
+                console.log(small_length);
+                $(".slider").hide();
+            }else if(small_length == 2){
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+            }else if(small_length == 3){
+
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+
+            }else if(small_length == 4){
+
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+            }
+
+
+        }
+
+        $(window).resize(function(){
+            if($(window).width()>768){
+                var paddingNum = ($(".content-all").width()-540)/2;
+                $(".paddingNum").css("padding-left",paddingNum+"px");
+                var marginL = ($(".zoombox").width()-(small_length*112+(small_length-1)*10))/2-12.5;
+                if(small_length == 1){
+                    console.log(small_length);
+                    $(".slider").hide();
+                }else if(small_length == 2){
+                    $(".slider").show();
+                    $(".slider").css("margin-left",marginL+"px");
+                }else if(small_length == 3){
+
+                    $(".slider").css("margin-left",marginL+"px");
+
+                }else if(small_length == 4){
+                    $(".slider").css("margin-left",marginL+"px");
+                }
+                else if(small_length == 5){
+                    $(".slider").css("margin-left",marginL+"px");
+                }
+
+            }
+        });
+
+
+    });
+</script>
+<script src="js/style.js"></script>
+</body>
+</html>

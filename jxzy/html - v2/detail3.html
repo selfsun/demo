@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <meta name="renderer" content="webkit">
+    <title>详情页</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    body{
+        background-color: #f5f5f5;
+    }
+    header{
+        background-color: #fff;
+    }
+    .content>.content-all{
+        background-color: #fff;
+        border: 0;
+    }
+    .content-link{
+        margin-top: 20px;
+        line-height: 60px;
+    }
+    .content-link>a{
+        margin-right: 5px;
+        margin-left: 5px;
+        color: #333;
+    }
+    .content-link>a:hover{
+        color: #007c3a;
+    }
+    .content-link>strong{
+        font-size: 24px;
+        color: #007c3a;
+        margin-right: 10px;
+    }
+    .article-left{
+        border-right: 1px solid #efeded;
+    }
+    .article-left h3{
+        color: #007c3a;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .article-left>.tab-pane>p{
+        line-height: 25px;
+        text-indent: 2em;
+        margin-top: 20px;
+    }
+    .article-left>.tab-pane>p.text-center{
+        color: #999;
+        line-height: 30px;
+        text-indent: 0;
+    }
+    .article-left>.tab-pane>p.text-center>span+span{
+        margin-left: 5px;
+    }
+    .article-left>.tab-pane>p.abstract{
+        color: #999;
+        background-color: #f5f5f5;
+        padding: 10px 20px;
+        text-indent: 0;
+
+    }
+    .tab-pane>.img{
+        text-align: center;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .zoombox{
+        margin: 15px 0;
+        padding: 30px 0;
+        background-color: #f5f5f5;
+    }
+    .zoompic>img{
+        width: 400px;
+        height: 290px;
+
+    }
+    .slider{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    .slider ul{
+        height: 78px;
+        width: 1000px;
+    }
+    .slider ul>li{
+        float: left;
+        padding: 2px;
+        border: 1px solid #fff;
+    }
+    .slider ul>li+li{
+        margin-left: 10px;
+    }
+    .slider ul>li.current{
+        border: 1px solid #007c3a;
+
+    }
+    .slider ul>li img{
+        width: 106px;
+        height: 78px;
+    }
+
+    .article-right>.nav>li{
+        border-bottom: 1px dashed #ccc;
+    }
+    .article-right>.nav>li>a{
+        /*文本只显示1行,多出来的用省略号显示*/
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+
+        color: #666666;
+    }
+    .article-right>.nav>li>a:hover{
+        color: #007c3a;
+    }
+    .article-right > h4 { color: #007c3a;
+        font-weight: bold;}
+
+    .page{
+        padding-top: 30px;
+        border-top: 1px dashed #ccc;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .page>a{
+        font-size: 40px;
+        text-align: center;
+
+        color: #999;
+    }
+    .page>a+a{
+        margin-left: 30px;
+    }
+    .page>a:hover{
+        color: #007c3a;
+    }
+    @media (max-width:768px){
+        .content-link{
+            margin-top: 10px;
+            line-height: 40px;
+        }
+        .content-link>strong{
+            font-size: 20px;
+        }
+        .content {
+            padding: 0;
+        }
+        .article-left{
+            border-right: none;
+            padding: 0;
+        }
+        .article-left h3{
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .article-left>.tab-pane>p.text-center{
+            font-size: 12px;
+        }
+
+        .zoompic>img{
+            width: 200px;
+            height: 145px;
+        }
+        .slider{
+            margin-top: 20px;
+        }
+        .slider ul{
+            height: 51px;
+        }
+        .slider ul>li+li{
+            margin-left: 5px;
+        }
+        .slider ul li img{
+            width: 60px;
+            height: 45px;
+        }
+        .page {
+            border-bottom: 1px dashed #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-top: 0;
+        }
+        .tab-pane>.img{
+            width: 100%;
+        }
+
+    }
+</style>
+<body>
+
+<!--header开始-->
+<header class="header-home hidden-sm hidden-xs" id="header">
+    <div class="top-nav container">
+        <div class="head">
+            <a href="index.html"><img src="images/logo.png" class="headL"  data-src="holder.js/90x90" alt="90x90" style="width: 90px; height: 90px;"/></a>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索内容">
+                </div>
+                <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>
+<!--header结束-->
+
+<!--nav开始-->
+<section id="nav">
+    <nav class="navbar navbar-jxzy navbar_num navbar-static-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo-hide" href="index.html"><img src="images/logo-mobile.png" class="headL" alt="126x40" style="width: 126px; height: 40px;"></a>
+                <button type="button" class="navbar-toggle collapsed btn-jxzy" data-toggle="collapse" data-target="#nav_list">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="">导航</span>
+                </button>
+            </div>
+            <div id="nav_list" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav nav-pills">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="company.html">企业概况</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                    <li class="active"><a href="news.html">新闻动态</a></li>
+                    <li><a href="medical.html">医药宝典</a></li>
+                    <li><a href="jobs.html">人才招聘</a></li>
+                    <li><a href="network.html">网络营销</a></li>
+                    <li><a href="online.html">在线客服</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+                <form class="navbar-form visible-xs center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入搜索内容">
+                    </div>
+                    <button type="submit" class="btn btn-jxzy"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<!--nav结束-->
+<section class="banner">
+</section>
+
+<!--内容开始-->
+
+<section class="container">
+    <div class="row">
+        <div class="content-link col-md-12"><strong>新闻动态</strong><a href="index.html">首页</a>/<a href="news.html">新闻动态</a>><span>正文</span></div>
+        <div class="content col-md-12">
+            <div class="content-all">
+                <div class="col-md-12 article-left">
+                    <div class="tab-pane col-md-12">
+                        <h3 class="text-center tab-content-title">全球药品市场规模增长4.8%</h3>
+                        <p class="text-center"><span>来源:陕西金象制药</span><span>发布时间:2015-3-30</span><span>阅读:4069次</span></p>
+                        <p class="abstract">2008年可能遭受仿制药竞争的处方药的销售总额达240亿美元。抗肿瘤药类是增长最快的领域，增长达14%，与上年持平。2008年可能遭受仿制药竞争的处方药的销售总额达240亿美元。抗肿瘤药类是增长最快的领域，增长达14%，与上年持平。</p>
+                        <p class="paddingNum"><br>                                                                      儿泻止颗粒
+                            <br>
+                            <br>拼音名：Erxiezhi  Keli
+                            <br>英文名：
+                            <br>书页号：z14-4                            标准编号：WS3-B-2651-97
+                            <br>
+                            <br>    【处方】  葛根              66g   黄芩                  33g         白术（炒）    66g
+                            <br>                           茯苓              66g   木香               19.8g         厚朴                    33g
+                            <br>                           半夏(姜)      33g   山楂(焦)     52.8g         泽泻                39.6g
+                            <br>                           甘草(炙)    19.8g   广藿香油   3.3ml         盐酸小檗碱   6.6g
+                            <br>    【制法】以上十二味，除盐酸小檗碱、广藿香油外，取山楂、茯苓、木香加水煎
+                            <br>煮二次，每次2小时，合并煎液，滤过，滤液浓缩至相对密度为1.05(60～65℃)，放
+                            <br>置24小时,滤过，滤液浓缩至相对密度为1.30(50～55℃)的清膏，加乙醇使含醇量达
+                            <br>50％,搅匀，放置24小时，滤过，滤液回收乙醇，浓缩至相对密度为1.30(80～85℃)
+                            <br>的稠膏备用；其余葛根等七味，按上法制备成清膏，加乙醇使含醇量达75％,搅匀，
+                            <br>再按上法制备成稠膏 。合并上述稠膏，加入盐酸小檗碱，甜菊甙1.6g，混匀。取稠
+                            <br>膏 1份，糊精1.25份，混匀,制成颗粒,干燥，喷入广藿香油，即得。
+                            <br>   【性状】 本品为黄棕色的颗粒；气香，味苦、微甜。
+                            <br>   【鉴别】 （1）取本品6g，加水50ml，振摇数分钟，放置1小时，滤过。滤液加乙
+                            <br>醚10ml,振摇，分取乙醚液，挥干后，残渣加1 ％香草醛硫酸溶液1滴，即显红棕色,
+                            <br>渐变为紫红色。
+                            <br>  （2）取［鉴别］(1)项下滤渣，加水10ml，水浴上加热使溶解，滤过，滤液加氢氧
+                            <br>化钠试液２滴，即显橙红色，放冷，滴加丙酮至混浊，放置后，生成黄色沉淀。
+                            <br>   【检查】 应符合颗粒剂项下有关的各项规定（附录Ⅰ  Ｃ）。
+                            <br>   【功能与主治】 清热解毒，健脾和胃，燥湿止泻。用于小儿急、慢性腹泻，肠炎，
+                            <br>及痢疾恢复期。
+                            <br>   【用法与用量】 口服，一次3g，一岁以下一日3次；一至二岁一日4次，二岁以
+                            <br>上遵医嘱。
+                            <br>   【规格】 每袋装3g
+                            <br>   【贮藏】 密封。
+                            <br>
+                            <br>――――――――――――――――――――――――――――――――――――
+                            <br> 	  					湖北省药品检验所     起草
+                            <br></p>
+                        <div class="zoombox">
+                            <div class="zoompic text-center">
+                                <img src="images/article-big-01.jpg">
+                            </div>
+                            <div class="slider" id="thumbnail">
+                                <ul>
+                                    <li class="current"><a href="images/article-big-01.jpg" target="_blank"><img src="images/article-small-01.jpg" ></a></li>
+                                    <li><a href="images/article-big-02.jpg" target="_blank"><img src="images/article-small-02.jpg"></a></li>
+                                    <li><a href="images/article-big-03.jpg" target="_blank"><img src="images/article-small-03.jpg"></a></li>
+                                    <!--<li><a href="images/article-big-04.jpg" target="_blank"><img src="images/article-small-04.jpg"></a></li>-->
+                                    <!--<li><a href="images/article-big-03.jpg" target="_blank"><img src="images/article-small-03.jpg"></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <a href="javascript:;" alt="上一页"><i class="fa fa-chevron-circle-left"></i></a>
+                            <a href="javascript:;" alt="下一页"><i class="fa fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</section>
+
+　　
+　　
+
+
+
+
+
+
+
+div.img.center-block
+div.img.center-block
+div.img.center-block
+div.img.center-block
+<div class="img center-block"></div>
+<div class="img center-block"></div>
+<div class="img center-block"></div>
+<div class="img center-block"></div>
+<div class="img center-block"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+　　
+
+　　
+
+
+　　
+
+
+
+　　
+
+　　
+
+　　
+
+　　
+
+　　
+
+　　
+
+　　
+
+　　
+
+　　
+
+　　
+
+
+<!--内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <p class="text-center"><a href="tel:029-33571907">电话：029-33571907</a></p>
+            <p class="text-center"><span>地址：陕西省咸阳市秦都区医药园区</span></p>
+            <p class="text-center">版权所有:陕西金象制药有限公司©2016.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备10006229号</a></p>
+        </div>
+    </div>
+</footer>
+
+<!--悬浮窗-->
+<div class="fixed jxzy">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="col-xs-6 text-center"><a href="tel:400-990-3736"><i class="glyphicon glyphicon-earphone"></i><span>电话</span></a></li>
+        <li role="presentation" class="col-xs-6 text-center"><a href="index.html"><i class="glyphicon glyphicon-user"></i><span>首页</span></a></li>
+    </ul>
+</div>
+<div class="totop" title="返回顶部"><i class="glyphicon glyphicon-plane"></i></div>
+<div class="float">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+<script>
+    $(window).ready(function(){
+        $("#thumbnail li a").click(function(){
+            $(".zoompic>img").attr( "src", $(this).attr("href"));
+            $("#thumbnail li.current").removeClass("current");
+            $(this).parents("li").addClass("current");
+            return false;
+        });
+        $(".zoompic>img").load(function(){
+            $(".zoompic>img:hidden").show();
+        });
+
+
+
+        var small_length =  $('.slider ul li').length;
+        if($(window).width() < 768){
+            var marginL = ($(window).width()-(small_length*66+(small_length-1)*5))/2-12.5;
+            if(small_length == 1){
+                console.log(small_length);
+                $(".slider").hide();
+            }else if(small_length == 2){
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+            }else if(small_length == 3){
+
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+
+            }else if(small_length == 4){
+
+                $(".slider").show();
+                $(".slider").css("margin-left",marginL+"px");
+            }
+
+
+        }
+        var slider_count = 0;
+
+        $(window).resize(function(){
+            if($(window).width()>768){
+                var paddingNum = ($(".content-all").width()-540)/2;
+                $(".paddingNum").css("padding-left",paddingNum+"px");
+                var marginL = ($(".zoombox").width()-(small_length*112+(small_length-1)*10))/2-12.5;
+                if(small_length == 1){
+                    console.log(small_length);
+                    $(".slider").hide();
+                }else if(small_length == 2){
+                    $(".slider").show();
+                    $(".slider").css("margin-left",marginL+"px");
+                }else if(small_length == 3){
+
+                    $(".slider").css("margin-left",marginL+"px");
+
+                }else if(small_length == 4){
+                    $(".slider").css("margin-left",marginL+"px");
+                }
+                else if(small_length == 5){
+                    $(".slider").css("margin-left",marginL+"px");
+                }
+
+            }
+        });
+
+
+
+
+    });
+</script>
+<script src="js/style.js"></script>
+</body>
+</html>

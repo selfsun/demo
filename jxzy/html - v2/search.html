@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <title>搜索页</title>
+    <meta name="description" content="陕西金象制药有限公司">
+    <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css" type="text/css"/>
+    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" type="text/css"/>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/style.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+        .sr_lists {
+            padding: 15px;
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+        }
+        .wrap > div > h5 {
+            line-height: 25px;
+        }
+        .sr_lists .c li div.adds {
+            color: #007c3a;
+        }
+
+        /**
+         * Canvas
+         */
+
+        [canvas] {
+            z-index: 1;
+        }
+        [canvas=sr_main] {
+            overflow-y: auto;
+            position: relative;
+            background-color: white;
+            -webkit-overflow-scrolling: touch;
+        }
+        [canvas=container]:before, [canvas=container]:after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+
+        /**
+         * Off-Canavs
+         */
+
+        [off-canvas] {
+            display: none;
+            position: fixed;
+            overflow: hidden;
+            overflow-y: auto;
+            color: white;
+            -webkit-overflow-scrolling: touch;
+        }
+        [off-canvas*=left] {
+            width:100px;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        /**
+         * Animation
+         */
+
+        [canvas], [off-canvas] {
+            -webkit-transform: translate( 0px, 0px );
+            -ms-transform: translate( 0px, 0px );
+            transform: translate( 0px, 0px );
+            -webkit-transition: -webkit-transform 300ms;
+            transition:         transform 300ms;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /**
+         * Print
+         */
+
+        @media print {
+            [canvas] {
+                -webkit-transform: translate( 0px, 0px ) !important;
+                -ms-transform: translate( 0px, 0px ) !important;
+                transform: translate( 0px, 0px ) !important;
+            }
+            [off-canvas] {
+                display: none !important;
+            }
+        }
+
+        /*搜索框*/
+        .tit {
+            margin: 30px 0;
+            padding: 30px 0;
+            background-color: #f5f5f5;
+        }
+        .search-all > .search-left {
+            height: 78px;
+        }
+        .search-all > .search-right {
+            padding-top: 6px;
+        }
+        .search-all > .search-right > .input-group {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .search-all > .search-right > .input-group > span{
+            width: 15%;
+        }
+        .search-all > .search-right > .input-group > span button {
+            width: 100%;
+        }
+        .btn-jxzy {
+            border-radius: 0;
+        }
+        .search-right > .text-center {
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+
+
+        .adds {
+            color: #007c3a;
+            font-size: 12px;
+        }
+        .sr_lists > .list-content {
+            border: 1px solid #e3e3e3;
+            padding: 0;
+        }
+        
+        .sr_lists > .list-content > .left_1 > div {
+            border-bottom: 1px solid #efeded;
+            text-align: right;
+            padding-right: 50px;
+            font-weight: bold;
+        }
+        .sr_lists > .list-content > .left_1 > div > h4 {
+            color: #333;
+            font-weight: bold;
+        }
+        .sr_lists > .list-content > .left_1 > div > h4.blue {
+            color: #007c3a;
+        }
+        .sr_lists > .list-content > .left_1 > div.time {
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+
+        .time > ul > li {
+            line-height: 30px;
+        }
+        .time > ul > li > a {
+            color: #007c3a;
+        }
+        .sr_lists > .left_1 > div.time > h4 {
+            line-height: 30px;
+            color: #666;
+        }
+        /*sb-1*/
+
+        .sb-1 > div {
+            border-bottom: 1px solid #efeded;
+            text-align: right;
+        }
+        .sb-1 > div > h5 {
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sb-1 > div.time {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .sb-1 > .time > ul > li {
+            line-height: 30px;
+        }
+        .sb-1 > .time > ul > li > a {
+            color: #fff;
+        }
+        .sb-1 > div.time > h5 {
+            line-height: 30px;
+            color: #fff;
+        }
+
+        /*搜索出的列表*/
+        .con {
+            border-left: 1px solid #efefef;
+        }
+        .content-sec > div {
+            background-color: #fff;
+            padding: 20px 50px;
+            margin-top: 10px;
+            border-bottom: 1px solid #efeded;
+        }
+        .content-sec > nav {
+            background-color: #fff;
+            margin-top: 30px;
+        }
+        .content-sec div.media-body > p.text {
+            color: #666;
+            font-weight: bold;
+            line-height: 2em;
+            overflow: hidden;
+            height: 2em;
+        }
+        .content-sec div.media-body > p + p {
+            margin-top: 45px;
+        }
+        .content-sec div.media-body > p > span {
+            color: #999;
+        }
+        .content-sec div.media-body > p > a {
+            font-weight: bold;
+            color: #007c3a;
+        }
+        .content-sec div.media-body > a > h4 {
+            color: #666;
+            font-weight: bold;
+            line-height: 1.8em;
+            height: 1.8em;
+            overflow:hidden;
+        }
+
+        .content-sec .noimg > div.media-body > p + p {
+            margin-top: 10px;
+        }
+        @media (max-width:992px) {
+            .search-all > .search-left > a > img {
+                width: 200px;
+                height: 63px;
+            }
+        }
+        @media (max-width:768px) {
+            #nav {
+                display: none;
+            }
+            .con {
+                border-left: none;
+            }
+
+            .sr_head > .sear{
+                text-align: center;
+            }
+            .sr_lists {
+                border: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
+            .sr_head > .sear > a.toggle-left {
+                float: left;
+                color: #007c3a;
+                font-size: 18px;
+                padding-left: 15px;
+            }
+            .sr_head {
+                border-bottom: 1px solid #007c3a;
+                line-height: 32px;
+            }
+            .sear > a:last-child {
+                color:#007c3a;
+            }
+            .jxzy {
+                display: none;
+            }
+
+            .sr_lists > .con , .list-content > .con {
+                padding: 0;
+            }
+            .sr_lists > .list-content {
+                border: none;
+                overflow: hidden;
+            }
+
+            /*内容显示区*/
+            .content-sec > div {
+                padding: 10px 15px;
+            }
+            .content-sec div.media-left {
+                padding-right: 5px;
+            }
+            .content-sec div.media-body > a > h4 {
+                font-size: 14px;
+                line-height: 1.6em;
+                height: 1.6em;
+            }
+            .content-sec div.media-body > p + p {
+                margin-top: 10px;
+            }
+            .content-sec div.media-body > p > span ,.content-sec div.media-body > p > a {
+                font-size: 12px;
+
+            }
+            .content-sec div.media-body > p.text {
+                line-height: 30px;
+
+            }
+
+
+            /*搜索框*/
+          .tit {
+                margin: 0;
+                padding: 15px 0;
+                background-color: #fff;
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 15px;
+            }
+            .search-all {
+                overflow: hidden;
+                padding: 0;
+            }
+            .search-all > .search-right {
+                padding-top: 0;
+            }
+            .search-all > .search-left {
+                height: 65px;
+            }
+            .search-right > .text-center {
+                font-size: 12px;
+                line-height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<!--nav结束-->
+<section class="banner"></section>
+
+<!--<div class="clr sr_body sr_list">-->
+
+<div class="sr_main search container col-xs-12"  canvas="sr_main">
+    <div class="sr_head row visible-xs-block">
+        <div class="sear" id="search"> <a class="toggle-left visible-xs-block"><i class="glyphicon glyphicon-align-justify"></i></a> </div>
+    </div>
+    <div class="row tit">
+        <div class="col-md-12 search-all">
+            <div class="search-left text-center col-md-3">
+                <a href="javascript:;"><img src="images/logo-mobile.png"/></a>
+            </div>
+            <div class="search-right col-md-9 col-xs-12">
+                <div class="input-group">
+                    <input type="text" class="form-control-jxzy" placeholder="请输入搜索内容">
+                      <span class="input-group-btn">
+                        <button class="btn btn-jxzy" type="button">搜索</button>
+                      </span>
+                </div>
+                <div class="text-center col-md-12 search-bottom">获得约<span> 0 </span>条结果 （用时0.10 秒）</div>
+            </div>
+        </div>
+    </div>
+    <div class="sr_lists row">
+        <div class="list-content col-md-12">
+            <div class="left_1 col-md-3 hidden-xs col-xs-3">
+                <div style="margin-top:20px;">
+                    <h4>搜索结果</h4>
+                    <h4 class="blue">SEARCH RESULT</h4>
+                </div>
+                <div class="time">
+                    <h4>按时间搜索</h4>
+                    <ul>
+                        <li><a href="javascript:;" class="ac">全部时间</a></li>
+                        <li><a href="javascript:;" class="ac">一天内</a></li>
+                        <li><a href="javascript:;" class="ac">一周内</a></li>
+                        <li><a href="javascript:;" class="ac">一月内</a></li>
+                        <li><a href="javascript:;" class="ac">一年内</a></li>
+                    </ul>
+                </div>
+                <div class="bgno time">
+                    <h4>搜索历史</h4>
+                    <ul id='history_ul'>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-9 con" style="background:#fff;">
+                <div class="content-sec">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <a href="#">
+                                <img class="media-object" src="images/news_01.jpg">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="javascript:;"><h4 class="media-heading"><font color="#007c3a">全球</font>药品市场规模增长4.8%</h4></a>
+                            <p class="text">尽管出现负增长的制药企业较上年有所增加，但50强榜中超过一半的企业实现了两位数的增长。虽然经济衰退最终会冲击最终会冲击最终会冲击最终会冲击……</p>
+                            <p><span class="pull-left">发布时间：2017-02-07 14:16:47</span><a href="javascript:;" class="pull-right">查看详情</a></p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <a href="#">
+                                <img class="media-object" src="images/news_01.jpg">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="javascript:;"><h4 class="media-heading"><font color="#007c3a">全球</font>药品市场规模增长4.8%</h4></a>
+                            <p class="text">尽管出现负增长的制药企业较上年有所增加，但50强榜中超过一半的企业实现了两位数的增长。虽然经济衰退最终会冲击最终会冲击最终会冲击最终会冲击……</p>
+                            <p><span class="pull-left">发布时间：2017-02-07 14:16:47</span><a href="javascript:;" class="pull-right">查看详情</a></p>
+                        </div>
+                    </div>
+                    <div class="media noimg">
+                        <div class="media-body">
+                            <a href="javascript:;"><h4 class="media-heading"><font color="#007c3a">全球</font>药品市场规模增长4.8%</h4></a>
+                            <p class="text">尽管出现负增长的制药企业较上年有所增加，但50强榜中超过一半的企业实现了两位数的增长。虽然经济衰退最终会冲击最终会冲击最终会冲击最终会冲击……</p>
+                            <p><span class="pull-left">发布时间：2017-02-07 14:16:47</span><a href="javascript:;" class="pull-right">查看详情</a></p>
+                        </div>
+                    </div>
+                    <div class="media noimg">
+                        <div class="media-body">
+                            <a href="javascript:;"><h4 class="media-heading"><font color="#007c3a">全球</font>药品市场规模增长4.8%</h4></a>
+                            <p class="text">尽管出现负增长的制药企业较上年有所增加，但50强榜中超过一半的企业实现了两位数的增长。虽然经济衰退最终会冲击最终会冲击最终会冲击最终会冲击……</p>
+                            <p><span class="pull-left">发布时间：2017-02-07 14:16:47</span><a href="javascript:;" class="pull-right">查看详情</a></p>
+                        </div>
+                    </div>
+                    <div class="media noimg">
+                        <div class="media-body">
+                            <a href="javascript:;"><h4 class="media-heading"><font color="#007c3a">全球</font>药品市场规模增长4.8%</h4></a>
+                            <p class="text">尽管出现负增长的制药企业较上年有所增加，但50强榜中超过一半的企业实现了两位数的增长。虽然经济衰退最终会冲击最终会冲击最终会冲击最终会冲击……</p>
+                            <p><span class="pull-left">发布时间：2017-02-07 14:16:47</span><a href="javascript:;" class="pull-right">查看详情</a></p>
+                        </div>
+                    </div>
+                    <div class="media noimg">
+                        <div class="media-body">
+                            <a href="javascript:;"><h4 class="media-heading"><font color="#007c3a">全球</font>药品市场规模增长4.8%</h4></a>
+                            <p class="text">尽管出现负增长的制药企业较上年有所增加，但50强榜中超过一半的企业实现了两位数的增长。虽然经济衰退最终会冲击最终会冲击最终会冲击最终会冲击……</p>
+                            <p><span class="pull-left">发布时间：2017-02-07 14:16:47</span><a href="javascript:;" class="pull-right">查看详情</a></p>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation" class="page-jxzy col-md-12">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="page_total_num" class="pull-right">共24条</div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+        <footer class="visible-xs-block">
+            <div class="link text-center hidden-xs">
+                <a href="javascript:;">首页</a>|<a href="javascript:;">企业概况</a>|<a href="javascript:;">产品中心</a>|
+                <a href="javascript:;">新闻动态</a>|<a href="javascript:;">医药宝典</a>|<a href="javascript:;">人才招聘</a>|
+                <a href="javascript:;">网络营销</a>|<a href="javascript:;">联系我们</a>
+            </div>
+            <div class="banquan text-center">版权所有:陕西金象制药有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></div>
+        </footer>
+    </div>
+</div>
+<div off-canvas="sb-1 left reveal " style="background:#007c3a; padding:50px 10px 0;" class="sb-1">
+    <!-- Left Slidebar content -->
+
+    <div>
+        <h5>搜索结果</h5>
+    </div>
+    <div class="time">
+        <h5>按时间搜索</h5>
+        <ul>
+            <li><a href="javascript:;" class="ac">全部时间</a></li>
+            <li><a href="javascript:;" class="ac">一天内</a></li>
+            <li><a href="javascript:;" class="ac">一周内</a></li>
+            <li><a href="javascript:;" class="ac">一月内</a></li>
+            <li><a href="javascript:;" class="ac">一年内</a></li>
+        </ul>
+    </div>
+    <div class="bgno time">
+        <h5>搜索历史</h5>
+        <ul id='history_ul2'>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--footer开始-->
+<footer class="hidden-xs">
+    <div class="link text-center hidden-xs">
+        <a href="javascript:;">首页</a>|<a href="javascript:;">企业概况</a>|<a href="javascript:;">产品中心</a>|
+        <a href="javascript:;">新闻动态</a>|<a href="javascript:;">医药宝典</a>|<a href="javascript:;">人才招聘</a>|
+        <a href="javascript:;">网络营销</a>|<a href="javascript:;">联系我们</a>
+    </div>
+    <div class="banquan text-center">版权所有:陕西金象制药有限公司©2017.<a href="http://www.miitbeian.gov.cn/" class="gs">陕ICP备17010026号-1</a></div>
+</footer>
+<!--悬浮窗-->
+
+<div class="totop" title="返回顶部"><i class="fa fa-angle-up"></i></div>
+<div class="float hidden-xs">
+    <div class="phone">
+        <div class="phone-left text-center"><a href="tel:029-32862485">招商电话：029-32862485</a></div>
+        <div class="phone-right text-center pull-right">
+            <a href="javascript:;"><i class="fa fa-phone"></i></a>
+        </div>
+    </div>
+    <div class="search-common hidden-xs">
+        <div class="navbar-form" style="display: none">
+            <div class="form-group">
+                <input type="hidden" name="m" value="search">
+                <input type="hidden" name="c" value="index">
+                <input type="hidden" name="a" value="init">
+                <input type="hidden" name="typeid" value="57" id="typeid">
+                <input type="hidden" name="siteid" value="5" id="siteid">
+                <input type="text" class="form-control" placeholder="请输入搜索内容" name="q" id="q">
+            </div>
+            <a id="search_btn2" style="margin-right:3px;" href="javascript:;" class="btn btn-jxzy">go</a>
+        </div>
+        <a class="search-right text-center" href="javascript:;"><i class="glyphicon glyphicon-search"></i></a>
+    </div>
+    <div class="float-contact">
+        <a class="qq text-center" href="javascript:;"><i class="fa fa-qq"></i></a>
+        <a id="top" class="top text-center active" href="javascript:;"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    </div>
+</div>
+
+<script src="js/slidebars.js"></script>
+<script>
+    ( function ( $ ) {
+        $( document ).ready( function () {
+            var controller = new slidebars();
+
+            controller.init();
+
+            // Toggle left
+            $( '.toggle-left' ).on( 'click', function ( event ) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                controller.toggle( 'sb-1' );
+            });
+            var _width = $(window).width();
+            if(_width >= 768&&_width<992){
+                $(".col-xs-12").removeClass("col-xs-12").addClass("col-md-9");
+                $(".left_1").addClass("col-md-3").removeClass("hidden-xs");
+                $(".list-content>.con").css("overflow","hidden");
+                $(".float").hide();
+            }else if($(window).width()<768){
+                $(".sr_main").addClass("col-xs-12");
+            }else{
+                $(".sr_main").removeClass("col-xs-12");
+            }
+        });
+    }) ( jQuery );
+</script>
+</body>
+</html>

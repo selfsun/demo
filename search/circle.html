@@ -2,23 +2,112 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>无标题文档</title>
+    <title>沿中心点画圆</title>
     <!--脚本加载-->
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function(e) {
-            var a = 200, b = 200, r = 90, times = 0;
-            setInterval(function flutter() {
+//            var a = 200, b = 200, r = 90, times = 0;
+//            setInterval(function flutter() {
+//                times += 0.1;
+//                var hudu = (2*Math.PI / 360) * 6 * times;
+//                var X = a + Math.sin(hudu) * r;
+//                var Y = b - Math.cos(hudu) * r;    //  注意此处是“-”号，因为我们要得到的Y是相对于（0,0）而言的。
+//                //$(".sky_text").css({"left":X+"px","top":Y+"px"});
+//                $("body").append('<div style="position:absolute; left:'+X+'px; top:'+Y+'px; width:2px; height:2px; background:green;"></div>');
+//                if(times > 29){
+//                    return;
+//                    console.log(times);
+//                }
+//                console.log(times);
+//            }, 2);
+
+
+
+
+//            JS Math.sin() 与 Math.cos() 用法
+//
+//            Math.sin(x)      x 的正玄值。返回值在 -1.0 到 1.0 之间；
+//
+//            Math.cos(x)    x 的余弦值。返回的是 -1.0 到 1.0 之间的数；
+//
+//            这两个函数中的X 都是指的“弧度”而非“角度”，弧度的计算公式为： 2*PI/360*角度；
+//
+//            30° 角度 的弧度 = 2*PI/360*30
+//
+//            如何得到圆上每个点的坐标？
+//
+//            解决思路：根据三角形的正玄、余弦来得值；
+//
+//            假设一个圆的圆心坐标是(a,b)，半径为r，
+//
+//            则圆上每个点的X坐标=a + Math.sin(2*Math.PI / 360) * r ；Y坐标=b + Math.cos(2*Math.PI / 360) * r ；
+//
+//            如何求时钟的秒针转动一圈的轨迹？
+//
+//            假设秒针的初始值（起点）为12点钟方向，圆心的坐标为（a,b)。
+//
+//            解决思路：一分钟为60秒，一个圆为360°，所以平均每秒的转动角度为 360°/60 = 6°；
+//
+//            for(var times=0; times<60; times++) {
+//
+//           var hudu = (2*Math.PI / 360) * 6 * times;
+//
+//           var X = a + Math.sin(hudu) * r;
+//
+//           var Y = b - Math.cos(hudu) * r    //  注意此处是“-”号，因为我们要得到的Y是相对于（0,0）而言的。
+//
+//}
+
+
+//                var x = a + Math.cos(hudu)*r;
+//                var y = b - Math.sin(hudu)*r;
+//                x,y 的math,sin,cos反着写会出现反方向；
+
+        var a=200,b=200,r=50,times=0;
+
+
+            function circle() {
+                var hudu = (Math.PI/180)*6*times;
                 times += 0.1;
-                var hudu = (2*Math.PI / 360) * 6 * times;
-                var X = a + Math.sin(hudu) * r;
-                var Y = b - Math.cos(hudu) * r    //  注意此处是“-”号，因为我们要得到的Y是相对于（0,0）而言的。
-                //$(".sky_text").css({"left":X+"px","top":Y+"px"});
-                $("body").append('<div style="position:absolute; left:'+X+'px; top:'+Y+'px; width:2px; height:2px; background:green;"></div>');
-                if(times == 60){
+
+                var x = a + Math.sin(hudu)*r;
+                var y = b - Math.cos(hudu)*r;
+
+                if(times <= 30){
+                    $('body').append('<div class="cir1" style="position: absolute; left: '+x+'px; top: '+y+'px; width:2px; height:2px; background:green;"></div>');
+//                    return;
+                }else{
                     return;
                 }
-            }, 2);
+                console.log(times);
+            };
+
+            function circle1() {
+                var hudu = (Math.PI/180)*6*times;
+                times += 0.1;
+
+                var x = a - Math.sin(hudu)*r;
+                var y = b + Math.cos(hudu)*r;
+
+                if(times <= 30){
+                    $('body').append('<div class="cir1" style="position: absolute; left: '+x+'px; top: '+y+'px; width:2px; height:2px; background:green;"></div>');
+//                    return;
+                }else{
+                    return;
+                }
+                console.log(times);
+            };
+
+//            myCricle = setInterval(circle,2);
+            $('div').hover(function () {
+//                $('.cir1').show();
+                myCricle = setInterval(circle,2);
+                myCricle1 = setInterval(circle1,2);
+
+            }, function () {
+                $('.cir1').empty();
+            })
         });
     </script>
     <style type="text/css">

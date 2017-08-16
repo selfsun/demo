@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鼠标划过分别从圆的两边出发，绕圆走半圈</title>
+    <!--<link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.css"/>-->
+
+
+    <script src="js/jquery.js"></script>
+    <!--<script src="plugins/bootstrap/dist/js/bootstrap.js"></script>-->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            width: 128px;
+            height: 130px;
+            margin: 0 20px;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        li i {
+            width: 74px;
+            background: url(images/words.png) no-repeat -207px -630px;
+        }
+        li i {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 28px;
+            height: 70px;
+        }
+
+
+        li u.cl {
+            clip: rect(0px,128px,-10px,64px);
+        }
+        li u {
+            display: block;
+            position: absolute;
+            width: 128px;
+            height: 128px;
+            background: url(images/words.png) no-repeat 0px -624px;
+            -webkit-transition: all .5s ease-in-out 0s;
+            -moz-transition: all .5s ease-in-out 0s;
+            -ms-transition: all .5s ease-in-out 0s;
+            -o-transition: all .5s ease-in-out 0s;
+            transition: all .5s ease-in-out 0s;
+        }
+
+        li u.cr {
+            clip: rect(128px,64px,128px,0px);
+        }
+
+        li:hover u.cl {
+            clip: rect(0px,128px,128px,64px);
+        }
+
+        li:hover u.cr {
+            clip: rect(0px,64px,128px,0px);
+        }
+
+        .circle {
+            margin: 50px auto;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+<ul class="circle">
+    <li>
+        <u class="cl"></u>
+        <u class="cr"></u>
+        <i></i>
+    </li>
+    <li>
+        <u class="cl"></u>
+        <u class="cr"></u>
+        <i></i>
+    </li>
+    <li>
+        <u class="cl"></u>
+        <u class="cr"></u>
+        <i></i>
+    </li>
+</ul>
+</body>
+</html>
